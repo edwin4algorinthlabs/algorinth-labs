@@ -16,6 +16,10 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,4 +28,12 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.gradient1 {
+  background: linear-gradient(157.28deg, rgba(148, 38, 186, 0) 41.63%, #9426BA 79.18%);
+}
+
+.gradient2 {
+  background: linear-gradient(157.28deg, #DF40A9 7.22%, #4D35A3 57.07%);
 }
