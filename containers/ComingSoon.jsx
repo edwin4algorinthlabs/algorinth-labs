@@ -7,7 +7,7 @@ export default function ComingSoonContainer() {
       <div className="flex w-full mx-auto">
         <Image src="/images/logo.png" width={310} height={220} alt="Brand logo" placeholder="blur" blurDataURL="data" priority className="w-[310px]" />
         <div className="flex flex-1 justify-center max-w-[70%]">
-          <p className="text-[64px] text-center leading-[96px] font-poppins font-thin ">Launching Soon...</p>
+          <p className="text-[64px] text-white text-center leading-[96px] font-poppins font-thin ">Launching Soon...</p>
         </div>
       </div>
 
@@ -16,8 +16,8 @@ export default function ComingSoonContainer() {
         <div className="max-w-[812px] w-full flex flex-row max-h-full h-[72.1px] rounded-[10px] bg-white ">
           <input type="email" placeholder="Email Address" className="w-full h-[72.1px] p-4 rounded-[10px] outline-0 border-none text-black text-[28px] font-normal font-poppins placeholder:text-black/60 placeholder:text-[28px] placeholder:font-normal" />
           <button className="h-[72.1px] w-full max-w-[246.81px] bg-secondary rounded-r-[10px] text-[32px] font-poppins font-normal">
-              Notify Me
-            </button>
+            Notify Me
+          </button>
         </div>
       </div>
 
