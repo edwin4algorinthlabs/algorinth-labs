@@ -7,7 +7,7 @@ export default function ComingSoonContainer() {
       <div className="flex w-full mx-auto">
         <Image src="/images/logo.png" width={310} height={220} alt="Brand logo" placeholder="blur" blurDataURL="data" priority className="w-[310px]" />
         <div className="flex flex-1 justify-center max-w-[70%]">
-          <p className="text-[64px] text-center leading-[96px] font-poppins font-thin ">Launching Soon...</p>
+          <p className="text-[64px] text-center text-white leading-[96px] font-poppins font-thin ">Launching Soon...</p>
         </div>
       </div>
 
