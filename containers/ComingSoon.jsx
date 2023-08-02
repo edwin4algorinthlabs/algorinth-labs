@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaDribbble } from "r
 
 export default function ComingSoonContainer() {
   return (
-    <div className="min-h-screen max-h-screen relative z-0 w-full bg-[#08111F] bg-[url('/images/coming.png')] bg-contain bg-no-repeat bg-center overflow-hidden">
+    <div className="min-h-screen max-h-screen relative z-0 w-full bg-[#08111F] bg-[url('/images/coming.png')] bg-contain bg-no-repeat bg-center">
       <div className="flex w-full mx-auto">
         <Image src="/images/logo.png" width={310} height={220} alt="Brand logo" placeholder="blur" blurDataURL="data" priority className="w-[310px]" />
         <div className="flex flex-1 justify-center max-w-[70%]">
@@ -22,8 +22,8 @@ export default function ComingSoonContainer() {
       </div>
 
       {/* Balls */}
-      <div className="absolute bottom-[-30px] left-[-533px] z-[1] w-[754px] h-[769px] rounded-full gradient1"></div>
-      <div className="flex flex-col justify-center gap-6 absolute bottom-[-30px] right-[-533px] z-[1] w-[754px] h-[769px] rounded-full gradient2 pl-[92px]">
+      <div className="fixed bottom-[-30px] left-[-533px] z-[1] w-[754px] h-[769px] rounded-full gradient1"></div>
+      <div className="flex flex-col justify-center gap-6 fixed bottom-[-30px] right-[-533px] z-[1] w-[754px] h-[769px] rounded-full gradient2 pl-[92px]">
         <FaFacebookF color="#fff" size={30} />
         <FaTwitter color="#fff" size={30} />
         <FaLinkedinIn color="#fff" size={30} />
