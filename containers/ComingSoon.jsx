@@ -1,5 +1,7 @@
+import Link from "next/link";
 import Image from "next/image";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaDribbble } from "react-icons/fa6";
+import TypingText from "@/components/TypingText";
 
 export default function ComingSoonContainer() {
   return (
@@ -7,7 +9,8 @@ export default function ComingSoonContainer() {
       <div className="flex w-full mx-auto">
         <Image src="/images/logo.png" width={310} height={220} alt="Brand logo" placeholder="blur" blurDataURL="data" priority className="max-w-[21.5vw] max-h-[21.4vh] object-contain" />
         <div className="flex flex-1 justify-center max-w-[65vw]">
-          <p className="text-[54px] text-center text-white leading-[96px] font-poppins font-thin ">Launching Soon...</p>
+          {/* <p className="text-[46px] text-center text-white leading-[96px] font-poppins font-thin ">Launching Soon...</p> */}
+          <TypingText text="Launching Soon. . ." />
         </div>
       </div>
 
@@ -21,13 +24,17 @@ export default function ComingSoonContainer() {
 
       {/* Balls */}
       <div className=" absolute bottom-[-3.2vh] left-[-52vh] z-[1] w-[73.632vh] h-[73.632vh] rounded-full gradient1"></div>
-      <div className="flex flex-col justify-center gap-7 absolute bottom-[-3.2vh] right-[-52vh] z-[1] w-[73.632vh] h-[73.632vh] rounded-full gradient2 pl-[5.2%]">
+      <div className="flex flex-col justify-center gap-7 absolute bottom-[-3.2vh] right-[-52vh] z-[1] w-[73.632vh] h-[73.632vh] rounded-full gradient2 pl-[5%]">
         {/* <FaFacebookF color="#fff" size={30} /> */}
         {/* <FaTwitter color="#fff" size={30} className="cursor-pointer" /> */}
-        <FaLinkedinIn color="#fff" size={30} className="cursor-pointer hover:scale-125 transition duration-300 ease-in-out delay-75" />
-        <FaInstagram color="#fff" size={30} className="cursor-pointer hover:scale-125 transition duration-300 ease-in-out delay-75" />
+        <Link href="" target="_blank">
+          <FaLinkedinIn color="#fff" size={30} className="cursor-pointer hover:scale-125 transition duration-300 ease-in-out delay-75" />
+        </Link>
+        <Link href="https://instagram.com/algorinthlabs.llc?igshid=MzRlODBiNWFlZA==" target="_black">
+          <FaInstagram color="#fff" size={30} className="cursor-pointer hover:scale-125 transition duration-300 ease-in-out delay-75" />
+        </Link>
         {/* <FaDribbble color="#fff" size={30} /> */}
       </div>
     </div>
   );
-} 
+}
