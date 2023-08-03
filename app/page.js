@@ -1,3 +1,4 @@
+"use client";
 import ComingSoonContainer from "@/containers/ComingSoon"
 
 export default function Home() {

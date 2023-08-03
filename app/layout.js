@@ -9,7 +9,7 @@ const poppins = Poppins({
   variable: '--font-poppins', })
 
 export const metadata = {
-  title: 'Algorinth Labss | Coming Soon',
+  title: 'Algorinth Labs | Coming Soon',
   description: 'This is the coming soon page of Algorinth Labs',
 }
 
