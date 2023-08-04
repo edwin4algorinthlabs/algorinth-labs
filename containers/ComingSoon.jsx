@@ -22,10 +22,18 @@ export default function ComingSoonContainer() {
     
     // validate the email input value
     if (!emailValue) {
-      setErrorMessage('Email is required');
+      setErrorMessage("Email is required");
+      // hide the error message after 3 seconds
+      setTimeout(() => {
+        setErrorMessage(null);
+      }, 3000);
       return;
     } else if (!EmailValidator.validate(emailValue)) {
-      setErrorMessage('Invalid email address');
+      setErrorMessage("Invalid email address");
+      // hide the error message after 3 seconds
+      setTimeout(() => {
+        setErrorMessage(null);
+      }, 3000);
       return;
     } else {
       setErrorMessage(null);
