@@ -53,7 +53,7 @@ export default function ComingSoonContainer() {
   };
 
   return (
-    <div className="h-screen relative z-0 w-full bg-[#08111F] bg-[url('/images/background-resource.png.png')] bg-contain bg-no-repeat bg-center overflow-hidden">
+    <div className="h-screen relative z-0 w-full bg-[#08111F] bg-[url('/images/background-resource.png')] bg-contain bg-no-repeat bg-center overflow-hidden">
       <div className="flex w-full mx-auto">
         <Image src="/images/logo.png" width={310} height={220} alt="Brand logo" placeholder="blur" blurDataURL="data" priority className="max-w-[21.5vw] max-h-[21.4vh] object-contain" />
         <div className="flex flex-1 justify-center max-w-[65vw]">
