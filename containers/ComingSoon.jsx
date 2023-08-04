@@ -22,12 +22,18 @@ export default function ComingSoonContainer() {
     
     // validate the email input value
     if (!emailValue) {
-      setErrorMessage('Email is required');
-      form.current.reset(); // reset the form
+      setErrorMessage("Email is required");
+      // hide the error message after 3 seconds
+      setTimeout(() => {
+        setErrorMessage(null);
+      }, 3000);
       return;
     } else if (!EmailValidator.validate(emailValue)) {
-      setErrorMessage('Invalid email address');
-      form.current.reset(); // reset the form
+      setErrorMessage("Invalid email address");
+      // hide the error message after 3 seconds
+      setTimeout(() => {
+        setErrorMessage(null);
+      }, 3000);
       return;
     } else {
       setErrorMessage(null);
@@ -91,23 +97,6 @@ export default function ComingSoonContainer() {
         </Link>
         {/* <FaDribbble color="#fff" size={30} /> */}
       </div>
-
-      {/* messages will disappear after 3 seconds using css animation */}
-      <style jsx>{`
-        .animate-fade-out {
-          animation: fadeOut 3s forwards;
-        }
-
-        @keyframes fadeOut {
-          from {
-            opacity: 1;
-          }
-          to {
-            opacity: 0;
-            display: none;
-          }
-        }
-      `}</style>
     </div>
   );
 }
