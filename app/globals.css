@@ -16,12 +16,34 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.gradient1 {
+  background: linear-gradient(157.28deg, rgba(148, 38, 186, 0) 41.63%, #9426ba 79.18%);
+}
+
+.gradient2 {
+  background: linear-gradient(157.28deg, #df40a9 7.22%, #4d35a3 57.07%);
+}
+
+.animate-fade-out {
+  animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    /* opacity: 1; */
+    display: flex;
+  }
+  to {
+    /* opacity: 0; */
+    display: none;
+  }
 }
