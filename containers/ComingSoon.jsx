@@ -23,9 +23,11 @@ export default function ComingSoonContainer() {
     // validate the email input value
     if (!emailValue) {
       setErrorMessage('Email is required');
+      form.current.reset(); // reset the form
       return;
     } else if (!EmailValidator.validate(emailValue)) {
       setErrorMessage('Invalid email address');
+      form.current.reset(); // reset the form
       return;
     } else {
       setErrorMessage(null);
