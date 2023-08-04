@@ -85,7 +85,7 @@ export default function ComingSoonContainer() {
 
       {/* Balls */}
       <div className=" absolute bottom-[-3.2vh] left-[-52vh] z-[1] w-[73.632vh] h-[73.632vh] rounded-full gradient1"></div>
-      <div className="flex flex-col justify-center gap-7 absolute bottom-[-3.2vh] right-[-52vh] z-[1] w-[73.632vw] h-[73.632vw] rounded-full gradient2 pl-[5%]">
+      <div className="flex flex-col justify-center gap-7 absolute bottom-[-3.2vh] right-[-52vh] z-[1] w-[73.632vh] h-[73.632vh] rounded-full gradient2 pl-[5%]">
         {/* <FaFacebookF color="#fff" size={30} /> */}
         {/* <FaTwitter color="#fff" size={30} className="cursor-pointer" /> */}
         <Link href="" target="_blank">
