@@ -89,23 +89,6 @@ export default function ComingSoonContainer() {
         </Link>
         {/* <FaDribbble color="#fff" size={30} /> */}
       </div>
-
-      {/* messages will disappear after 3 seconds using css animation */}
-      <style jsx>{`
-        .animate-fade-out {
-          animation: fadeOut 3s forwards;
-        }
-
-        @keyframes fadeOut {
-          from {
-            opacity: 1;
-          }
-          to {
-            opacity: 0;
-            display: none;
-          }
-        }
-      `}</style>
     </div>
   );
 }
