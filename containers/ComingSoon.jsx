@@ -71,8 +71,8 @@ export default function ComingSoonContainer() {
               Notify Me
             </button>
           </div>
-          {errorMessage && <div className="absolute top-0 left-0 right-0 rounded-b-md bg-red-500 text-white px-4 py-2 text-sm animate-fade-out">{errorMessage}</div>}
-          {successMessage && <div className="flex items-center p-4 mb-4 text-sm text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 dark:border-green-800 animate-fade-out">{successMessage}</div>}
+          {errorMessage && <div className="absolute top-0 max-w-[52vw] w-full rounded-md bg-red-500 text-white px-4 py-2 text-sm text-center mx-4 animate-fade-out">{errorMessage}</div>}
+          {successMessage && <div className="flex items-center p-4 mb-4 ml-2 text-sm text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 dark:border-green-800 animate-fade-out">{successMessage}</div>}
         </div>
       </form>
 
