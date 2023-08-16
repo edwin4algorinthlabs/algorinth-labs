@@ -48,6 +48,16 @@ body {
   }
 }
 
+
+.outerContainer {
+  background-image: url(/images/background-resource-algo.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+
+}
+
 .div-hero {
   align-items: flex-start;
   background-image: url(/images/div-hero.png);
@@ -58,6 +68,7 @@ body {
   height: 718px;
   justify-content: center;
   position: relative;
+  opacity: 0.5;
 }
 
 .div-hero .div-w-container {
@@ -252,4 +263,107 @@ body {
   position: absolute;
   top: 0;
   width: 145px;
+}
+
+
+@media (max-width: 768px) {
+  .div-w-container-ii {
+      border: 1px none;
+      overflow-x: hidden;
+  }
+
+  .div-w-container-heading {
+      height: 228px;
+      left: -9px;
+      position: absolute;
+      top: 146px;
+      width: 374px;
+  }
+
+  .div-w-container-text-wrapper-ii {
+      color: #ffffff;
+      font-family: "Rubik-Bold", Helvetica;
+      font-size: 36px;
+      font-weight: 700;
+      height: 227px;
+      left: 17px;
+      letter-spacing: 0;
+      line-height: 52px;
+      position: absolute;
+      top: 0;
+      width: 374px;
+  }
+
+  .div-w-container-p-newsletter-ii {
+      align-items: flex-start;
+      display: flex;
+      left: 8px;
+      padding: 0px 17px 0px 0px;
+      position: absolute;
+      top: 374px;
+      width: 374px;
+  }
+
+  .div-w-container-algorinth-labs-is-ii {
+      color: #ffffff;
+      font-family: "Open Sans-Regular", Helvetica;
+      font-size: 16px;
+      font-weight: 400;
+      height: 158px;
+      letter-spacing: 0;
+      line-height: 28px;
+      margin-right: -17px;
+      margin-top: -1px;
+      position: relative;
+      width: 374px;
+  }
+
+  .div-w-container-link-ii {
+      align-items: flex-start;
+      background-color: #2a333d;
+      border-radius: 4px;
+      display: inline-flex;
+      left: 8px;
+      padding: 7px 24.81px 9px 24px;
+      position: absolute;
+      top: 570px;
+  }
+
+  .div-w-container-request-AN-AUDIT-ii {
+      color: #ffffff;
+      font-family: "Rubik-Medium", Helvetica;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      line-height: 30px;
+      margin-top: -1px;
+      position: relative;
+      white-space: nowrap;
+      width: fit-content;
+  }
+
+  .div-w-container-overlap-group-ii {
+      height: 115px;
+      left: 0;
+      position: absolute;
+      top: -15px;
+      width: 378px;
+  }
+
+  .div-w-container-banner-ii {
+      height: 68px;
+      left: 0;
+      position: absolute;
+      top: 47px;
+      width: 378px;
+  }
+
+  .div-w-container-element-removebg-preview-ii {
+      height: 94px;
+      left: 8px;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      width: 111px;
+  }
 }
