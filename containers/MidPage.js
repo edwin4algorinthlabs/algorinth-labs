@@ -10,7 +10,7 @@ const MidPage = () => {
           <div className="overlap">
             <div className="div-w-clearfix">
               <div className="overlap-group">
-                {/* <img className="software-assurance" alt="Software assurance" src="software-assurance-svg.svg" /> */}
+                {/* <Image className="software-assurance" alt="Software assurance" src="software-assurance-svg.svg" /> */}
                 {/* <div className="heading-software">Smart Contract Testing</div> */}
               </div>
               <div className="p">
@@ -37,7 +37,7 @@ const MidPage = () => {
             width={145}
             height={129}
           /> */}
-                {/* <img className="security-engineering" alt="Security engineering" src="security-engineering-svg.svg" /> */}
+                {/* <Image className="security-engineering" alt="Security engineering" src="security-engineering-svg.svg" /> */}
                 {/* <div className="heading-security">Smart Contract Auditing</div> */}
                 <div className="our-smart-contract-wrapper">
                   {/* <p className="our-smart-contract">
@@ -68,8 +68,8 @@ const MidPage = () => {
             width={392}
             height={271}
           />
-          {/* <img className="kanchanara" alt="Kanchanara" src="kanchanara-fssggtbox9y-unsplash-1.png" />
-          <img className="shubham-dhage" alt="Shubham dhage" src="shubham-dhage-t9rkvi3n0nm-unsplash-1.png" /> */}
+          {/* <Image className="kanchanara" alt="Kanchanara" src="kanchanara-fssggtbox9y-unsplash-1.png" />
+          <Image className="shubham-dhage" alt="Shubham dhage" src="shubham-dhage-t9rkvi3n0nm-unsplash-1.png" /> */}
         </div>
       </div>
     </div>

@@ -1,0 +1,321 @@
+.div-footer {
+    align-items: flex-start;
+    background-color: #10181f;
+    border: 1px none;
+    background-position: 50% 50%;
+    display: flex; 
+    height: 243px;
+    overflow: hidden;
+    position: relative;    
+    position: relative;
+  }
+  
+  .div-footer .div-w-row {
+    align-items: flex-start;
+    display: flex;
+    gap: 150px;
+    padding: 0px 0.05px 0px 0px;
+    position: relative;
+  }
+  
+  .div-footer .div-w-col {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 243px;
+    padding: 9px 10px 10px;
+    position: relative;
+    width: 320px;
+  }
+  
+  .div-footer .heading-ABOUT-US {
+    color: #8294a3;
+    font-family: "Rubik-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 24px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .div-footer .p-light {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    padding: 0px 1.98px 1px 0px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .div-footer .text-wrapper {
+    color: #8294a3;
+    font-family: "Open Sans-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 26px;
+    margin-top: -1px;
+    position: relative;
+    width: 298px;
+  }
+  
+  .div-footer .learn-more {
+    color: #d7ebfe;
+    font-family: "Rubik-Medium", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .div-footer .div {
+    align-self: stretch;
+    min-height: 1px;
+    position: relative;
+    width: 310px;
+  }
+  
+  .div-footer .heading-connect {
+    color: #8294a3;
+    font-family: "Rubik-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    height: 24px;
+    left: 69px;
+    letter-spacing: 2px;
+    line-height: 24px;
+    position: absolute;
+    top: 8px;
+    white-space: nowrap;
+  }
+  
+  .div-footer .div-w-layout-grid {
+    height: 104px;
+    left: 41px;
+    position: absolute;
+    top: 70px;
+    width: 228px;
+  }
+  
+  .div-footer .link {
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 70px;
+  }
+  
+  .div-footer .img {
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: -3px;
+    width: 24px;
+  }
+  
+  .div-footer .div-link-footer {
+    align-items: flex-start;
+    display: inline-flex;
+    left: 28px;
+    padding: 0px 0px 5px;
+    position: absolute;
+    top: -1px;
+  }
+  
+  .div-footer .text-wrapper-2 {
+    color: #8294a3;
+    font-family: "Open Sans-SemiBold", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .div-footer .div-wrapper {
+    align-items: flex-start;
+    display: flex;
+    left: 158px;
+    max-width: 299.98px;
+    padding: 0px 89px 5px 0px;
+    position: absolute;
+    top: -1px;
+    width: 70px;
+  }
+  
+  .div-footer .text-wrapper-3 {
+    align-self: stretch;
+    color: #8294a3;
+    font-family: "Open Sans-SemiBold", Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-right: -72px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .div-footer .link-2 {
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: 40px;
+    width: 70px;
+  }
+  
+  .div-footer .link-3 {
+    align-items: flex-start;
+    display: flex;
+    left: 158px;
+    max-width: 299.98px;
+    padding: 0px 72px 5px 0px;
+    position: absolute;
+    top: 39px;
+    width: 70px;
+  }
+  
+  .div-footer .link-4 {
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: 80px;
+    width: 70px;
+  }
+  
+  .div-footer .link-5 {
+    align-items: flex-start;
+    display: flex;
+    left: 158px;
+    max-width: 299.98px;
+    padding: 0px 112px 5px 0px;
+    position: absolute;
+    top: 79px;
+    width: 70px;
+  }
+  
+  .div-footer .div-w-col-2 {
+    height: 243px;
+    position: relative;
+    width: 392px;
+  }
+  
+  .div-footer .heading-join-our {
+    color: #8294a3;
+    font-family: "Rubik-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    height: 24px;
+    left: 82px;
+    letter-spacing: 2px;
+    line-height: 24px;
+    position: absolute;
+    top: 8px;
+    white-space: nowrap;
+  }
+  
+  .div-footer .stay-informed-about-wrapper {
+    align-items: flex-start;
+    display: flex;
+    left: 82px;
+    padding: 0px 35.98px 1px 0px;
+    position: absolute;
+    top: 54px;
+    width: 372px;
+  }
+  
+  .div-footer .stay-informed-about {
+    color: #8294a3;
+    font-family: "Open Sans-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 26px;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .div-footer .form-tob-newsletter {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    left: 82px;
+    position: absolute;
+    top: 130px;
+    width: 310px;
+  }
+  
+  .div-footer .input {
+    align-items: flex-start;
+    background-color: #000000;
+    border: 1px solid;
+    border-color: #2a333d;
+    border-radius: 4px;
+    display: flex;
+    height: 38px;
+    padding: 9.5px 13px;
+    position: relative;
+    width: 299.98px;
+  }
+  
+  .div-footer .div-placeholder {
+    align-items: flex-start;
+    display: flex;
+    padding: 0px 155.98px 0px 0px;
+    position: relative;
+    width: 273.98px;
+  }
+  
+  .div-footer .text-wrapper-4 {
+    color: #8294a3;
+    font-family: "Open Sans-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .div-footer .subscribe-wrapper {
+    align-items: flex-start;
+    border: 3px solid;
+    border-color: #576675;
+    border-radius: 4px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    padding: 6px 17.27px 6px 16px;
+    position: relative;
+  }
+  
+  .div-footer .subscribe {
+    color: #576675;
+    font-family: "Rubik-Medium", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    margin-top: -3px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
