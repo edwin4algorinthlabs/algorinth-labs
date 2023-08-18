@@ -1,6 +1,6 @@
 
 // import ComingSoonContainer from "@/containers/ComingSoon"
-import HomeContainer from "@/containers/Home"
+import HomeContainer from "@/containers/HomePage"
 
 export default function Home() {
   return (

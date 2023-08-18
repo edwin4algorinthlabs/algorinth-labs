@@ -1,0 +1,215 @@
+.outerContainer {
+    background-image: url(/images/background-resource-algo.png);
+    align-items: flex-start;
+    background-position: 50% 50%;
+    background-size: cover;
+    border: 1px none;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .div-hero {
+    background-image: url(/images/div-hero.png);
+    align-items: flex-start;
+    background-position: 50% 50%;
+    background-size: cover;
+    border: 1px none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    opacity: 0.5;
+  }
+  
+  .div-hero .div-w-container {
+    height: 718px;
+    max-width: 940px;
+    position: relative;
+    width: 940px;
+  }
+  
+  .div-hero .heading-we-don-t {
+    color: #ffffff;
+    font-family: "Rubik-Bold", Helvetica;
+    font-size: 36px;
+    font-weight: 700;
+    height: 52px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 52px;
+    position: absolute;
+    top: 320px;
+    white-space: nowrap;
+  }
+  
+  .div-hero .p-newsletter {
+    align-items: flex-start;
+    display: flex;
+    left: 0;
+    padding: 0px 144px 0px 0px;
+    position: absolute;
+    top: 420px;
+    width: 940px;
+  }
+  
+  .div-hero .algorinth-labs-is {
+    color: #ffffff;
+    font-family: "Open Sans-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 28px;
+    margin-right: -137px;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .div-hero .link {
+    align-items: flex-start;
+    background-color: #2a333d;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 4px;
+    display: inline-flex;
+    left: -2px;
+    padding: 7px 24.81px 9px 24px;
+    position: absolute;
+    top: 518px;
+  }
+  
+  .div-hero .request-an-AUDIT {
+    color: #ffffff;
+    font-family: "Rubik-Medium", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .div-hero .overlap-group {
+    height: 129px;
+    left: -2px;
+    position: absolute;
+    top: 0;
+    width: 942px;
+  }
+  
+  .div-hero .banner {
+    height: 60px;
+    left: 2px;
+    position: absolute;
+    top: 32px;
+    width: 940px;
+  }
+  
+  .div-hero .link-home-trail-of {
+    height: 13px;
+    left: 0;
+    position: absolute;
+    top: 20px;
+    width: 32px;
+  }
+  
+  .div-hero .navbar {
+    height: 60px;
+    left: 169px;
+    position: absolute;
+    top: 0;
+    width: 813px;
+  }
+  
+  .div-hero .div-wrapper {
+    align-items: flex-start;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-color: #ad2b43;
+    display: inline-flex;
+    left: 16px;
+    max-width: 940px;
+    padding: 19px 3.81px 11px 4px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .div-hero .link-services {
+    color: #f0f4f7;
+    font-family: "Rubik-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    height: 20px;
+    left: 108px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 18px;
+    white-space: nowrap;
+  }
+  
+  .div-hero .link-resources {
+    color: #f0f4f7;
+    font-family: "Rubik-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    height: 20px;
+    left: 215px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 18px;
+    white-space: nowrap;
+  }
+  
+  .div-hero .link-careers {
+    color: #f0f4f7;
+    font-family: "Rubik-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    height: 20px;
+    left: 337px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 18px;
+    white-space: nowrap;
+  }
+  
+  .div-hero .link-about {
+    color: #f0f4f7;
+    font-family: "Rubik-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    height: 20px;
+    left: 415px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 18px;
+    white-space: nowrap;
+  }
+  
+  .div-hero .link-contact {
+    color: #f0f4f7;
+    font-family: "Rubik-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    height: 20px;
+    left: 506px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 18px;
+    white-space: nowrap;
+  }
+  
+  .div-hero .element-removebg-preview {
+    height: 129px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 145px;
+  }

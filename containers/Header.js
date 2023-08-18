@@ -1,12 +1,13 @@
 import React from "react";
 import Image from 'next/image';
+import "./Header.css";
 
-const Home = () => {
+const Header = () => {
   return (
     <div className="outerContainer">
     <div className="div-hero">
-      <div className="div-w-container div-w-container-ii">
-        <p className="heading-we-don-t div-w-container-heading">
+      <div className="div-w-container">
+        <p className="heading-we-don-t">
           We fix your contract, so you can focus on productivity.
         </p>
         <div className="p-newsletter">
@@ -53,4 +54,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Header;

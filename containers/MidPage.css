@@ -1,0 +1,188 @@
+.div-services {
+    align-items: flex-start;
+    background-image: url(/images/div-services-overview.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border: 1px none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .div-services .div-w-container {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 718px;
+    max-width: 940px;
+    position: relative;
+    width: 940px;
+  }
+  
+  .div-services .div-w-layout-grid {
+    height: 721px;
+    margin-bottom: -3px;
+    position: relative;
+    width: 940px;
+  }
+  
+  .div-services .overlap {
+    height: 304px;
+    left: 0;
+    position: absolute;
+    top: 16px;
+    width: 940px;
+  }
+  
+  .div-services .div-w-clearfix {
+    height: 256px;
+    left: 0;
+    position: absolute;
+    top: 48px;
+    width: 462px;
+  }
+  
+  .div-services .overlap-group {
+    height: 90px;
+    left: 55px;
+    position: absolute;
+    top: -32px;
+    width: 407px;
+  }
+  
+  .div-services .software-assurance {
+    height: 90px;
+    left: 267px;
+    position: absolute;
+    top: 0;
+    width: 140px;
+  }
+  
+  .div-services .heading-software {
+    color: #10181f;
+    font-family: "Rubik-Bold", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    height: 40px;
+    left: 0;
+    letter-spacing: -0.2px;
+    line-height: 40px;
+    position: absolute;
+    top: 44px;
+    white-space: nowrap;
+  }
+  
+  .div-services .p {
+    align-items: flex-start;
+    display: flex;
+    left: 55px;
+    position: absolute;
+    top: 60px;
+    width: 423px;
+  }
+  
+  .div-services .at-algorinth-labs-we {
+    color: #10181f;
+    font-family: "Open Sans-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 30px;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .div-services .div {
+    height: 304px;
+    left: 392px;
+    position: absolute;
+    top: 0;
+    width: 548px;
+  }
+  
+  .div-services .div-w-node {
+    height: 269px;
+    left: 86px;
+    position: absolute;
+    top: 34px;
+    width: 462px;
+  }
+  
+  .div-services .security-engineering {
+    height: 92px;
+    left: 322px;
+    position: absolute;
+    top: -32px;
+    width: 140px;
+  }
+  
+  .div-services .heading-security {
+    color: #10181f;
+    font-family: "Rubik-Bold", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    height: 40px;
+    left: 0;
+    letter-spacing: -0.2px;
+    line-height: 40px;
+    position: absolute;
+    top: 19px;
+    white-space: nowrap;
+  }
+  
+  .div-services .our-smart-contract-wrapper {
+    align-items: flex-start;
+    display: flex;
+    left: 0;
+    padding: 0px 1px 0px 0px;
+    position: absolute;
+    top: 70px;
+    width: 462px;
+  }
+  
+  .div-services .our-smart-contract {
+    color: #10181f;
+    font-family: "Open Sans-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 30px;
+    margin-right: -1px;
+    margin-top: -1px;
+    position: relative;
+    width: 462px;
+  }
+  
+  .div-services .heading-products {
+    color: #020d17;
+    font-family: "Rubik-Regular", Helvetica;
+    font-size: 30px;
+    font-weight: 400;
+    height: 46px;
+    left: 0;
+    letter-spacing: -0.5px;
+    line-height: 46px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .div-services .kanchanara {
+    height: 271px;
+    left: 478px;
+    object-fit: cover;
+    position: absolute;
+    top: 386px;
+    width: 407px;
+  }
+  
+  .div-services .shubham-dhage {
+    height: 271px;
+    left: 58px;
+    object-fit: cover;
+    position: absolute;
+    top: 386px;
+    width: 392px;
+  }
+  
