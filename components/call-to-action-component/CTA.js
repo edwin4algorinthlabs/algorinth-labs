@@ -1,7 +1,7 @@
 import React from "react";
-import "./Rider.css";
+import "./CTA.css";
 
-const Rider = () => {
+const CTA = () => {
   return (
     <div className="div-awards">
       <div className="div-group-banner">
@@ -19,4 +19,4 @@ const Rider = () => {
     </div>
   );
 };
-export default Rider;
+export default CTA;

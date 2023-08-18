@@ -125,7 +125,7 @@ const DisplayPrices = () => {
             </div>
             <div className="div-coin-marquee-2">
               <div className="link-2">
-                <Image className="img" alt="Element png" src="/images/1839-png.png" width={20} height={20}/>
+                <Image className="img" alt="Element png" src="/images/1839-png.png" width={20} height={20} />
                 <div className="div-coin-marquee-10">
                   <div className="div-coin-marquee-4">
                     <div className="div-wrapper">
@@ -230,7 +230,7 @@ const DisplayPrices = () => {
             </div>
             <div className="div-coin-marquee-2">
               <div className="link-2">
-                <Image className="img" alt="Element png" src="/images/2010-png.png" width={20} height={20}/>
+                <Image className="img" alt="Element png" src="/images/2010-png.png" width={20} height={20} />
                 <div className="div-coin-marquee-7">
                   <div className="div-coin-marquee-4">
                     <div className="div-wrapper">
@@ -283,7 +283,7 @@ const DisplayPrices = () => {
             </div>
             <div className="div-coin-marquee-2">
               <div className="link-2">
-                <Image className="img" alt="Element png" src="/images/3408-png.png" width={20} height={20}/>
+                <Image className="img" alt="Element png" src="/images/3408-png.png" width={20} height={20} />
                 <div className="div-coin-marquee-15">
                   <div className="div-coin-marquee-4">
                     <div className="div-wrapper">

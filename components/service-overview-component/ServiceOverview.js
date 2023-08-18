@@ -1,8 +1,8 @@
 import React from "react";
 import Image from 'next/image';
-import "./MidPage.css";
+import "./ServiceOverview.css";
 
-const MidPage = () => {
+const ServiceOverview = () => {
   return (
     <div className="div-services">
       <div className="div-w-container">
@@ -30,7 +30,7 @@ const MidPage = () => {
             </div>
             <div className="div">
               <div className="div-w-node">
-              {/* <Image
+                {/* <Image
             className="security-engineering"
             alt="Security engineering"
             src="/images/crystals_on_services_page.png"
@@ -75,4 +75,4 @@ const MidPage = () => {
     </div>
   );
 };
-export default MidPage;
+export default ServiceOverview;
