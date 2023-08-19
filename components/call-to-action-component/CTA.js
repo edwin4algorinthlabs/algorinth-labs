@@ -7,7 +7,7 @@ const CTA = () => {
       <div className="div-group-banner">
         <div className="div-glow-banner" />
         <div className="div-block-banner">
-          {/* <div className="heading-whats-next">Whats Next? Lets Chat!</div> */}
+          <div className="heading-whats-next">Whats Next? Lets Chat!</div>
         </div>
         <div className="link">
           <div className="text-wrapper">CONTACT US</div>

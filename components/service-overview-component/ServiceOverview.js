@@ -10,11 +10,10 @@ const ServiceOverview = () => {
           <div className="overlap">
             <div className="div-w-clearfix">
               <div className="overlap-group">
-                {/* <Image className="software-assurance" alt="Software assurance" src="software-assurance-svg.svg" /> */}
-                {/* <div className="heading-software">Smart Contract Testing</div> */}
+                <div className="heading-software">Smart Contract Testing</div>
               </div>
               <div className="p">
-                {/* <p className="at-algorinth-labs-we">
+                <p className="at-algorinth-labs-we">
                   At Algorinth Labs, we offer comprehensive smart <br />
                   contract testing services to ensure the reliability,
                   <br />
@@ -25,22 +24,14 @@ const ServiceOverview = () => {
                   evaluate and validate your smart contracts, <br />
                   safeguarding your projects from vulnerabilities and <br />
                   potential pitfalls.
-                </p> */}
+                </p>
               </div>
             </div>
             <div className="div">
               <div className="div-w-node">
-                {/* <Image
-            className="security-engineering"
-            alt="Security engineering"
-            src="/images/crystals_on_services_page.png"
-            width={145}
-            height={129}
-          /> */}
-                {/* <Image className="security-engineering" alt="Security engineering" src="security-engineering-svg.svg" /> */}
-                {/* <div className="heading-security">Smart Contract Auditing</div> */}
+                <div className="heading-security">Smart Contract Auditing</div>
                 <div className="our-smart-contract-wrapper">
-                  {/* <p className="our-smart-contract">
+                  <p className="our-smart-contract">
                     Our smart contract auditing services offer a meticulous <br />
                     evaluation of your blockchain-based solutions, mitigating <br />
                     risks and enhancing the trustworthiness of your projects.
@@ -48,10 +39,10 @@ const ServiceOverview = () => {
                     Our expert auditors perform a thorough code review, <br />
                     examining every line of your smart contract code to identify vulnerabilities and potential issues.
                     We follow industry best practices to ensure your code is robust and resilient against threats.
-                  </p> */}
+                  </p>
                 </div>
               </div>
-              {/* <div className="heading-products">Services</div> */}
+              <div className="heading-products">Services</div>
             </div>
           </div>
           <Image
@@ -68,8 +59,6 @@ const ServiceOverview = () => {
             width={392}
             height={271}
           />
-          {/* <Image className="kanchanara" alt="Kanchanara" src="kanchanara-fssggtbox9y-unsplash-1.png" />
-          <Image className="shubham-dhage" alt="Shubham dhage" src="shubham-dhage-t9rkvi3n0nm-unsplash-1.png" /> */}
         </div>
       </div>
     </div>
