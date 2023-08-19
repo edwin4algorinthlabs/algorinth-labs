@@ -4,28 +4,28 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div className="outerContainer">
-      <div className="div-hero">
-        <div className="div-w-container">
-          <p className="heading-we-don-t">
+    <div className="outerContainer items-start bg-cover justify-center relative">
+      <div className="div-hero items-start bg-cover flex justify-center relative">
+        <div className="div-w-container relative">
+          <p className="heading-we-don-t text-white text-4xl font-bold h-12 left-0 tracking-normal absolute whitespace-no-wrap">
             We fix your contract, so you can focus on productivity.
           </p>
-          <div className="p-newsletter">
-            <p className="algorinth-labs-is">
+          <div className="p-newsletter items-start flex left-0 absolute">
+            <p className="algorinth-labs-is text-white text-base font-normal tracking-normal leading-7 -mr-32 -mt-px relative">
               Algorinth Labs is dedicated to ensuring the integrity of blockchain ecosystems by providing meticulous smart contract audits,
               <br />
               rigorous testing, and innovative software development.
             </p>
           </div>
-          <div className="link">
-            <div className="request-an-AUDIT">
+          <div className="link items-start bg-gray-800 border-black rounded inline-flex absolute">
+            <div className="request-an-AUDIT text-white text-sm font-medium leading-7 -mt-px relative whitespace-no-wrap">
               REQUEST AN AUDIT
             </div>
           </div>
-          <div className="overlap-group">
-            <div className="banner">
+          <div className="overlap-group h-32 absolute top-0">
+            <div className="banner h-16 absolute">
               <Image
-                className="link-home-trail-of"
+                className="link-home-trail-of h-3 left-0 absolute w-8"
                 alt="Link home trail of"
                 src="/images/link-home-trail-of-bits-svg.svg.png"
                 width={32}
@@ -39,9 +39,9 @@ const Header = () => {
                 <div>About</div>
                 <div>Contact</div>
               </div>
-            </div>
+              </div>
             <Image
-              className="element-removebg-preview absolute top-0 left-0 object-cover h-full w-40 md:w-44 xl:w-52"
+              className="h-32 left-0 object-cover absolute top-0 w-40"
               alt="Element removebg preview"
               src="/images/2-removebg-preview-1.png"
               width={145}
