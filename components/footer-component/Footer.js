@@ -75,7 +75,8 @@ const Footer = () => {
                                 <div className="text-wrapper-4 text-[#8294a3] text-sm font-normal tracking-normal -mt-px relative">name@email.com</div>
                             </div>
                         </div>
-                        <div className="subscribe-wrapper items-start border-[#576675] rounded inline-flex relative">
+                        <div className="subscribe-wrapper items-start rounded inline-flex relative">
+                        {/* <div className="subscribe-wrapper"> */}
                             <div className="subscribe text-[#576675] text-xs font-medium leading-7 -mt-1 relative text-center whitespace-no-wrap">SUBSCRIBE</div>
                         </div>
                     </div>

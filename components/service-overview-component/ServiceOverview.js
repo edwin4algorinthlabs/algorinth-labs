@@ -5,7 +5,7 @@ import "./ServiceOverview.css";
 const ServiceOverview = () => {
   return (
     <div className="div-services">
-      <div className="div-w-container">
+      <div className="div-services .div-w-container">
         <div className="div-w-layout-grid">
           <div className="overlap">
             <div className="div-w-clearfix">

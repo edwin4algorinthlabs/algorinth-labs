@@ -7,9 +7,11 @@ const Header = () => {
     <div className="outerContainer items-start bg-cover justify-center relative">
       <div className="div-hero items-start bg-cover flex justify-center relative">
         <div className="div-w-container relative">
+        <div className="heading">
           <p className="heading-we-don-t text-white text-4xl font-bold h-12 left-0 tracking-normal absolute whitespace-no-wrap">
             We fix your contract, so you can focus on productivity.
           </p>
+          </div>
           <div className="p-newsletter items-start flex left-0 absolute">
             <p className="algorinth-labs-is text-white text-base font-normal tracking-normal leading-7 -mr-32 -mt-px relative">
               Algorinth Labs is dedicated to ensuring the integrity of blockchain ecosystems by providing meticulous smart contract audits,
@@ -23,6 +25,8 @@ const Header = () => {
             </div>
           </div>
           <div className="overlap-group h-32 absolute top-0">
+          <Image className="banner_ii" alt="Banner" src="/images/vector.svg" width={15} height={11} />
+          <Image className="element-removebg-preview" alt="Element removebg preview" src="/images/2-removebg-preview-1.png" width={79} height={111} />            
             <div className="banner h-16 absolute">
               <Image
                 className="link-home-trail-of h-3 left-0 absolute w-8"

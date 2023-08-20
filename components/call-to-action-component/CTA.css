@@ -1,98 +1,28 @@
 .div-awards {
-    align-items: flex-start;
-    background-image: url(/images/div-awards.jfif);
-    background-position: 50% 50%;
-    background-size: cover;
-    border: 1px none;
-    display: flex;
-    height: 317px;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .div-awards .div-group-banner {
+    @apply items-start bg-[url(/images/div-awards.jfif)] bg-[50%_50%] bg-cover border flex h-[317px] justify-center relative border-none;
+}
+.div-awards .div-group-banner {
+    @apply h-[317px] overflow-hidden relative w-[1200px] rounded-[15px];
     background: linear-gradient(180deg, rgba(29, 40, 56, 0.5) 0%, rgba(29, 40, 56, 0.25) 100%);
-    border-radius: 15px;
-    height: 317px;
-    overflow: hidden;
-    position: relative;
-    width: 1200px;
-  }
-  
-  .div-awards .div-glow-banner {
-    background-color: #00c0a3;
-    border-radius: 610px;
-    filter: blur(65px);
-    height: 260px;
-    left: 120px;
-    opacity: 0.6;
-    position: absolute;
-    top: -230px;
-    width: 960px;
-  }
-  
-  .div-awards .div-block-banner {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    left: 216px;
-    max-width: 780px;
-    padding: 0px 111.53px 28.19px 110.47px;
-    position: absolute;
-    top: 74px;
-    width: 780px;
-  }
-  
-  .div-awards .heading-whats-next {
-    color: #05050a;
+}
+.div-awards .div-glow-banner {
+    @apply bg-[#00c0a3] blur-[65px] h-[260px] opacity-60 absolute top-[-230px] w-[960px] rounded-[610px] left-[120px];
+}
+.div-awards .div-block-banner {
+    @apply items-center flex flex-col max-w-[780px] absolute w-[780px] pl-[110.47px] pr-[111.53px] pt-0 pb-[28.19px] left-[216px] top-[74px];
+}
+.div-awards .heading-whats-next {
+    @apply text-[#05050a] text-[52px] font-medium tracking-[-0.8px] leading-[57.2px] relative text-center whitespace-nowrap w-fit -mt-px;
     font-family: "Maven Pro-Medium", Helvetica;
-    font-size: 52px;
-    font-weight: 500;
-    letter-spacing: -0.8px;
-    line-height: 57.2px;
-    margin-top: -1px;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-    width: fit-content;
-  }
-  
-  .div-awards .link {
-    align-items: flex-start;
-    background-color: #0f1720;
-    border: 1px solid;
-    border-color: #000000;
-    border-radius: 4px;
-    display: inline-flex;
-    left: 368px;
-    padding: 7px 24.81px 9px 24px;
-    position: absolute;
-    top: 239px;
-  }
-  
-  .div-awards .text-wrapper {
-    color: #ffffff;
+}
+.div-awards .link {
+    @apply items-start bg-[#0f1720] border rounded inline-flex absolute pl-6 pr-[24.81px] pt-[7px] pb-[9px] border-solid border-black left-[368px] top-[239px];
+}
+.div-awards .text-wrapper {
+    @apply text-white text-sm font-medium tracking-[1.5px] leading-[30px] relative whitespace-nowrap w-fit -mt-px;
     font-family: "Rubik-Medium", Helvetica;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1.5px;
-    line-height: 30px;
-    margin-top: -1px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-  }
-  
-  .div-awards .request-an-audit-wrapper {
-    align-items: flex-start;
-    background-color: #0f1720;
-    border: 1px solid;
-    border-color: #000000;
-    border-radius: 4px;
-    display: inline-flex;
-    left: 628px;
-    padding: 7px 24.81px 9px 24px;
-    position: absolute;
-    top: 239px;
-  }
+}
+.div-awards .request-an-audit-wrapper {
+    @apply items-start bg-[#0f1720] border rounded inline-flex absolute pl-6 pr-[24.81px] pt-[7px] pb-[9px] border-solid border-black left-[628px] top-[239px];
+}
   
