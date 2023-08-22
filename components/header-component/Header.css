@@ -1,41 +1,41 @@
 .outerContainer {
-    @apply bg-[url(/images/background-resource-algo.png)] bg-[50%_50%] border border-none;
+  @apply bg-[url(/images/background-resource-algo.png)] items-start bg-[50%_50%] bg-cover border justify-center relative border-none;
 }
 .div-hero {
-    @apply bg-[url(/images/div-hero.png)] bg-[50%_50%] border opacity-50 border-none;
+  @apply bg-[url(/images/div-hero.png)] items-start bg-[50%_50%] bg-cover border flex justify-center relative opacity-50 border-none;
 }
 .div-hero .div-w-container {
-    @apply h-[718px] max-w-[940px] w-[940px];
+  @apply h-[718px] max-w-[940px] relative w-[940px];
 }
 .div-hero .heading-we-don-t {
-    @apply leading-[52px] top-80;
-    font-family: "Rubik-Bold", Helvetica;
+  @apply leading-[52px] top-80;
+  font-family: "Rubik-Bold", Helvetica;
 }
 .div-hero .p-newsletter {
-    @apply w-[940px] pl-0 pr-36 py-0 top-[420px];
+  @apply items-start flex absolute w-[940px] pl-0 pr-36 py-0 left-0 top-[420px];
 }
 .div-hero .algorinth-labs-is {
-    @apply w-fit;
-    font-family: "Open Sans-Regular", Helvetica;
+  @apply text-white text-base font-normal tracking-[0] leading-7 mr-[-137px] relative w-fit -mt-px;
+  font-family: "Open Sans-Regular", Helvetica;
 }
 .div-hero .link {
-    @apply border pl-6 pr-[24.81px] pt-[7px] pb-[9px] border-solid -left-0.5 top-[518px];
+  @apply items-start bg-[#2a333d] border rounded inline-flex absolute pl-6 pr-[24.81px] pt-[7px] pb-[9px] border-solid border-black -left-0.5 top-[518px];
 }
 .div-hero .request-an-AUDIT {
-    @apply tracking-[1.5px] w-fit;
-    font-family: "Rubik-Medium", Helvetica;
+  @apply text-white text-sm font-medium tracking-[1.5px] leading-[30px] relative whitespace-nowrap w-fit -mt-px;
+  font-family: "Rubik-Medium", Helvetica;
 }
 .div-hero .overlap-group {
-    @apply w-[942px] -left-0.5;
+  @apply h-[129px] absolute w-[942px] -left-0.5 top-0;
 }
 .div-hero .banner {
-    @apply w-[940px] left-0.5 top-8;
+  @apply h-[60px] absolute w-[940px] left-0.5 top-8;
 }
 .div-hero .link-home-trail-of {
-    @apply top-5;
+  @apply h-[13px] absolute w-8 left-0 top-5;
 }
-.div-hero .navbar {
-    @apply w-[813px] left-[169px];
+.div-hero .navbar { 
+  @apply h-[60px] absolute w-[813px] left-[169px] top-0;
 }
 
 .div-hero .element-removebg-preview {
@@ -47,15 +47,13 @@
 }
 
 
-
-
  /* Media Queries */
 @media (max-width: 768px) {
   .outerContainer {
-    @apply bg-[url(/images/background-resource-algo.png)] items-start bg-[50%_50%] bg-cover border justify-center relative h-[760px] pt-0 pb-36 px-2 border-none w-[390px];/* width: 390px; */
+    @apply bg-[url(/images/background-resource-algo.png)] items-start bg-[50%_50%] bg-cover border justify-center relative h-[760px] pt-0 pb-36 px-2 border-none w-full max-w-screen-sm mx-auto; /*w-[390px]*/
   }
   .div-hero {
-    @apply items-start bg-[url(/images/div-hero.png)] bg-[50%_50%] bg-cover border opacity-50 flex h-[760px] justify-center relative pt-0 pb-36 px-2 border-none w-[390px];/* width: 390px; */
+    @apply items-start bg-[url(/images/div-hero.png)] bg-[50%_50%] bg-cover border opacity-50 flex h-[760px] justify-center relative pt-0 pb-36 px-2 border-none w-full max-w-screen-sm mx-auto; /*w-[390px]*/
   }
   .div-hero .div-w-container {
     @apply h-[616px] relative w-[374px];
@@ -91,6 +89,9 @@
     @apply hidden;
   }
   .div-hero .navbar {
+    @apply hidden;
+  }
+  .div-hero .banner {
     @apply hidden;
   }
   .div-hero .element-removebg-preview {

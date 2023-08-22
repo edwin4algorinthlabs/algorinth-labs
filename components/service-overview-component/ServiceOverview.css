@@ -54,6 +54,10 @@
     @apply text-[#020d17] text-3xl font-normal h-[46px] tracking-[-0.5px] leading-[46px] absolute whitespace-nowrap left-0 top-0;
     font-family: "Rubik-Regular", Helvetica;
 }
+
+.div-services .heading-products-mobile {
+    @apply hidden;
+}
 .div-services .kanchanara {
     @apply h-[271px] object-cover absolute w-[407px] left-[478px] top-[386px];
 }
@@ -63,3 +67,63 @@
 
 
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .div-services {
+        @apply items-start bg-[url(/images/div-services-overview_ii.jpg)] bg-[50%_50%] bg-cover border flex h-[1802px] justify-center overflow-hidden relative w-full max-w-screen-sm mx-auto pt-0 pb-10 px-0 border-none;
+    }
+    .div-services .div-w-container {
+        @apply items-start flex flex-col gap-[13px] h-[3038px] mb-[-1276px] relative w-full max-w-screen-sm mx-auto; /* w-[374px]*/
+    }
+    .div-services .div-w-layout-grid {
+        @apply items-start flex flex-col gap-4 h-[2159px] relative w-[374px];
+    }
+
+    .div-services .overlap-group {
+        @apply h-full justify-center max-w-screen-sm mx-auto absolute left-[55px] -top-8; /*h-[90px]*/
+    }
+
+    .div-services .div-w-node {
+        @apply h-[70px] absolute w-[374px] left-0 top-[760px];
+    }
+    .div-services .heading-security {
+        @apply text-[#10181f] text-2xl font-bold h-10 tracking-[-0.2px] leading-10 absolute whitespace-nowrap left-[41px]; /*top-1.5;*/
+        font-family: "Rubik-Bold", Helvetica;
+    }
+
+    .div-services .our-smart-contract-wrapper {
+        @apply items-start flex absolute w-full max-w-screen-sm mx-auto pl-0 pr-px py-0 left-0 top-[70px]; /* w-[462px]*/
+    }
+    .div-services .our-smart-contract {
+        @apply text-[#10181f] text-base font-normal tracking-[0] leading-[30px] relative w-full max-w-screen-sm mx-auto -mr-px -mt-px;
+        font-family: "Open Sans-Regular", Helvetica; /* w-[462px]*/
+    }
+    .div-services .p {
+        @apply h-[296px] absolute w-[368px] left-[3px] top-[70px];
+    }
+    .div-services .text-wrapper {
+        @apply text-[#10181f] text-base font-normal h-[296px] tracking-[0] leading-[30px] absolute top-[-26px] w-full max-w-screen-sm mx-auto -mr-px -mt-px left-0; /* w-[374px]*/
+        font-family: "Open Sans-Regular", Helvetica;
+    }
+    .div-services .div-w-clearfix {
+        @apply h-[106px] absolute w-[374px] left-0 justify-center top-[66px];
+    }
+    .div-services .heading-software {
+        @apply text-[#10181f] text-2xl font-bold h-10 tracking-[-0.2px] justify-center leading-10 absolute whitespace-nowrap left-12 top-[38px];
+        font-family: "Rubik-Bold", Helvetica;
+    }
+    .div-services .div {
+        @apply text-[#10181f] text-base font-normal h-60 tracking-[0] leading-[30px] absolute w-[363px] left-[7px] top-[58px];
+        font-family: "Open Sans-Regular", Helvetica;
+    }
+    .div-services .heading-products {
+        @apply text-[#020d17] text-3xl font-normal h-[46px] tracking-[-0.5px] leading-[46px] absolute whitespace-nowrap left-[129px]; /*top-[1px]*/
+        font-family: "Rubik-Regular", Helvetica;
+    }
+    .div-services .shubham-dhage {
+        @apply h-[309px] object-cover absolute w-[374px] left-0 top-[395px];
+    }
+    .div-services .kanchanara {
+        @apply h-[309px] object-cover absolute w-[374px] left-0 top-[1115px];
+    }
+} 

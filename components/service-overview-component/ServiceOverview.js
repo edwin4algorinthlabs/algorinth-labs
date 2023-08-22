@@ -5,12 +5,13 @@ import "./ServiceOverview.css";
 const ServiceOverview = () => {
   return (
     <div className="div-services">
-      <div className="div-services .div-w-container">
+      <div className="div-services">
+      {/* <div className="div-services div-w-container"> */}
         <div className="div-w-layout-grid">
           <div className="overlap">
             <div className="div-w-clearfix">
               <div className="overlap-group">
-                <div className="heading-software">Smart Contract Testing</div>
+                
               </div>
               <div className="p">
                 <p className="at-algorinth-labs-we">
@@ -43,6 +44,7 @@ const ServiceOverview = () => {
                 </div>
               </div>
               <div className="heading-products">Services</div>
+                <div className="heading-software">Smart Contract Testing</div>
             </div>
           </div>
           <Image
