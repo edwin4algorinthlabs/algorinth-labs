@@ -3,10 +3,14 @@ import React from "react";
 import { useEffect, useState } from 'react';
 import Header from "../components/header-component/Header";
 import ServiceOverview from "../components/service-overview-component/ServiceOverview";
-import CTAMobile from "../components/call-to-action-component/CTAMobile";
+import CTAMobile from "../components/mobile-call-to-action-component/CTAMobile";
 import CTA from "../components/call-to-action-component/CTA";
 import Footer from "../components/footer-component/Footer";
+import MobileFooter from "../components/mobile-footer-component/MobileFooter";
 import DisplayPrices from "../components/price-display-component/DisplayPrices";
+import MobilePriceDisplay from "../components/mobile-price-display-component/MobilePriceDisplay";
+import MobileServiceOverview from "../components/mobile-service-overview-component/MobileServiceOverview";
+
 
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -25,12 +29,13 @@ const HomePage = () => {
   return (
     
     <div className="">
-      {/* {isMobile ? <CTAMobile /> : <CTA />} */}
       <Header />
-      <ServiceOverview />
-      <CTA />
-      <DisplayPrices />
-      <Footer />
+      {/* {isMobile ? <CTAMobile /> : <CTA />} */}
+      {isMobile ? <MobileServiceOverview /> : <ServiceOverview />}
+      {/* <ServiceOverview /> */}
+      {!isMobile && <CTA />}
+      {isMobile? <MobilePriceDisplay /> : <DisplayPrices />}
+      {isMobile? <MobileFooter /> : <Footer />}
     </div>
   );
 };
