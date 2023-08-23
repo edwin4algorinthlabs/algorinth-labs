@@ -45,7 +45,11 @@ const Footer = () => {
                             <Image className="img h-6 left-0 absolute w-6" alt="Github svg" src="/images/github-svg.svg" width={145}
                                 height={129} />
                             <div className="div-link-footer items-start inline-flex absolute">
-                                <div className="text-wrapper-2 text-[#8294a3] text-sm font-semibold tracking-normal leading-5 -mt-px relative whitespace-no-wrap">GitHub</div>
+                                <div className="text-wrapper-2 text-[#8294a3] text-sm font-semibold tracking-normal leading-5 -mt-px relative whitespace-no-wrap">
+                                <a 
+                                href="https://github.com/Algorinth-Labs"
+                                target="_blank">GitHub</a>
+                                </div>
                             </div>
                         </div>
                         <div className="link-5 items-start flex absolute w-16">

@@ -36,7 +36,11 @@ const MobileFooter = () => {
               <Image className="m-img" alt="Github svg" src="/images/github-svg.svg" width={24}
  height={24}/>
               <div className="m-div-link-footer">
-                <div className="m-text-wrapper-2">GitHub</div>
+                <div className="m-text-wrapper-2">
+                <a 
+                                href="https://github.com/Algorinth-Labs"
+                                target="_blank">GitHub</a>
+                                </div>
               </div>
             </div>
           </div>
