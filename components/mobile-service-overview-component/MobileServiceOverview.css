@@ -1,68 +1,68 @@
-.div-services {
+.m-div-services {
     @apply items-start bg-[url(/images/div-services-overview_ii.jpg)] bg-[50%_50%] bg-cover flex h-[1802px] justify-center overflow-hidden relative w-[390px] pt-0 pb-10 px-0;
 }
-.div-services .div-w-container {
+.m-div-services .m-div-w-container {
     @apply items-start flex flex-col gap-[13px] h-[3038px] mb-[-1276px] relative w-[374px];
 }
-.div-services .div-w-layout-grid {
+.m-div-services .m-div-w-layout-grid {
     @apply items-start flex flex-col gap-4 h-[2159px] relative w-[374px];
 }
-.div-services .div-w-node {
+.m-div-services .m-div-w-node {
     @apply h-[70px] absolute w-[374px] left-0 top-[760px];
 }
-.div-services .heading-security {
+.m-div-services .m-heading-security {
     @apply text-[#10181f] text-2xl font-bold h-10 tracking-[-0.2px] leading-10 absolute whitespace-nowrap left-[41px] top-1.5;
     font-family: "Rubik-Bold", Helvetica;
 }
-.div-services .p {
+.m-div-services .m-p {
     @apply h-[296px] absolute w-[368px] left-[3px] top-[70px];
 }
-.div-services .text-wrapper {
+.m-div-services .m-text-wrapper {
     @apply text-[#10181f] text-base font-normal h-[296px] tracking-[0] leading-[30px] absolute top-[-26px] w-[374px] left-0;
     font-family: "Open Sans-Regular", Helvetica;
 }
-.div-services .div-w-clearfix {
+.m-div-services .m-div-w-clearfix {
     @apply h-[106px] absolute w-[374px] left-0 top-[66px];
 }
-.div-services .heading-software {
+.m-div-services .m-heading-software {
     @apply text-[#10181f] text-2xl font-bold h-10 tracking-[-0.2px] leading-10 absolute whitespace-nowrap left-12 top-[18px];
     font-family: "Rubik-Bold", Helvetica;
 }
-.div-services .div {
+.m-div-services .m-div {
     @apply text-[#10181f] text-base font-normal h-60 tracking-[0] leading-[30px] absolute w-[363px] left-[7px] top-[58px];
     font-family: "Open Sans-Regular", Helvetica;
 }
-.div-services .heading-products {
+.m-div-services .m-heading-products {
     @apply text-[#020d17] text-3xl font-normal h-[46px] tracking-[-0.5px] leading-[46px] absolute whitespace-nowrap left-[129px] top-[19px];
     font-family: "Rubik-Regular", Helvetica;
 }
-.div-services .shubham-dhage {
+.m-div-services .m-shubham-dhage {
     @apply h-[309px] object-cover absolute w-[374px] left-0 top-[395px];
 }
-.div-services .kanchanara {
+.m-div-services .m-kanchanara {
     @apply h-[309px] object-cover absolute w-[374px] left-0 top-[1115px];
 }
-.div-services .div-group-banner {
+.m-div-services .m-div-group-banner {
     @apply h-[1244px] overflow-hidden absolute w-[374px] rounded-[15px] left-0 top-[1446px];
     background: linear-gradient(180deg, rgba(29, 40, 56, 0.5) 0%, rgba(29, 40, 56, 0.25) 100%);
 }
-.div-services .div-div-block {
+.m-div-services .m-div-div-block {
     @apply items-start inline-flex gap-2.5 absolute pl-0 pr-[10.01px] pt-4 pb-2.5 left-[81px] top-[179px];
 }
-.div-services .link {
+.m-div-services .m-link {
     @apply items-start bg-[#0f1720] border rounded inline-flex flex-[0_0_auto] relative pl-6 pr-[24.81px] pt-[7px] pb-[9px] border-solid border-black;
 }
-.div-services .text-wrapper-2 {
+.m-div-services .m-text-wrapper-2 {
     @apply text-white text-sm font-medium tracking-[1.5px] leading-[30px] relative whitespace-nowrap w-fit -mt-px;
     font-family: "Rubik-Medium", Helvetica;
 }
-.div-services .div-glow-banner {
+.m-div-services .m-div-glow-banner {
     @apply bg-[#00c0a3] blur-[65px] h-[260px] opacity-60 absolute top-[-230px] w-[299px] rounded-[610px] left-[37px];
 }
-.div-services .contact-us-wrapper {
+.m-div-services .m-contact-us-wrapper {
     @apply items-start bg-[#0f1720] border rounded inline-flex absolute pl-6 pr-[24.81px] pt-[7px] pb-[9px] border-solid border-black left-[113px] top-[291px];
 }
-.div-services .heading-whats-next {
+.m-div-services .m-heading-whats-next {
     @apply text-[#05050a] text-3xl font-medium h-[58px] tracking-[-0.8px] leading-[57.2px] absolute text-center whitespace-nowrap left-[29px] top-[90px];
     font-family: "Maven Pro-Medium", Helvetica;
 }
