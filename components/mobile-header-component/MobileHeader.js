@@ -24,7 +24,6 @@ const MobileHeader = () => {
         </div>
         <div className="m-overlap-group">
         <Dropdown />
-          {/* <Image className="m-banner" alt="Banner" src="/images/Vector.svg"  width={15} height={11}/> */}
           <Image className="m-element-removebg-preview" alt="Element removebg preview" src="/images/2-removebg-preview-1.png" width={111} height={79} />
         </div>
       </div>

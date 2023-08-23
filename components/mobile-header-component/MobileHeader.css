@@ -35,9 +35,6 @@
 .m-div-hero .m-overlap-group {
     @apply h-[105px] left-[-9px] absolute top-[-5px] w-[387px];
 }
-/* .m-div-hero .m-banner {
-    @apply h-[11] absolute w-[15px] ml-[85%] left-[9px] top-[37px];
-} */
 .m-div-hero .m-element-removebg-preview {
     @apply h-[79px] object-cover absolute w-[111px] left-0 top-0;
 }
