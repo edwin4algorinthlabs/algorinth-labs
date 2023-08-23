@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 const MobilePriceDisplay = () => {
   return (
+    <div className="m-div-display">
     <div className="m-div-coin-marquee">
       <div className="m-link-wrapper">
         <div className="m-link">
@@ -327,6 +328,7 @@ const MobilePriceDisplay = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

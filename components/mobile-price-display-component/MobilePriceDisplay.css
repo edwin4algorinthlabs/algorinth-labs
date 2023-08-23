@@ -1,3 +1,7 @@
+.m-div-display {
+    @apply bg-[#10181f] h-full relative w-[390px];
+}
+
 .m-div-coin-marquee {
     @apply h-[61px] overflow-hidden relative w-[380px] border-b border-[#222531] border-t bg-[#10181f];
     border-bottom-style: solid;
@@ -18,7 +22,7 @@
 .m-div-coin-marquee .m-SVG {
     @apply h-[18px] relative w-[94px];
 }
-.m-div-coin-marquee .m-m-div-coin-marquee-wrapper {
+.m-div-coin-marquee .m-div-coin-marquee-wrapper {
     @apply h-[57px] overflow-hidden absolute w-[1297px] left-[141px] top-0.5;
 }
 .m-div-coin-marquee .m-div {

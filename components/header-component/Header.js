@@ -25,9 +25,7 @@ const Header = () => {
             </div>
           </div>
           <div className="overlap-group">
-          <Image className="banner_ii" alt="Banner" src="/images/vector.svg" width={15} height={11} />
-          <Image className="element-removebg-preview" alt="Element removebg preview" src="/images/2-removebg-preview-1.png" width={79} height={111} />            
-            <div className="banner h-16 absolute">
+          <div className="banner h-16 absolute">
               <Image
                 className="link-home-trail-of"
                 alt="Link home trail of"

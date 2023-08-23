@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 const MobileFooter = () => {
   return (
+    <div className="m-div-footer">
     <div className="m-div-w-row">
       <div className="m-div-w-col">
         <div className="m-p-light" />
@@ -77,6 +78,7 @@ const MobileFooter = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
