@@ -1,6 +1,7 @@
 import React from "react";
 import "./MobileHeader.css";
 import Image from 'next/image';
+import Dropdown from "../dropdown-component/Dropdown";
 
 
 const MobileHeader = () => {
@@ -22,7 +23,8 @@ const MobileHeader = () => {
           <div className="m-request-AN-AUDIT">REQUEST AN AUDIT</div>
         </div>
         <div className="m-overlap-group">
-          <Image className="m-banner" alt="Banner" src="/images/Vector.svg"  width={15} height={11}/>
+        <Dropdown />
+          {/* <Image className="m-banner" alt="Banner" src="/images/Vector.svg"  width={15} height={11}/> */}
           <Image className="m-element-removebg-preview" alt="Element removebg preview" src="/images/2-removebg-preview-1.png" width={111} height={79} />
         </div>
       </div>
