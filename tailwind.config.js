@@ -12,6 +12,9 @@ module.exports = {
         'leading-12': '3rem',
         'leading-14': '3.5rem',
       },
+      fontSize: {
+        'xxs': '0.5rem',
+      },
       fontFamily: {
         "poppins": ['var(--font-poppins)'],
       },

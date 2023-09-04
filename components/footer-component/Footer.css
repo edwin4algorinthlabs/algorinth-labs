@@ -2,10 +2,10 @@
     @apply border bg-[50%_50%] border-none;
 }
 .div-footer .div-w-row {
-    @apply gap-[150px] pl-0 pr-[0.05px] py-0;
+    @apply lg:gap-[150px] sm:gap-[5px] pl-0 pr-[0.05px] py-0;
 }
 .div-footer .div-w-col {
-    @apply gap-6 w-80 pt-[9px] pb-2.5 px-2.5;
+    @apply gap-6 lg:w-80 sm:w-fit pt-[9px] pb-2.5 px-2.5;
 }
 .div-footer .heading-ABOUT-US {
     @apply tracking-[2px] w-fit;
@@ -62,27 +62,27 @@
     @apply max-w-[299.98px] pl-0 pr-28 pt-0 pb-[5px] left-[158px] top-[79px];
 }
 .div-footer .div-w-col-2 {
-    @apply w-[392px];
+    @apply lg:w-[392px] sm:w-fit;
 }
 .div-footer .heading-join-our {
-    @apply tracking-[2px] left-[82px] top-2;
+    @apply tracking-[2px] lg:left-[82px] sm:left-[10px] top-2;
     font-family: "Rubik-Medium", Helvetica;
 }
 .div-footer .stay-informed-about-wrapper {
-    @apply w-[372px] pl-0 pr-[35.98px] pt-0 pb-px left-[82px] top-[54px];
+    @apply w-[372px] pl-0 pr-[35.98px] pt-0 pb-px lg:left-[82px] sm:left-[10px] top-[54px];
 }
 .div-footer .stay-informed-about {
     @apply w-fit;
     font-family: "Open Sans-Regular", Helvetica;
 }
 .div-footer .form-tob-newsletter {
-    @apply gap-[18px] w-[310px] left-[82px] top-[130px];
+    @apply gap-[18px] w-[310px] lg:left-[82px] sm:left-[10px] top-[130px];
 }
 .div-footer .input {
-    @apply border w-[299.98px] px-[13px] py-[9.5px] border-solid;
+    @apply border lg:w-[299.98px] px-[13px] py-[9.5px] border-solid;
 }
 .div-footer .div-placeholder {
-    @apply w-[273.98px] pl-0 pr-[155.98px] py-0;
+    @apply lg:w-[273.98px] sm:w-fit pl-0 lg:pr-[155.98px] sm:pr-0 py-0;
 }
 .div-footer .text-wrapper-4 {
     @apply leading-[normal] w-fit;
