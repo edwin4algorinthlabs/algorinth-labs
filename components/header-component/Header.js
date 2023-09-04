@@ -38,7 +38,7 @@ const Header = () => {
     return (
         <div className="bg-[url(/images/background-resource-algo.png)] items-start bg-[50%_50%] bg-cover justify-center relative border-none">
             <div className="bg-[url(/images/div-hero.png)] items-start bg-[50%_50%] bg-cover flex justify-center relative opacity-50 border-none">
-                <div className="h-[718px] relative lg:w-[940px] sm:w-full relative ml-[16.666667%] mr-[16.666667%]">
+                <div className="h-[718px] lg:w-[940px] sm:w-full relative ml-[16.666667%] mr-[16.666667%]">
                     <div className="grid grid-cols-4">
                         <div className="col-span-1 flex">
                         <a href="/"><Image
@@ -62,12 +62,12 @@ const Header = () => {
                         </div>
                     </div>
                     <div>
-                        <p className="leading-[52px] lg:w-[966px] top-80 sm:top-60 text-white xl:text-4xl lg:text-3xl sm:text-3xl font-bold h-12 left-0 tracking-normal absolute sm:w-full">
+                        <p className="leading-[52px] lg:max-w-[966px] top-80 sm:top-60 text-white xl:text-4xl lg:text-3xl sm:text-3xl font-bold h-12 left-0 tracking-normal absolute sm:w-full">
                             We fix your contract, so you can focus on productivity.
                         </p>
                     </div>
                     <br></br>
-                    <div className="items-start flex absolute lg:w-[940px] sm:w-full pl-0 pr-36 py-0 left-0 lg:top-[440px] sm:top-[450px]">
+                    <div className="items-start flex absolute lg:max-w-[940px] sm:w-full pl-0 pr-36 py-0 left-0 lg:top-[440px] sm:top-[450px]">
                         <p className="text-white text-sm font-normal lg:w-[933px] flex">
                             Algorinth Labs is dedicated to ensuring the integrity of blockchain ecosystems by providing meticulous smart contract audits,
                             <br></br>

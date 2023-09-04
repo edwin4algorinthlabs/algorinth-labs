@@ -2,26 +2,9 @@
   @apply items-start bg-[url(/images/div-awards.jfif)] bg-[50%_50%] bg-cover border flex h-[317px] justify-center relative border-none;
 }
 .div-awards .div-group-banner {
-  @apply h-[317px] overflow-hidden relative w-[1200px] rounded-[15px];
+  @apply h-[317px] overflow-hidden absolute lg:w-[1000px] sm:w-full rounded-[15px];
   background: linear-gradient(180deg, rgba(29, 40, 56, 0.5) 0%, rgba(29, 40, 56, 0.25) 100%);
 }
 .div-awards .div-glow-banner {
   @apply bg-[#00c0a3] blur-[65px] h-[260px] opacity-60 absolute top-[-230px] w-[960px] rounded-[610px] left-[120px];
-}
-.div-awards .div-block-banner {
-  @apply items-center flex flex-col max-w-[780px] absolute w-[780px] pl-[110.47px] pr-[111.53px] pt-0 pb-[28.19px] left-[216px] top-[74px];
-}
-.div-awards .heading-whats-next {
-  @apply text-[#05050a] text-[52px] font-medium tracking-[-0.8px] leading-[57.2px] relative text-center whitespace-nowrap w-fit -mt-px;
-  font-family: "Maven Pro-Medium", Helvetica;
-}
-.div-awards .link {
-  @apply items-start bg-[#0f1720] border rounded inline-flex absolute pl-6 pr-[24.81px] pt-[7px] pb-[9px] border-solid border-black left-[368px] top-[239px];
-}
-.div-awards .text-wrapper {
-  @apply text-white text-sm font-medium tracking-[1.5px] leading-[30px] relative whitespace-nowrap w-fit -mt-px;
-  font-family: "Rubik-Medium", Helvetica;
-}
-.div-awards .request-an-audit-wrapper {
-  @apply items-start bg-[#0f1720] border rounded inline-flex absolute pl-6 pr-[24.81px] pt-[7px] pb-[9px] border-solid border-black left-[628px] top-[239px];
 }
