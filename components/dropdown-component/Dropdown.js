@@ -1,13 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Dropdown.css';
 import Image from 'next/image';
-import Link from "next/link";
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 
 const Dropdown = () => {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
-    const router = useRouter();
+    // const router = useRouter();
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);

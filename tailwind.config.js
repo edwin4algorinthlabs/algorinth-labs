@@ -8,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      lineHeight: {
+        '12': '3rem', //custom line-height values
+        '14': '3.5rem',
+      },
       fontFamily: {
         "poppins": ['var(--font-poppins)'],
       },

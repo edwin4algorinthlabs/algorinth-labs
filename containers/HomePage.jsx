@@ -17,7 +17,8 @@ const HomePage = () => {
 
   useEffect(() => {
     function handleResize() {
-      setIsMobile(window.innerWidth <= 768);
+      // setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 410);
     }
 
     handleResize();

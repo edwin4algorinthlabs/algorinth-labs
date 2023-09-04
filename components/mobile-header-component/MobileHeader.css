@@ -1,7 +1,3 @@
-.m-div-footer {
-    @apply bg-[#10181f] h-[678px] relative w-[390px];
-}
-
 .m-outerContainer {
     @apply items-start bg-[url(/images/background-resource-algo.png)] bg-[50%_50%] bg-cover flex h-[760px] justify-center relative w-[390px] pt-0 pb-36 px-2;
 }
