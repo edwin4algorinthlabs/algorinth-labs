@@ -44,7 +44,7 @@ const MobileServiceOverview = () => {
           <div className="m-contact-us-wrapper">
             <div className="m-text-wrapper-2">CONTACT US</div>
           </div>
-          <div className="m-heading-whats-next">Whats Next? Lets Chat!</div>
+          <div className="m-heading-whats-next">What&apos;s Next? Let&apos;s Chat!</div>
         </div>
       </div>
     </div>
