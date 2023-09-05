@@ -14,7 +14,7 @@ const ServiceOverview = () => {
             <div className="col-span-3 left-[10%]">
               <div className="text-[#10181f] lg:text-2xl sm:text-xl font-bold h-10 tracking-[-0.2px] leading-10">Smart Contract Testing</div>
               <div className="">
-                <p className="leading-12 mb-10 lg:text-base sm:text-sm">
+                <p className="leading-12 mb-10 lg:text-base text-[#10181f] sm:text-sm">
                   At Algorinth Labs, we offer comprehensive smart <br />
                   contract testing services to ensure the reliability,
                   <br />
@@ -27,36 +27,41 @@ const ServiceOverview = () => {
                   potential pitfalls.
                 </p>
               </div>
-              <Image
-            className="lg:h-[271px] sm:h-[190px] object-cover lg:w-[392px] sm:w-[260px] lg:left-[58px] sm:left-[58] top-[420px]"
-            alt="Shubham dhage"
-            src="/images/shubham-dhage-t9rkvi3n0nm-unsplash-1.png"
-            width={392}
-            height={271}
-          />
             </div>
             <div className="col-span-3 ml-[10px]">
               <div className="text-[#10181f] lg:text-2xl sm:text-xl font-bold h-10 tracking-[-0.2px] leading-10">Smart Contract Auditing</div>
               <div className="">
-                  <p className="leading-12 mb-10 lg:text-base sm:text-sm">
-                    Our smart contract auditing services offer a meticulous <br />
-                    evaluation of your blockchain-based solutions, mitigating <br />
-                    risks and enhancing the trustworthiness of your projects.
-                    <br />
-                    Our expert auditors perform a thorough code review, <br />
-                    examining every line of your smart contract code to identify vulnerabilities and potential issues.
-                    We follow industry best practices to ensure your code is robust and resilient against threats.
-                  </p>
-                </div>
-                <Image
-            className="lg:h-[271px] sm:h-[190px] object-cover lg:w-[407px] sm:w-[285] lg:left-[478px] sm:left-[58] top-[420px]"
+                <p className="leading-12 text-[#10181f] mb-10 lg:text-base sm:text-sm">
+                  Our smart contract auditing services offer a meticulous <br />
+                  evaluation of your blockchain-based solutions, mitigating <br />
+                  risks and enhancing the trustworthiness of your projects.
+                  <br />
+                  Our expert auditors perform a thorough code review, <br />
+                  examining every line of your smart contract code to identify vulnerabilities and potential issues.
+                  We follow industry best practices to ensure your code is robust and resilient against threats.
+                </p>
+              </div>
+              </div>
+              </div>
+              <div className="grid grid-cols-6">
+            <div className="col-span-3 left-[8%]">
+            <Image
+            className="lg:h-[271px] sm:h-[190px] object-cover lg:w-[392px] sm:w-[260px] lg:left-[68px] sm:left-[58] top-[420px]"
+            alt="Shubham dhage"
+            src="/images/shubham-dhage-t9rkvi3n0nm-unsplash-1.png"
+            width={392}
+            height={271}
+          /></div>
+            <div className="col-span-3 left-[8%]">
+            <Image
+            className="lg:h-[271px] sm:h-[190px] object-cover lg:w-[392px] sm:w-[260px] lg:left-[478px] sm:left-[58] top-[420px]"
             alt="Kanchanara"
             src="/images/kanchanara-fssggtbox9y-unsplash-1.png"
             width={407}
             height={271}
           />
-          </div>
-          </div>
+          </div>            
+            </div>          
         </div>
       </div>
     </div>

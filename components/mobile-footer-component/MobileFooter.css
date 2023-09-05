@@ -94,8 +94,6 @@
     @apply text-[#576675] text-xs font-medium tracking-[1.5px] leading-[30px] mt-[-3px] relative text-center whitespace-nowrap w-fit;
     font-family: "Rubik-Medium", Helvetica;
 }
-  
-
-/* .m-div-footer {
+.m-div-footer {
     @apply bg-[#10181f] h-[678px] relative w-[390px];
-} */
+}
