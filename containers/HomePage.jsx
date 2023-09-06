@@ -1,6 +1,7 @@
 "use client"
 import React from "react";
 import { useEffect, useState } from 'react';
+//import Header from "../components/header-component/Header_2";
 import Header from "../components/header-component/Header";
 import  MobileHeader from "../components/mobile-header-component/MobileHeader";
 import CTA from "../components/call-to-action-component/CTA";
@@ -17,7 +18,6 @@ const HomePage = () => {
 
   useEffect(() => {
     function handleResize() {
-      // setIsMobile(window.innerWidth <= 768);
       setIsMobile(window.innerWidth <= 640);
     }
 
@@ -31,10 +31,10 @@ const HomePage = () => {
     
     <div className="">
       {isMobile ? <MobileHeader /> : <Header />}
-      {isMobile ? <MobileServiceOverview /> : <ServiceOverview />}
+      {/* {isMobile ? <MobileServiceOverview /> : <ServiceOverview />}
       {!isMobile && <CTA />}
       {isMobile? <MobilePriceDisplay /> : <DisplayPrices />}
-      {isMobile? <MobileFooter /> : <Footer />}
+      {isMobile? <MobileFooter /> : <Footer />} */}
     </div>
   );
 };
