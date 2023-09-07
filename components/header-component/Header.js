@@ -90,7 +90,7 @@ const Header = () => {
                         </p>
                     </div>
 
-                    <div className="ml-[16.666667%] items-start bg-[#2a333d] border rounded inline-flex absolute pl-6 pr-[24.81px] pt-[7px] pb-[9px] border-solid border-black -left-0.5 top-[518px]">
+                    <div className="ml-[16.666667%] items-start bg-[#2a333d] border rounded inline-flex absolute pl-6 pr-[24.81px] pt-[7px] pb-[9px] sm:mt-5 border-solid border-black -left-0.5 top-[518px]">
                     <div className="text-white text-sm font-medium tracking-[1.5px] leading-[30px] relative whitespace-nowrap w-fit -mt-px">
                     REQUEST AN AUDIT
                     </div>

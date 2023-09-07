@@ -31,10 +31,10 @@ const HomePage = () => {
     
     <div className="">
       {isMobile ? <MobileHeader /> : <Header />}
-      {/* {isMobile ? <MobileServiceOverview /> : <ServiceOverview />}
+      {isMobile ? <MobileServiceOverview /> : <ServiceOverview />}
       {!isMobile && <CTA />}
-      {isMobile? <MobilePriceDisplay /> : <DisplayPrices />}
-      {isMobile? <MobileFooter /> : <Footer />} */}
+      <DisplayPrices />
+      {isMobile? <MobileFooter /> : <Footer />}
     </div>
   );
 };

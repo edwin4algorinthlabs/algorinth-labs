@@ -6,7 +6,7 @@ const CTA = () => {
     <div className="div-awards">
       <div className="div-group-banner">
         <div className="div-glow-banner" />
-        <div className="text-[#05050a] text-[52px] font-medium top-[74px] tracking-[-0.8px] leading-[57.2px] absolute text-center whitespace-nowrap w-fit left-[50%] transform translate-x-[-50%]">What&apos;s Next? Let&apos;s Chat!</div>
+        <div className="text-[#05050a] md:text-[52px] sm:text-[40px] font-medium top-[74px] tracking-[-0.8px] leading-[57.2px] absolute text-center whitespace-nowrap w-fit left-[50%] transform translate-x-[-50%]">What&apos;s Next? Let&apos;s Chat!</div>
       </div>
       <ul className="flex top-[239px] space-x-24 absolute">
 
