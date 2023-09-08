@@ -1,5 +1,6 @@
 import React from "react";
 import Image from 'next/image';
+import './MobileFooter.css';
 
 const MobileFooter = () => {
   return (
@@ -33,7 +34,7 @@ const MobileFooter = () => {
           </div>
 
 
-          <div className="col-span-1">
+          <div className="col-span-1 xs:hide-excess">
             <div className="px-2 text-xs pb-6">
               <div className="text-[#8294a3] px-2 text-sm font-semibold relative tracking-normal leading-5 -mt-px whitespace-no-wrap">Careers</div>
             </div>
@@ -54,8 +55,8 @@ const MobileFooter = () => {
             </p>
            <br></br>
             <div className="input items-start bg-black border-[#2a333d] rounded top-[520px] left-[50%] transform translate-x-[-50%] h-10 absolute">
-              <div className="div-placeholder items-start flex relative">
-                <div className="text-wrapper-4 text-[#8294a3] text-sm inline-flex font-normal pl-2 pr-[100px] tracking-normal -mt-px relative">name@email.com</div>
+              <div className="items-start flex relative">
+                <div className="text-wrapper-4 text-[#8294a3] text-sm inline-flex font-normal pl-2 pr-[150px] tracking-normal -mt-px relative">name@email.com</div>
               </div>
             </div>
             <div className="items-start rounded inline-flex pl-4 pr-[17.27px] py-1.5 border-[3px] border-solid border-[#576675] left-[50%] transform translate-x-[-50%] top-[570px] relative"> {/*left-[5px]*/}

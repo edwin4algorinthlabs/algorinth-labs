@@ -59,7 +59,7 @@ const Footer = () => {
                     </p>
 
                     <div className="input items-start bg-black border-[#2a333d] rounded flex h-10 relative">
-                        <div className="div-placeholder items-start flex relative">
+                        <div className="items-start flex relative">
                             <div className="text-wrapper-4 text-[#8294a3] lg:text-sm sm:text-xs font-normal tracking-normal -mt-px relative">name@email.com</div>
                         </div>
                     </div>
