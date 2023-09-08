@@ -1,23 +1,24 @@
 import React from "react";
 import Link from "next/link";
 import Image from 'next/image';
+import './Footer.css';
 
 const Footer = () => {
     return (
         <div className="items-start bg-[#0f1720] flex h-64 overflow-hidden relative">
             <div className="mx-8 grid grid-cols-3 gap-10">
-                <div className="text-[#8294a3] text-base font-medium h-6 tracking-[2px] leading-8 ">
+                <div className="text-[#8294a3] sm:text-sm md:text-base font-medium h-6 tracking-[2px] leading-8 ">
                     ABOUT US
-                    <p className="teext-sm py-5 tracking-[0px] font-normal">Algorinth Labs pioneers secure smart contract audits, comprehensive testing, and cutting-edge software
+                    <p className="text-sm md:leading-8 sm:py-3 lg:py-5 tracking-[0px] font-normal">Algorinth Labs pioneers secure smart contract audits, comprehensive testing, and cutting-edge software
                         development, driving the evolution of decentralized technologies.
                     </p>
                     LEARN MORE...
                 </div>
                 <div className="text-[#8294a3] text-base font-medium h-6 tracking-[2px] leading-8">
-                    <p className="flex justify-center lg:pr-10">CONNECT WITH US</p>
+                    <p className="flex justify-center sm:text-sm md:text-base lg:pr-10">CONNECT WITH US</p>
                     <div className="grid pl-10 grid-cols-2 mt-8">
                         <div className="col-span-1">
-                            <div className="inline-flex px-2 pb-1">
+                            <div className="inline-flex sm:text-xs px-2 pb-1">
                             <Image className="img h-5 w-5" alt="Twitter alt svg" src="/images/twitter-alt-svg.svg" width={145}
                             height={129} />                            
                             <div className="text-[#8294a3] px-2 text-sm font-semibold relative tracking-normal leading-5 -mt-px whitespace-no-wrap">Twitter</div>
@@ -36,8 +37,8 @@ const Footer = () => {
                             </div>
                             
                             
-                        <div className="col-span-1">
-                        <div className="px-2 pb-3">
+                        <div className="hide-excess col-span-1">
+                        <div className="px-2 sm:text-xs pb-3">
                             <div className="text-[#8294a3] px-2 text-sm font-semibold relative tracking-normal leading-5 -mt-px whitespace-no-wrap">Careers</div>
                             </div>
                             <div className="px-2 pb-3">
@@ -51,7 +52,7 @@ const Footer = () => {
 
 
                 </div>
-                <div className="text-[#8294a3] text-base font-medium h-6 tracking-[2px] leading-8">
+                <div className="text-[#8294a3] sm:text-sm md:text-base font-medium h-6 tracking-[2px] leading-8">
                     JOIN OUR NEWSLETTER
                     <p className="teext-sm py-5 tracking-[0px] font-normal">Stay informed about our latest work and
                         industry news:
