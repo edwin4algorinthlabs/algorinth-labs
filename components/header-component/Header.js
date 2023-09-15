@@ -12,7 +12,7 @@ const Header = () => {
             text: 'Services',
         },
         {
-            href: '/resources',
+            href: 'https://algorinth-labs.gitbook.io/',
             text: 'Resources',
         },
         {
