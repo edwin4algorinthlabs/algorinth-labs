@@ -32,23 +32,23 @@ const Dropdown = () => {
             text: 'Home',
         },
         {
-            href: '/#',
+            href: '/services',
             text: 'Services',
         },
         {
-            href: '/#',
+            href: 'https://algorinth-labs.gitbook.io/',
             text: 'Resources',
         },
         {
-            href: '/#',
+            href: '/blog',
             text: 'Blog',
         },
         {
-            href: '/#',
+            href: '/about',
             text: 'About',
         },
         {
-            href: '/#',
+            href: '/contact',
             text: 'Contact',
         },
     ];
