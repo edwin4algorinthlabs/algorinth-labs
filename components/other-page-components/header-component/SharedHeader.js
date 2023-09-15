@@ -8,23 +8,23 @@ const Header = () => {
             text: 'Home',
         },
         {
-            href: '/#',
+            href: '/services',
             text: 'Services',
         },
         {
-            href: '/#',
+            href: 'https://algorinth-labs.gitbook.io/',
             text: 'Resources',
         },
         {
-            href: '/#',
+            href: '/blog',
             text: 'Blog',
         },
         {
-            href: '/#',
+            href: '/about',
             text: 'About',
         },
         {
-            href: '/#',
+            href: '/contact',
             text: 'Contact',
         },
     ];
@@ -42,7 +42,7 @@ const Header = () => {
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
-                height: '100vh',
+                height: '120px',
                 width: '100%',
             }}>
             <div
@@ -78,28 +78,28 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-                <div>
+                {/* <div>
                         <p className="leading-[52px] ml-[16.666667%] max-w-[966px] top-80 text-white xl:text-4xl lg:text-3xl sm:text-3xl font-bold max-h-12 left-0 tracking-normal absolute">
                             We fix your contract, so you can focus on productivity.
                         </p>
-                    </div>
+                    </div> */}
 
-                    <div className="items-start ml-[16.666667%] flex absolute max-w-[940px] pl-0 pr-36 py-0 left-0 top-[440px]">
+                {/* <div className="items-start ml-[16.666667%] flex absolute max-w-[940px] pl-0 pr-36 py-0 left-0 top-[440px]">
                         <p className="text-white text-sm font-normal max-w-[933px] flex">
                             Algorinth Labs is dedicated to ensuring the integrity of blockchain ecosystems by providing meticulous smart contract audits, rigorous testing, and innovative software development.
                         </p>
-                    </div>
+                    </div> */}
 
-                    <div className="ml-[16.666667%] items-start bg-[#2a333d] border rounded inline-flex absolute pl-6 pr-[24.81px] pt-[7px] pb-[9px] sm:mt-5 border-solid border-black -left-0.5 top-[518px]">
+                {/* <div className="ml-[16.666667%] items-start bg-[#2a333d] border rounded inline-flex absolute pl-6 pr-[24.81px] pt-[7px] pb-[9px] sm:mt-5 border-solid border-black -left-0.5 top-[518px]">
                     <div className="text-white text-sm font-medium tracking-[1.5px] leading-[30px] relative whitespace-nowrap w-fit -mt-px">
                     REQUEST AN AUDIT
                     </div>
-                    </div>
-
-                    </div>
+                    </div> */}
 
             </div>
-       
+
+        </div>
+
 
     );
 };
