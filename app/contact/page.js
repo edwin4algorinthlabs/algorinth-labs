@@ -1,13 +1,13 @@
 "use client"
 import React from "react";
 import { useEffect, useState } from 'react';
-import Header from "../../components/header-component/SharedHeader";
-import  MobileHeader from "../../components/mobile-header-component/SharedMobileHeader";
-import Footer from "../../components/footer-component/Footer";
-import MobileFooter from "../../components/mobile-footer-component/MobileFooter";
-import DisplayPrices from "../../components/price-display-component/DisplayPrices";
-import Background from "../../components/background-component/Background";
-import MobileBackground from "../../components/background-component/MobileBackground";
+import Header from "../../components/other-page-components/header-component/SharedHeader";
+import  MobileHeader from "../../components/other-page-components/header-component/SharedMobileHeader";
+import Footer from "../../components/other-page-components/footer-component/Footer";
+import MobileFooter from "../../components/other-page-components/footer-component/MobileFooter";
+import DisplayPrices from "../../components/other-page-components/price-display-component/DisplayPrices";
+import Background from "../../components/other-page-components/background-component/Background";
+import MobileBackground from "../../components/other-page-components/background-component/MobileBackground";
 
 
 const Contact = () => {
