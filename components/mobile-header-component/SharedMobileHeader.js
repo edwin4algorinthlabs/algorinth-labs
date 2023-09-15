@@ -12,7 +12,7 @@ const SharedMobileHeader = () => {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
-            height: '40vh',
+            height: '15vh',
             width: '100%',
         }}>
         <div
