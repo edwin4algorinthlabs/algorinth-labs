@@ -2,7 +2,7 @@
 import React from "react";
 import { useEffect, useState } from 'react';
 import Header from "../../components/header-component/SharedHeader";
-import  MobileHeader from "../../components/mobile-header-component/MobileHeader";
+import  SharedMobileHeader from "../../components/mobile-header-component/SharedMobileHeader";
 import Footer from "../../components/footer-component/Footer";
 import MobileFooter from "../../components/mobile-footer-component/MobileFooter";
 import DisplayPrices from "../../components/price-display-component/DisplayPrices";
@@ -27,7 +27,7 @@ const About = () => {
   return (
     
     <div className="">
-      {isMobile ? <MobileHeader /> : <Header />}
+      {isMobile ? <SharedMobileHeader /> : <Header />}
       {isMobile ? <MobileBackground /> : <Background />}
       <DisplayPrices />
       {isMobile? <MobileFooter /> : <Footer />}
