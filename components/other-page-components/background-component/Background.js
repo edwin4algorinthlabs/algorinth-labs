@@ -4,7 +4,8 @@ import Image from 'next/image';
 const ServiceOverview = () => {
   return (
     <div className="items-start bg-[url(/images/div-services-overview.jfif)] bg-cover h-[714px] border-none bg-[50%_50%] justify-center">
-        {/* <div className="text-[#020d17] text-3xl font-normal h-auto left-[50%] transform translate-x-[-50%] absolute tracking-[-0.5px] leading-[46px]">
+
+      {/* <div className="text-[#020d17] text-3xl font-normal h-auto left-[50%] transform translate-x-[-50%] absolute tracking-[-0.5px] leading-[46px]">
         Services
       </div>
       <div className=" grid grid-cols-2 sm:mb-5 justify-center mx-[15%] gap-10 h-auto relative top-[80px]">
@@ -59,7 +60,7 @@ const ServiceOverview = () => {
 
       </div> */}
 
-      
+
     </div>
 
 

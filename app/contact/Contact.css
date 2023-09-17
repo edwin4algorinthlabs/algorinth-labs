@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+
+*{
+    
+    box-sizing: border-box;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    max-width: 500px;
+    padding: 8px;
+}
+
+
+form input, select, textarea{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+
+}
+    
+main{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-height: 100vh;
+    
+}
+
+main div{
+    width: 50%;
+    
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    text-align: center;
+    
+
+}
+
+.info h4{
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+   
+}
+
+
+.info p{
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 0;
+    
+}
+
+.info a{
+    color: orangered;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+form .names{
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    height: 5em;
+    margin-bottom: 0.8em;
+}
+
+form .names label{
+    display: inline-block;
+    width: 100%;
+}
+
+main form label{
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 0.4em;
+
+}
+
+main form label:after {
+    content: " *";
+    color: red;
+}
+
+form .names div{
+    margin: 0.5em 0.5em 0.5em 0;
+
+}
+
+
+
+form button{
+    height: 2.4em;
+    width: 7.3em;
+    align-items: center;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    background-color: black;
+}
