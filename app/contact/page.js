@@ -2,13 +2,12 @@
 import React from "react";
 import { useEffect, useState } from 'react';
 import Header from "../../components/other-page-components/header-component/SharedHeader";
-import  MobileHeader from "../../components/other-page-components/header-component/SharedMobileHeader";
+import MobileHeader from "../../components/other-page-components/header-component/SharedMobileHeader";
 import Footer from "../../components/other-page-components/footer-component/Footer";
 import MobileFooter from "../../components/other-page-components/footer-component/MobileFooter";
 import DisplayPrices from "../../components/other-page-components/price-display-component/DisplayPrices";
-import Background from "../../components/other-page-components/background-component/Background";
-import MobileBackground from "../../components/other-page-components/background-component/MobileBackground";
-
+import Background from "./Contact"
+import MobileBackground from "./ContactMobile"
 
 const Contact = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -25,12 +24,12 @@ const Contact = () => {
     };
   }, []);
   return (
-    
+
     <div className="">
       {isMobile ? <MobileHeader /> : <Header />}
       {isMobile ? <MobileBackground /> : <Background />}
       <DisplayPrices />
-      {isMobile? <MobileFooter /> : <Footer />}
+      {isMobile ? <MobileFooter /> : <Footer />}
     </div>
   );
 };

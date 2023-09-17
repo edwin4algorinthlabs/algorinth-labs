@@ -44,26 +44,34 @@ const MobileFooter = () => {
             <div className="px-2 pb-5">
               <div className="text-[#8294a3] px-2 text-sm font-semibold relative tracking-normal leading-5 -mt-px whitespace-no-wrap">Blog</div>
             </div>
-          </div>          
-        </div>        
+          </div>
+        </div>
       </div>
       <div className="text-[#8294a3] text-base tracking-[2px] font-medium left-[50%] transform translate-x-[-50%] absolute top-[420px]">
-            <p className="flex justify-center tracking-[0px]">JOIN OUR NEWSLETTER</p></div>
-             
-            <p className="text-[#8294a3] text-base font-normal h-60 tracking-[0] flex justify-center leading-[30px] max:w-[463px] mx-8 absolute top-[460px]">
-              Stay informed about our latest work and industry news:
-            </p>
-           <br></br>
-            <div className="input items-start bg-black border-[#2a333d] rounded top-[520px] left-[50%] transform translate-x-[-50%] h-10 absolute">
-              <div className="items-start flex relative">
-                <div className="text-wrapper-4 text-[#8294a3] text-sm inline-flex font-normal pl-2 pr-[150px] tracking-normal -mt-px relative">name@email.com</div>
-              </div>
-            </div>
-            <div className="items-start rounded inline-flex pl-4 pr-[17.27px] py-1.5 border-[3px] border-solid border-[#576675] left-[50%] transform translate-x-[-50%] top-[570px] relative"> {/*left-[5px]*/}
+        <p className="flex justify-center tracking-[0px]">JOIN OUR NEWSLETTER</p></div>
 
-              <div className="text-[#576675] text-xs font-medium leading-7 -mt-1 relative text-center whitespace-no-wrap">SUBSCRIBE</div>
-            </div>
-            </div>
+      <p className="text-[#8294a3] text-base font-normal h-60 tracking-[0] flex justify-center leading-[30px] max:w-[463px] mx-8 absolute top-[460px]">
+        Stay informed about our latest work and industry news:
+      </p>
+      <br></br>
+      <div className="input items-start bg-black border-[#2a333d] rounded top-[520px] left-[50%] transform translate-x-[-50%] h-10 absolute">
+        <div className="items-start flex relative">
+          <form>
+            <input onChange={(e) => {
+            }}
+              name={'name'} required maxLength={"100"}
+              type='text'
+              className={"px-6 py-3 align-middle bg-black text-white rounded-lg w-50"}
+              placeholder="name@email.com"
+            />
+          </form>
+        </div>
+      </div>
+      <div className="items-start rounded inline-flex pl-4 pr-[17.27px] py-1.5 border-[3px] border-solid border-[#576675] left-[50%] transform translate-x-[-50%] top-[570px] relative"> {/*left-[5px]*/}
+
+        <div className="text-[#576675] text-xs font-medium leading-7 -mt-1 relative text-center whitespace-no-wrap">SUBSCRIBE</div>
+      </div>
+    </div>
   );
 };
 export default MobileFooter;
