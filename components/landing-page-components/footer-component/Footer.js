@@ -54,7 +54,7 @@ const Footer = () => {
                 </div>
                 <div className="text-[#8294a3] sm:text-sm md:text-base font-medium h-6 tracking-[2px] leading-8">
                     JOIN OUR NEWSLETTER
-                    <p className="teext-sm py-5 tracking-[0px] font-normal">Stay informed about our latest work and
+                    <p className="text-sm py-5 tracking-[0px] font-normal">Stay informed about our latest work and
                         industry news:
                     </p>
 
