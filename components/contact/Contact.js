@@ -24,7 +24,8 @@ const Contact = () => {
     // alert(data);
   }
   return (
-    <div className="pt-[130px] orange-gradient w-full">
+    <div className="pt-[130px] w-full">
+    <p className="font-bold text-center mt-20 mt-10 text-[40px] text-white">Contact Us</p>
     <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-6 md:gap-3 w-full max-w-[1185px] mx-auto pb-[100px] px-5">
         {/* This is the form section */}
         <form action='#' method='post' onSubmit={handleSubmit}>
@@ -47,7 +48,7 @@ const Contact = () => {
           <input type="text" name="cName" cols={15} rows={1} id="cName" onChange={handleChange} value={data.name} required /> <br />
 
           <label for="inquiry">Inquiry type</label>
-          <select name="inquiry" id="inquiry" value={data.inquiry} required>
+          <select name="inquiry" id="inquiry" required>
             <option value="Smart Contract Audit">Smart Contract Audit</option>
             <option value="Smart Contract Security">Smart Contract Security</option>
             <option value="Smart Contract Testing">Smart Contract Testing</option>

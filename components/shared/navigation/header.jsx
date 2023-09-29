@@ -40,7 +40,7 @@ const links = [
 export default function Header() {
     const segment = useSelectedLayoutSegment();
     return (
-        <div className={`h-[120px] w-full font-rubik absolute top-0 z-10 ${segment == null ? "bg-transparent" : "bg-[url(/images/div-hero.png)] bg-cover bg-no-repeat bg-center"}`}>
+        <div className="h-[120px] w-full font-rubik absolute top-0 z-[50] bg-transparent">
              {/* {
                 segment != null && <div className="absolute z-[11] top-0 left-0 right-0 bottom-0 bg-[url(/images/background-resource-algo.png)] bg-no-repeat bg-cover opacity-60 bg-center"></div>
              } */}

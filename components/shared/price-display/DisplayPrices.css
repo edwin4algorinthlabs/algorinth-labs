@@ -1,10 +1,10 @@
 .div-html-embed {
-    @apply items-start bg-black border flex min-h-[61px] relative border-none;
+    @apply items-start bg-black border flex min-h-[61px] w-full relative border-none;
     /* min-width: 1444px; */
     /* width: 100%; */
 }
 .div-html-embed .div-coin-marquee {
-    @apply h-[61px] overflow-hidden relative w-[1438px] border-b border-[#222531] border-t;
+    @apply h-[61px] overflow-hidden relative w-full border-b border-[#222531] border-t;
     border-bottom-style: solid;
     border-top-style: solid;
 }
