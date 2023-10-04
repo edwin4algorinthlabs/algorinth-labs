@@ -1,6 +1,5 @@
 "use client"
 
-import Image from 'next/image';
 import "./Contact.css";
 import { useState } from 'react';
 
@@ -24,8 +23,8 @@ const Contact = () => {
     // alert(data);
   }
   return (
-    <div className="pt-[130px] w-full">
-    <p className="font-bold text-center mt-20 text-[40px] text-white">Contact Us</p>
+    <div className="w-full max-w-5xl mx-auto">
+    <p className="font-bold text-center mb-10 md:mb-20 md:mt-10 text-[40px] text-white">Contact Us</p>
     <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-6 md:gap-3 w-full max-w-[1185px] mx-auto pb-[100px] px-5">
         {/* This is the form section */}
         <form action='#' method='post' onSubmit={handleSubmit}>
@@ -33,19 +32,19 @@ const Contact = () => {
 
             <div>
               <label for="fname">First name</label>
-              <input type="text" name="fName" id="fname" placeholder="John" onChange={handleChange} value={data.name} required /> <br />
+              <input type="text" name="fName" id="fname" placeholder="John" onChange={handleChange} value={data.fName} required /> <br />
 
             </div>
 
             <div>
               <label for="lname">Last name</label>
-              <input type="text" name="lName" placeholder="Doe" id="lname" onChange={handleChange} value={data.name} required /> <br />
+              <input type="text" name="lName" placeholder="Doe" id="lname" onChange={handleChange} value={data.lName} required /> <br />
             </div>
           </div>
 
 
           <label for="cName">Company name</label>
-          <input type="text" name="cName" cols={15} rows={1} id="cName" onChange={handleChange} value={data.name} required /> <br />
+          <input type="text" name="cName" cols={15} rows={1} id="cName" onChange={handleChange} value={data.cName} required /> <br />
 
           <label for="inquiry">Inquiry type</label>
           <select name="inquiry" id="inquiry" required>
@@ -66,16 +65,20 @@ const Contact = () => {
           <input type="url" name="link" id="link" onChange={handleChange} value={data.name} required /> <br />
 
           <button type="submit" className="submit__button">Submit</button>
+
+          <p className="block md:hidden mt-6 text-xs text-center">
+            For secure communications, please use  <a href="https://www.sendsafely.com/u/admin@algorinthlabs.com" className="text-primary">SendSafely.</a>
+          </p>
         </form>
 
 
-        <div className='info w-full md:w-[35%]'>
+        <div className='info w-full max-w-[407px]'>
           <h4 className="text-center md:text-left">
             Contact us to help you secure your smart contract.
           </h4>
 
-          <p>
-            For secure communications, please use  <a href="https://www.sendsafely.com/u/admin@algorinthlabs.com">SendSafely</a>.
+          <p className="hidden md:block">
+            For secure communications, please use  <a href="https://www.sendsafely.com/u/admin@algorinthlabs.com">SendSafely.</a>
           </p>
 
         </div>

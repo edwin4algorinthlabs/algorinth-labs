@@ -2,7 +2,8 @@ form{
     display: flex;
     flex-direction: column;
     margin: 10px 0 0;
-    max-width: 500px;
+    max-width: 460px;
+    width: 100%;
     padding: 8px;
 }
 
@@ -60,7 +61,6 @@ form .names{
     justify-content: space-between;
     flex-direction: column;
     width: 100%;
-    height: 5em;
     margin-bottom: 0.8em;
 }
 
@@ -102,5 +102,9 @@ form .submit__button {
 @media screen and (min-width: 768px) {
     form .names {
         flex-direction: row;
+    }
+
+    form .submit__button {
+        height: 54px;
     }
 }

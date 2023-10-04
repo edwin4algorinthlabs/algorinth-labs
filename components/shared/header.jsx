@@ -47,7 +47,7 @@ export default function Header() {
                     <Link href="/"><Image
                         className="max-h-32 left-0 object-cover lg:top-0 max-w-40"
                         alt="Element removebg preview"
-                        src="/images/2-removebg-preview-1.png"
+                        src="/images/logo.png"
                         width={145}
                         height={129}
                     /></Link>
