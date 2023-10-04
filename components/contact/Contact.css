@@ -1,0 +1,99 @@
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0;
+    max-width: 500px;
+    padding: 8px;
+}
+
+
+input, select, textarea{
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    outline: none;
+    border-radius: 3px;
+    color: #2C333C;
+}
+
+input:focus, select:focus, textarea:focus{
+    outline: 1px solid #2C333C;
+}
+
+textarea[name="message"] {
+    height: 120px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+}
+
+.info h4{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+    font-family: var(--font-open-sans);
+    color: #fff;   
+}
+
+
+.info p{
+    color: #fff;
+    font-size: 16px;
+    margin-top: 0;
+    font-family: var(--font-open-sans);
+    
+}
+
+.info a{
+    color: #EA5501;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+form .names{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 5em;
+    margin-bottom: 0.8em;
+}
+
+form .names label{
+    display: inline-block;
+    width: 100%;
+}
+
+form label{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0.4em;
+    color: #fff;
+    font-family: var(--font-open-sans);
+}
+
+form label:after {
+    content: " *";
+    color: red;
+}
+
+form .names div{
+    margin: 0.5em 0.5em 0.5em 0;
+
+}
+
+form .submit__button {
+    background: #fff;
+    border-radius: 3px;
+    height: 42px;
+    width: 7.3em;
+    align-items: center;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #000;
+}

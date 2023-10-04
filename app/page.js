@@ -1,12 +1,9 @@
 
 // import ComingSoonContainer from "@/containers/ComingSoon"
-import HomeContainer from "@/containers/HomePage"
+import HomeContainer from "@/containers/Home"
 
 export default function Home() {
   return (
-    <main>
-      {/* <ComingSoonContainer /> */}
-      < HomeContainer/>
-    </main>
+      <HomeContainer/>
   )
 }
