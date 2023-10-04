@@ -25,7 +25,7 @@ const Contact = () => {
   }
   return (
     <div className="pt-[130px] w-full">
-    <p className="font-bold text-center mt-20 mt-10 text-[40px] text-white">Contact Us</p>
+    <p className="font-bold text-center mt-20 text-[40px] text-white">Contact Us</p>
     <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-6 md:gap-3 w-full max-w-[1185px] mx-auto pb-[100px] px-5">
         {/* This is the form section */}
         <form action='#' method='post' onSubmit={handleSubmit}>
@@ -70,7 +70,7 @@ const Contact = () => {
 
 
         <div className='info w-full md:w-[35%]'>
-          <h4 >
+          <h4 className="text-center md:text-left">
             Contact us to help you secure your smart contract.
           </h4>
 

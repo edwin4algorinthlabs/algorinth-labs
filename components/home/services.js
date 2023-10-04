@@ -30,7 +30,7 @@ const Services = () => {
                 risks and enhancing the trustworthiness of your projects.
               </p>
               <p className="text-base">
-                Our expert auditors perform a thorough code review, <br />examining every line of your smart contract code 
+                Our expert auditors perform a thorough code review, examining every line of your smart contract code 
                 to identify vulnerabilities and potential issues. We follow industry best practices to ensure your code is 
                 robust and resilient against threats.
               </p>
