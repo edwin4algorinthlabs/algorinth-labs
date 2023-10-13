@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Services = () => {
   return (
     <div className="w-full pt-20 px-5 lg:px-[100px]">
-      <div className="w-full mx-auto">
+      <div className="w-full max-w-[1315px] mx-auto">
         <p className="text-[40px] font-semibold">
           Our Services
         </p>

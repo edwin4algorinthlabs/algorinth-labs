@@ -1,10 +1,9 @@
+import AboutContainer from "@/containers/About";
 
 
 const About = () => {
   return (
-     <div className="pt-[120px] min-h-screen">
-      About Page
-    </div>
+     <AboutContainer />
   );
 };
 
