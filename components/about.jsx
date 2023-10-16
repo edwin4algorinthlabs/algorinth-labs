@@ -10,7 +10,7 @@ export default function About({children}) {
 
 About.Heading = function AboutHeading({text, sx, ...props}) {
     return (
-        <h1 className={`text-[40px] font-semibold ${sx}`} {...props}>
+        <h1 className={`text-2xl sm:text-[40px] font-semibold ${sx}`} {...props}>
             {text}
         </h1>
     )
@@ -18,7 +18,7 @@ About.Heading = function AboutHeading({text, sx, ...props}) {
 
 About.Text = function AboutText({children}) {
     return (
-        <p className="text-base">
+        <p className="text-sm sm:text-base">
             {children}
         </p>
     )
@@ -26,7 +26,7 @@ About.Text = function AboutText({children}) {
 
 About.Title = function AboutTitle({text}) {
     return (
-        <h3 className="text-2xl font-medium">
+        <h3 className="text-xl sm:text-2xl font-medium">
             {text}
         </h3>
     )

@@ -43,6 +43,10 @@ body {
   background: linear-gradient(180deg, #93A8AF 2.39%, #CF9B62 78.13%, #CE8658 99.99%);
 }
 
+.step-badge {
+  background: linear-gradient(180deg, #EA5501 0%, #AF2A00 100%);
+}
+
 @keyframes fadeOut {
   from {
     /* opacity: 1; */
