@@ -16,10 +16,15 @@ module.exports = {
         'xxs': '0.5rem',
       },
       fontFamily: {
-        "poppins": ['var(--font-poppins)'],
+        "rubik": ['var(--font-rubik)'],
+        "open-sans": ['var(--font-open-sans)'],
       },
       colors: {
+        'primary': "#EA5501",
         'secondary': "#D631BB",
+        'c-grey': "#525252",
+        'c-grey-2': "#848794",
+        "link-active": "#AD2B43"
       }
     },
   },
