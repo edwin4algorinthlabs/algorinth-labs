@@ -1,13 +1,54 @@
 import React from "react";
 import Image from 'next/image';
 import "./Contact.css";
+import axios from "axios";
 import { useState } from 'react';
+
+
+
 
 const Contact = () => {
   const [data, setData] = useState(
-    { fName: "", lName: "", cName: "", inquiry: "", message: "", link: "" }
+    { firstName: "", lastName: "", companyMail: "", inquiry: "Smart Contract Audit", message: "", link: "" }
   )
+  const [error, setError] = useState(false);
+//email transporter
 
+const getMarketCap = async ()=> {
+  try{
+    const response =await axios.get('/api/coinmarketcap')
+    console.log(response.data)
+  }catch(error){
+    console.log(error)
+  }
+}
+
+  const sendData = async ()=>{
+    try {
+      const response = await axios.post('/api/sendContact', { data });
+      
+      if (response.data.message == "Data registered successfully"){
+        alert("Thanks we'll be in touch Soon");
+      }else{
+        setError(true)
+        alert("please type correct information")
+      }
+      // alert(JSON.stringify(response.data.emails, null, 2));
+    } catch (error) {
+      setError(true)
+      alert("Something Went Wrong Please check if data follows rule");
+
+    }
+  }
+  const sendNotification = async()=>{
+    try{
+       
+      const res = await axios.post("/api/sendNotification",{data});
+      console.log(res.data.message)
+    }catch(error){
+      console.log(error)
+    }
+  }
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -17,10 +58,14 @@ const Contact = () => {
       [name]: value
     }))
   }
-
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // alert(data);
+    ///sendData();
+    if(!error){
+      getMarketCap();
+    }
+   //alert(JSON.stringify(data, null, 2));
   }
   return (
     <div className="items-start bg-[url(/images/div-services-overview.jfif)] bg-cover h-[714px] border-none bg-[50%_50%] justify-center">
@@ -35,13 +80,13 @@ const Contact = () => {
 
             <div>
               <label for="fname">First name</label>
-              <input type="text" name="fName" id="fname" placeholder="John" onChange={handleChange} value={data.name} required /> <br />
+              <input type="text" name="firstName" id="fname" placeholder="John" onChange={handleChange} value={data.name} required /> <br />
 
             </div>
 
             <div>
               <label for="lname">Last name</label>
-              <input type="text" name="lName" placeholder="Doe" id="lname" onChange={handleChange} value={data.name} required /> <br />
+              <input type="text" name="lastName" placeholder="Doe" id="lname" onChange={handleChange} value={data.name} required /> <br />
 
             </div>
 
@@ -51,11 +96,11 @@ const Contact = () => {
           </div>
 
 
-          <label for="cName">Company name</label>
-          <input type="text" name="cName" cols={15} rows={1} id="cName" onChange={handleChange} value={data.name} required /> <br />
+          <label for="cName">Company Email</label>
+          <input type="text" name="companyMail" cols={15} rows={1} id="cName" onChange={handleChange} value={data.name} required /> <br />
 
           <label for="inquiry">Inquiry type</label>
-          <select name="inquiry" id="inquiry" value={data.inquiry} required>
+          <select name="inquiry" id="inquiry" value={data.inquiry} onChange={handleChange} required>
             <option value="Smart Contract Audit">Smart Contract Audit</option>
             <option value="Smart Contract Security">Smart Contract Security</option>
             <option value="Smart Contract Testing">Smart Contract Testing</option>
@@ -74,7 +119,7 @@ const Contact = () => {
 
           {/* <input type="submit" name="submit" value="submit" /> */}
 
-          <button type="submit">Submit</button>
+          <button type="submit" onClick={sendNotification}>Submit</button>
 
 
           {/* <p>
