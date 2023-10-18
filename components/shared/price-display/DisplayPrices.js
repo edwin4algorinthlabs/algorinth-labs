@@ -1,20 +1,9 @@
-"use client"
 import React from "react";
 import "./DisplayPrices.css";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect } from "react";
+
 const DisplayPrices = () => {
-  const getMarketCap = async ()=> {
-    try{
-      const response =await axios.get('/api/coinmarketcap')
-      console.log(response.data)
-      //response.data is an object like so : {ETH:'1867.784'}
-    }catch(error){
-      setError(true)
-      console.log(error)
-    }
-  }
   return (
     <div className="div-html-embed">
       <div className="div-coin-marquee">
