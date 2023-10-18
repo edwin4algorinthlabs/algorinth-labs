@@ -3,6 +3,15 @@ import "./MobilePriceDisplay.css";
 import Image from 'next/image';
 
 const MobilePriceDisplay = () => {
+  try{
+    const response =await axios.get('/api/coinmarketcap')
+    console.log(response.data)
+    //response.data is an object like so : {ETH:'1867.784'}
+  }catch(error){
+    setError(true)
+    console.log(error)
+  }
+}
   return (
     <div className="m-div-display">
     <div className="m-div-coin-marquee">
