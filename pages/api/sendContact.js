@@ -10,7 +10,7 @@ async function initDatabase(){
               validator: {
                 $jsonSchema: {
                   bsonType: "object",
-                  required: ["firstName", "lastName", "companyMail", "inquiry", "message", "link"],
+                  required: ["firstName", "lastName", "companyMail", "inquiry", "message", "projectlink"],
                   properties: {
                     firstName: { bsonType: "string" },
                     lastName: { bsonType: "string" },
@@ -23,7 +23,7 @@ async function initDatabase(){
                       enum: ["Smart Contract Audit", "Smart Contract Testing", "Smart Contract Security", "Web3 Development","Web3 Consultation"]
                     },
                     message: { bsonType: "string" },
-                    link: {
+                    projectlink: {
                       bsonType: "string",
                       pattern: "^https://github.com/.+$"
                     },

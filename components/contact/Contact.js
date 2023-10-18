@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 const Contact = () => {
   const [data, setData] = useState(
-    { firstName: "", lastName: "", companyMail: "", inquiry: "Smart Contract Audit", message: "", link: "" }
+    { firstName: "", lastName: "", companyMail: "", inquiry: "Smart Contract Audit", message: "", projectlink: "" }
   )
   const [error, setError] = useState(false);
 //email transporter
@@ -19,6 +19,7 @@ const getMarketCap = async ()=> {
     const response =await axios.get('/api/coinmarketcap')
     console.log(response.data)
   }catch(error){
+    setError(true)
     console.log(error)
   }
 }
@@ -61,11 +62,8 @@ const getMarketCap = async ()=> {
  
   const handleSubmit = (e) => {
     e.preventDefault();
-    ///sendData();
-    if(!error){
-      getMarketCap();
-    }
-   //alert(JSON.stringify(data, null, 2));
+    sendData();
+    sendNotification();
   }
   return (
     <div className="w-full max-w-5xl mx-auto">
@@ -77,39 +75,23 @@ const getMarketCap = async ()=> {
 
             <div>
               <label for="fname">First name</label>
-<<<<<<< HEAD:app/contact/Contact.js
               <input type="text" name="firstName" id="fname" placeholder="John" onChange={handleChange} value={data.name} required /> <br />
-=======
-              <input type="text" name="fName" id="fname" placeholder="John" onChange={handleChange} value={data.fName} required /> <br />
->>>>>>> 44c2be4b6dbd649a4e6005fa38eaaa9468537c1e:components/contact/Contact.js
 
             </div>
 
             <div>
               <label for="lname">Last name</label>
-<<<<<<< HEAD:app/contact/Contact.js
               <input type="text" name="lastName" placeholder="Doe" id="lname" onChange={handleChange} value={data.name} required /> <br />
 
-=======
-              <input type="text" name="lName" placeholder="Doe" id="lname" onChange={handleChange} value={data.lName} required /> <br />
->>>>>>> 44c2be4b6dbd649a4e6005fa38eaaa9468537c1e:components/contact/Contact.js
             </div>
           </div>
 
 
-<<<<<<< HEAD:app/contact/Contact.js
           <label for="cName">Company Email</label>
           <input type="text" name="companyMail" cols={15} rows={1} id="cName" onChange={handleChange} value={data.name} required /> <br />
 
           <label for="inquiry">Inquiry type</label>
           <select name="inquiry" id="inquiry" value={data.inquiry} onChange={handleChange} required>
-=======
-          <label for="cName">Company name</label>
-          <input type="text" name="cName" cols={15} rows={1} id="cName" onChange={handleChange} value={data.cName} required /> <br />
-
-          <label for="inquiry">Inquiry type</label>
-          <select name="inquiry" id="inquiry" required>
->>>>>>> 44c2be4b6dbd649a4e6005fa38eaaa9468537c1e:components/contact/Contact.js
             <option value="Smart Contract Audit">Smart Contract Audit</option>
             <option value="Smart Contract Security">Smart Contract Security</option>
             <option value="Smart Contract Testing">Smart Contract Testing</option>
@@ -124,12 +106,11 @@ const getMarketCap = async ()=> {
           <textarea name="message" cols={15} rows={10} id="message" onChange={handleChange} value={data.name} required></textarea> <br />
 
           <label for="link">Link to project on Github</label>
-          <input type="url" name="link" id="link" onChange={handleChange} value={data.name} required /> <br />
+          <input type="url" name="projectlink" id="link" onChange={handleChange} value={data.name} required /> <br />
 
-<<<<<<< HEAD:app/contact/Contact.js
           {/* <input type="submit" name="submit" value="submit" /> */}
 
-          <button type="submit" onClick={sendNotification}>Submit</button>
+          <button type="submit" onClick={handleSubmit}>Submit</button>
 
 
           {/* <p>
@@ -138,9 +119,6 @@ const getMarketCap = async ()=> {
 
 
 
-=======
-          <button type="submit" className="submit__button">Submit</button>
->>>>>>> 44c2be4b6dbd649a4e6005fa38eaaa9468537c1e:components/contact/Contact.js
 
           <p className="block md:hidden mt-6 text-xs text-center">
             For secure communications, please use  <a href="https://www.sendsafely.com/u/admin@algorinthlabs.com" className="text-primary">SendSafely.</a>

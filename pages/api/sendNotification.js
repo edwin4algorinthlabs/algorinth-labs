@@ -15,13 +15,23 @@ const transporter = nodemailer.createTransport(
 export default async (req, res) => {
 
    const {data} = req.body;
-    console.log(data.firstName)
+    console.log(data.projectlink)
     try {
       const info = await transporter.sendMail({
-        from: "techwizardhyped@gmail.com", // Sender's email address
-        to: 'hollandroden419@gmail.com', // Recipient's email address
-        subject: "New potential client", // Email subject
-        text: `${data.firstName} ${data.lastName} could be a new potential client see how you can help them `, // Email body
+        from: 'techwizardhyped@gmail.com', // Sender's email address
+        to: 'admin@algorinthlabs.com', // Recipient's email address
+        subject: 'New potential client', // Email subject
+        // Specify the HTML content of the email
+        html: `
+          <html>
+            <body>
+              <h1>We have  a new potential client.</h1>
+              <h2>${data.firstName} ${data.lastName} </h2>
+              <h3>email : <a href="${data.companyMail}">${data.companyMail}</a></p>
+              <p>code base : <a href="${data.projectlink}">here</a></p>
+            </body>
+          </html>
+        `,
       });
   
       console.log('Email sent:', info.response);
