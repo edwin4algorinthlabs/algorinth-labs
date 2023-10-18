@@ -1,55 +1,13 @@
 "use client"
 
 import "./Contact.css";
-import axios from "axios";
 import { useState } from 'react';
-
-
-
 
 const Contact = () => {
   const [data, setData] = useState(
-    { firstName: "", lastName: "", companyMail: "", inquiry: "Smart Contract Audit", message: "", projectlink: "" }
+    { fName: "", lName: "", cName: "", inquiry: "", message: "", link: "" }
   )
-  const [error, setError] = useState(false);
-//email transporter
 
-const getMarketCap = async ()=> {
-  try{
-    const response =await axios.get('/api/coinmarketcap')
-    console.log(response.data)
-  }catch(error){
-    setError(true)
-    console.log(error)
-  }
-}
-
-  const sendData = async ()=>{
-    try {
-      const response = await axios.post('/api/sendContact', { data });
-      
-      if (response.data.message == "Data registered successfully"){
-        alert("Thanks we'll be in touch Soon");
-      }else{
-        setError(true)
-        alert("please type correct information")
-      }
-      // alert(JSON.stringify(response.data.emails, null, 2));
-    } catch (error) {
-      setError(true)
-      alert("Something Went Wrong Please check if data follows rule");
-
-    }
-  }
-  const sendNotification = async()=>{
-    try{
-       
-      const res = await axios.post("/api/sendNotification",{data});
-      console.log(res.data.message)
-    }catch(error){
-      console.log(error)
-    }
-  }
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -59,11 +17,10 @@ const getMarketCap = async ()=> {
       [name]: value
     }))
   }
- 
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    sendData();
-    sendNotification();
+    // alert(data);
   }
   return (
     <div className="w-full max-w-5xl mx-auto">
@@ -75,23 +32,22 @@ const getMarketCap = async ()=> {
 
             <div>
               <label for="fname">First name</label>
-              <input type="text" name="firstName" id="fname" placeholder="John" onChange={handleChange} value={data.name} required /> <br />
+              <input type="text" name="fName" id="fname" placeholder="John" onChange={handleChange} value={data.fName} required /> <br />
 
             </div>
 
             <div>
               <label for="lname">Last name</label>
-              <input type="text" name="lastName" placeholder="Doe" id="lname" onChange={handleChange} value={data.name} required /> <br />
-
+              <input type="text" name="lName" placeholder="Doe" id="lname" onChange={handleChange} value={data.lName} required /> <br />
             </div>
           </div>
 
 
-          <label for="cName">Company Email</label>
-          <input type="text" name="companyMail" cols={15} rows={1} id="cName" onChange={handleChange} value={data.name} required /> <br />
+          <label for="cName">Company name</label>
+          <input type="text" name="cName" cols={15} rows={1} id="cName" onChange={handleChange} value={data.cName} required /> <br />
 
           <label for="inquiry">Inquiry type</label>
-          <select name="inquiry" id="inquiry" value={data.inquiry} onChange={handleChange} required>
+          <select name="inquiry" id="inquiry" required>
             <option value="Smart Contract Audit">Smart Contract Audit</option>
             <option value="Smart Contract Security">Smart Contract Security</option>
             <option value="Smart Contract Testing">Smart Contract Testing</option>
@@ -106,19 +62,9 @@ const getMarketCap = async ()=> {
           <textarea name="message" cols={15} rows={10} id="message" onChange={handleChange} value={data.name} required></textarea> <br />
 
           <label for="link">Link to project on Github</label>
-          <input type="url" name="projectlink" id="link" onChange={handleChange} value={data.name} required /> <br />
+          <input type="url" name="link" id="link" onChange={handleChange} value={data.name} required /> <br />
 
-          {/* <input type="submit" name="submit" value="submit" /> */}
-
-          <button type="submit" onClick={handleSubmit}>Submit</button>
-
-
-          {/* <p>
-        {data.fName} {data.lName} {data.cName} {data.inquiry} {data.message} {data.link} {data.inquiry} 
-    </p> */}
-
-
-
+          <button type="submit" className="submit__button">Submit</button>
 
           <p className="block md:hidden mt-6 text-xs text-center">
             For secure communications, please use  <a href="https://www.sendsafely.com/u/admin@algorinthlabs.com" className="text-primary">SendSafely.</a>
