@@ -35,7 +35,7 @@ export default function BlogsContainer() {
             {/* =============== Blog =============== */}
             <div className="flex flex-col w-full max-w-[602px]">
                 <div className="bg-[#141414] w-full h-[300px] rounded-lg"></div>
-                <h2 className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 sm:pt-6">Topic 1</h2>
+                <h2 className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 sm:pt-6">{blogData ? blogData[1].fields.title.content[0].content[0].value:"Loading"}</h2>
                 <p className="text-xs sm:text-xl text-[#525252]">More details on it</p>
                 <p className="text-base sm:text-2xl py-4 sm:py-6">Body text  text  text  text  text  text  text  
                 text  text text text text text text text text text text text text text text text text.t</p>
