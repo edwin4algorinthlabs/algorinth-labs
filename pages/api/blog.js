@@ -5,7 +5,9 @@ const client = contentful.createClient({
     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
   })
 
-  export default async (req, res) => {
+  // export default async  (req, res) => {
+  export default async function Blog (req, res) {
+  
    let richText = null
    try{
 

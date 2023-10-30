@@ -42,6 +42,11 @@ const links = [
 export default function Header() {
     const segment = useSelectedLayoutSegment();
     const [showResource, setShowResource] = useState(false)
+
+    const recipientEmail = 'info@algorinthlabs.com';
+    const handleOnClick = () => {
+    window.open(`mailto:${recipientEmail}`, '_blank');
+  };
     
     return (
         <div className="h-[120px] w-full font-rubik absolute top-5 z-[50] bg-transparent">
@@ -79,7 +84,7 @@ export default function Header() {
                         ))}
                     </div>
                 </div>
-                <button type="button" className="hidden lg:block h-[70px] w-full max-w-[185px] ml-3 border-2 border-white text-white text-xl font-semibold rounded-lg">
+                <button type="button" onClick={handleOnClick} className="hidden lg:block h-[70px] w-full max-w-[185px] ml-3 border-2 border-white text-white text-xl font-semibold rounded-lg">
                         Request Demo
                 </button>
                 <MdMenu color="#fff" size={28} className="block lg:hidden cursor-pointer" />
