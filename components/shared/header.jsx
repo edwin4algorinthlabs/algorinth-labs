@@ -1,6 +1,6 @@
 "use client"
 
-// import { useState } from "react"
+// import "./dropdown.css";
 import Image from 'next/image';
 import Link from "next/link"
 import { MdMenu, MdOutlineKeyboardArrowDown } from "react-icons/md"
@@ -109,22 +109,22 @@ export default function Header() {
                 <button type="button" onClick={handleOnClick} className="hidden lg:block h-[70px] w-full max-w-[185px] ml-3 border-2 border-white text-white text-xl font-semibold rounded-lg">
                     Request Demo
                 </button>
+
+
                 <div className="lg:hidden cursor-pointer" color="#fff" size={28} ref={dropdownRef}>
                     <button onClick={toggleDropdown}>
                         <MdMenu color="#fff" size={28} className="pb-3" />
                     </button>
                     {isOpen && (
-                        <ul className="w-[90px] font-medium text-white rounded-lg pl-1 border-2 border-solid border-primary list-style: none">
+                        <ul className="list-style: none bg-black relative max-w-[375px] py-2 px-[31px]">
                             {links.map((link) => (
-                                <li key={link.href} className={link.href === window.location.pathname ? 'text-primary' : ''}>
-                                    <a href={link.href}>{link.text}</a>
+                                <li key={link.href} className={link.href === window.location.pathname ? 'text-lg font-medium border-b-[1px] border-gray-400 leading-[26px] border-solid text-white relative whitespace-nowrap w-fit' : 'relative leading-[26px] whitespace-nowrap w-fit font-medium border-b-[1px] border-gray-400 border-solid text-gray-400'}>
+                                <a href={link.href}>{link.text}</a>
                                 </li>
                             ))}
                         </ul>
                     )}
                 </div>
-
-
             </div>
 
         </div>

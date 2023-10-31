@@ -1,0 +1,31 @@
+.menu {
+  @apply bg-black flex flex-row justify-center w-full;
+}
+.menu .div {
+  @apply bg-[color:var(--greygrey-05)] h-[812px] relative max-w-[375px];
+}
+.menu .frame {
+  @apply items-center inline-flex flex-col absolute left-0 top-[138px];
+}
+.menu .frame-2 {
+  @apply items-center border-[color:var(--greygrey-04)] flex gap-2 h-12 relative w-[375px] px-[31px] py-4 border-b-2;
+  border-bottom-style: solid;
+}
+.menu .heading {
+  @apply text-[color:var(--greygrey-01)] text-xl font-bold tracking-[0] leading-[26px] mb-[-3px] mt-[-7px] relative whitespace-nowrap w-fit;
+  font-family: "Rubik-Bold", Helvetica;
+}
+.menu .ellipse {
+  @apply bg-[color:var(--primaryprimary-02)] rounded h-2 relative w-2;
+}
+.menu .heading-wrapper {
+  @apply items-center border-[color:var(--greygrey-04)] flex gap-2.5 h-12 relative w-[375px] px-[31px] py-4 border-b-2;
+  border-bottom-style: solid;
+}
+.menu .text-wrapper {
+  @apply text-[color:var(--greygrey-03)] text-xl font-medium tracking-[0] leading-[26px] mb-[-3px] mt-[-7px] relative whitespace-nowrap w-fit;
+  font-family: "Rubik-Medium", Helvetica;
+}
+.menu .frame-6 {
+  @apply h-[68px] absolute w-[375px] left-0 top-[30px];
+}
