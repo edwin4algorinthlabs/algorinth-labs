@@ -17,7 +17,7 @@ export default function BlogsContainer() {
           const response =await axios.get('/api/blog')
           console.log(response.data.richText)
           setBlogData(response.data.richText)
-          console.log(blogData)
+          console.log(type(blogData))
 
         }catch(error){
           console.log(error)
@@ -28,22 +28,20 @@ export default function BlogsContainer() {
         <h3 className="text-center text-2xl sm:text-5xl font-bold my-10 sm:my-20">Algorinth Labs Blog</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 w-full max-w-[1244px] mx-auto duration-300">
             {/* =============== Blog =============== */}
-            {/* {blogData ? blogData[0].fields.content.content[0].content[1].value.slice(0,100)+"...":"Loading"} */}
-            <div className="flex flex-col w-full max-w-[602px]">
+            {blogData ? blogData.map((item,index)=>(
+
+                <div className="flex flex-col w-full max-w-[602px]">
                 <div className="bg-[#141414] w-full h-[300px] rounded-lg"></div>
-                <h2 className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 sm:pt-6">{blogData ?  documentToReactComponents(blogData[0].fields.content).slice(0,100) :"Loading"}</h2>
-                <p className="text-xs sm:text-xl text-[#525252]">5 Minutes Read.</p>
-                <p className="text-base sm:text-2xl py-4 sm:py-6"></p>
-                <p className="text-xs sm:text-xl text-[#525252]">{blogData? blogData[0].fields.author: "..."}, {blogData? blogData[0].sys.updatedAt: " "}</p>
-            </div>
-            {/* =============== Blog =============== */}
-            <div className="flex flex-col w-full max-w-[602px]">
-                <div className="bg-[#141414] w-full h-[300px] rounded-lg"></div>
-                <h2 className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 sm:pt-6">{blogData ? blogData[1].fields.title.content[0].content[0].value:"Loading"}</h2>
+                <h2 className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 sm:pt-6">{item ? documentToReactComponents(item.fields.title):"loading..."}</h2>
                 <p className="text-xs sm:text-xl text-[#525252]">More details on it</p>
-                <p className="text-base sm:text-2xl py-4 sm:py-6">{blogData ? documentToReactComponents(blogData[0].fields.content).slice(0,100) :"Loading"}</p>
-                <p className="text-xs sm:text-xl text-[#525252]">{blogData? blogData[0].fields.author: "..."}, {blogData? blogData[1].sys.updatedAt: " "}</p>
-            </div>
+                <p className="text-base sm:text-2xl py-4 sm:py-6">{item ? documentToReactComponents(item.fields.content)[0].slice(1, 100) + "...":"Loading"}</p>
+                <p className="text-xs sm:text-xl text-[#525252]">{item? item.fields.author: "..."} . {new Date(item.sys.updatedAt).toLocaleString()}</p>
+                </div>
+
+            )): <div className="flex flex-col w-full max-w-[602px]">
+    
+            </div>}
+           
         </div>
         <div className="flex items-center justify-center">
             <button type="button" className="h-[54px] w-[330px] sm:h-20 text-primary text-base sm:text-2xl font-semibold border-[3px] border-primary rounded-lg mt-20 sm:mt-[100px] mb-20">Load More</button>
