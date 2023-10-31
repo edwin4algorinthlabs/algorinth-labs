@@ -15,6 +15,7 @@ const client = contentful.createClient({
 
     await client.getEntries().then((entries) => {
         richText = entries.items
+        // console.log(`${richText}`)
       })
       .catch(console.error)
      console.log("hello world")

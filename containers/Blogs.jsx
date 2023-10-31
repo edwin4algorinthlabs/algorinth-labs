@@ -2,6 +2,9 @@
 import RequestDemo from '@/components/shared/request';
 import axios from 'axios';
 import { useEffect,useState} from 'react';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
+
 export default function BlogsContainer() {
     const[blogData,setBlogData] = useState(null)
     useEffect(()=>{
@@ -25,20 +28,21 @@ export default function BlogsContainer() {
         <h3 className="text-center text-2xl sm:text-5xl font-bold my-10 sm:my-20">Algorinth Labs Blog</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 w-full max-w-[1244px] mx-auto duration-300">
             {/* =============== Blog =============== */}
+            {/* {blogData ? blogData[0].fields.content.content[0].content[1].value.slice(0,100)+"...":"Loading"} */}
             <div className="flex flex-col w-full max-w-[602px]">
                 <div className="bg-[#141414] w-full h-[300px] rounded-lg"></div>
-                <h2 className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 sm:pt-6">{blogData ? blogData[0].fields.title.content[0].content[0].value:"Loading"}</h2>
+                <h2 className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 sm:pt-6">{blogData ?  documentToReactComponents(blogData[0].fields.content).slice(0,100) :"Loading"}</h2>
                 <p className="text-xs sm:text-xl text-[#525252]">5 Minutes Read.</p>
-                <p className="text-base sm:text-2xl py-4 sm:py-6">{blogData ? blogData[0].fields.content.content[0].content[1].value.slice(0,100)+"...":"Loading"}</p>
-                <p className="text-xs sm:text-xl text-[#525252]">{blogData? blogData[0].fields.author: "..."}</p>
+                <p className="text-base sm:text-2xl py-4 sm:py-6"></p>
+                <p className="text-xs sm:text-xl text-[#525252]">{blogData? blogData[0].fields.author: "..."}, {blogData? blogData[0].sys.updatedAt: " "}</p>
             </div>
             {/* =============== Blog =============== */}
             <div className="flex flex-col w-full max-w-[602px]">
                 <div className="bg-[#141414] w-full h-[300px] rounded-lg"></div>
                 <h2 className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 sm:pt-6">{blogData ? blogData[1].fields.title.content[0].content[0].value:"Loading"}</h2>
                 <p className="text-xs sm:text-xl text-[#525252]">More details on it</p>
-                <p className="text-base sm:text-2xl py-4 sm:py-6">The importance of smart contract security</p>
-                <p className="text-xs sm:text-xl text-[#525252]">Wale Oladeinde. 28 Aug, 2023</p>
+                <p className="text-base sm:text-2xl py-4 sm:py-6">{blogData ? documentToReactComponents(blogData[0].fields.content).slice(0,100) :"Loading"}</p>
+                <p className="text-xs sm:text-xl text-[#525252]">{blogData? blogData[0].fields.author: "..."}, {blogData? blogData[1].sys.updatedAt: " "}</p>
             </div>
         </div>
         <div className="flex items-center justify-center">
