@@ -1,6 +1,5 @@
 "use client"
 
-// import "./dropdown.css";
 import Image from 'next/image';
 import Link from "next/link"
 import { MdMenu, MdOutlineKeyboardArrowDown } from "react-icons/md"

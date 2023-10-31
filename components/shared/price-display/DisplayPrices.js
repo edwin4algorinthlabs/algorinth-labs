@@ -7,7 +7,7 @@ const DisplayPrices = () => {
 
   const getMarketCap = async ()=> {
     try{
-      const response =await axios.get('/api/coinmarketcap')
+      const response = await axios.get('/api/coinmarketcap')
       console.log(response.data)
       //response.data is an object like so : {ETH:'1867.784'}
     }catch(error){
