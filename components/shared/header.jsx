@@ -6,7 +6,6 @@ import Link from "next/link"
 import { MdMenu, MdOutlineKeyboardArrowDown } from "react-icons/md"
 import { useSelectedLayoutSegment } from "next/navigation";
 import React, { useState, useRef, useEffect } from "react";
-import "../home/dropdown/Dropdown.css";
 
 const links = [
     {
