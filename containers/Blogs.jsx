@@ -3,24 +3,28 @@ import RequestDemo from '@/components/shared/request';
 import axios from 'axios';
 import { useEffect,useState} from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import ReactDOMServer from 'react-dom/server';
 export default function BlogsContainer() {
     const[blogData,setBlogData] = useState(null)
+    const [tiles, setTiles] = useState(1);
     useEffect(()=>{
 
       getBlogData()
 
-    },[])
-    const getBlogData = async ()=> {
-        try{
-          const response =await axios.get('/api/blog')
-          console.log(response.data.richText)
-          setBlogData(response.data.richText)
-          console.log(type(blogData))
-
-        }catch(error){
-          console.log(error)
-        }
+    },[tiles])
+    const getBlogData = async () => {
+      try {
+        const response = await axios.get('/api/blog', {
+          params: { tiles: tiles }
+        });
+    
+        console.log(response.data.richText);
+        setBlogData(response.data.richText);
+        console.log(typeof blogData);
+      } catch (error) {
+        console.log(error);
       }
+    }
     return (
     <div className="pt-[120px] w-full sm:w-[85vw] font-rubik mx-auto min-h-screen px-6 md:px-12 lg:px-24">
         <h3 className="text-center text-2xl sm:text-5xl font-bold my-10 sm:my-20">Algorinth Labs Blog</h3>
@@ -34,7 +38,7 @@ export default function BlogsContainer() {
                 </div>
                 <h2 className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 sm:pt-6">{item ? documentToReactComponents(item.fields.title):"loading..."}</h2>
                 <p className="text-xs sm:text-xl text-[#525252]">More details on it</p>
-                <p className="text-base sm:text-2xl py-4 sm:py-6">{item ? documentToReactComponents(item.fields.content)[0]:"Loading"}</p>
+                <p className="text-base sm:text-2xl py-4 sm:py-6">{item ? ReactDOMServer.renderToStaticMarkup(documentToReactComponents(item.fields.content)[0]).replace(/<[^>]+>/g, '').slice(0,100)+" ..." :"Loading"}</p>
                 <p className="text-xs sm:text-xl text-[#525252]">{item? item.fields.author: "..."} . {new Date(item.sys.updatedAt).toLocaleString()}</p>
                 </div>
 
@@ -53,7 +57,7 @@ export default function BlogsContainer() {
               </div>*/}
         </div>
         <div className="flex items-center justify-center">
-            <button type="button" className="h-[54px] w-[330px] sm:h-20 text-primary text-base sm:text-2xl font-semibold border-[3px] border-primary rounded-lg mt-20 sm:mt-[100px] mb-20">Load More</button>
+            <button type="button" className="h-[54px] w-[330px] sm:h-20 text-primary text-base sm:text-2xl font-semibold border-[3px] border-primary rounded-lg mt-20 sm:mt-[100px] mb-20" onClick={()=>{setTiles(tiles + 1)}}>Load More</button>
         </div>
 
 

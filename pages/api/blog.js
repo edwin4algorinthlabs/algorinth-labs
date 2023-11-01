@@ -7,12 +7,13 @@ const client = contentful.createClient({
 
   // export default async  (req, res) => {
   export default async function Blog (req, res) {
-  
+    console.log("req.query.tiles: " + req.query.tiles);
+  let noOfTiles = req.query.tiles
    let richText = null
    try{
 
     await client.getEntries().then((entries) => {
-        richText = entries.items
+        richText = noOfTiles < entries.items.length ? entries.items.slice(0,noOfTiles) :entries.items
       })
       .catch(console.error)
      console.log(richText)

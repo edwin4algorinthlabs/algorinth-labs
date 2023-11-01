@@ -1,15 +1,24 @@
+"use client"
 import { BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs";
 import Link from "next/link";
-
-
+import axios from "axios";
+import { useState } from "react";
 export default function FooterContainer() {
+    const [mail,setMail] = useState("")
+
+    const handleChange = (e)=>{
+        setMail(e.target.value)
+    }
+    const handleClick = ()=>{
+        console.log(mail)
+    }
     return (
         <div className="w-full bg-[#0C0000] flex justify-between pt-8 gap-10 flex-wrap pb-[69px] px-5 sm:px-[45px] lg:px-[100px]">
             <div className="flex flex-col gap-[23px] w-full max-w-[310px]">
                 <p className="font-medium text-base text-white">Join our Newsletter</p>
                 <p className="text-sm text-white font-open-sans">Stay informed about our latest work and industry news:</p>
-                <input type="email" placeholder="name@email.com" className="bg-transparent px-[13px] text-white h-[38px] rounded border border-c-grey-2" />
-                <button className="h-[42px] w-[113.27px] border-[3px] border-white text-white text-xs font-semibold rounded">
+                <input type="email" placeholder="name@email.com" className="bg-transparent px-[13px] text-white h-[38px] rounded border border-c-grey-2" onChange={handleChange} value={mail}/>
+                <button className="h-[42px] w-[113.27px] border-[3px] border-white text-white text-xs font-semibold rounded" onClick={handleClick}>
                    SUBSCRIBE
                 </button>
             </div>
