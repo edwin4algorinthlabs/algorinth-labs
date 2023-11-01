@@ -1,5 +1,4 @@
-import BlogsContainer from "@/containers/blogs"
-
+import BlogsContainer from "@/containers/Blogs"
 
 const Blog = () => {
   return (

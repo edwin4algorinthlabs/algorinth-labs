@@ -40,7 +40,8 @@ async function initDatabase(){
     }
 }
 initDatabase();
-export default async (req, res) => {
+// export default async (req, res) => {
+  export default async function SendContact(req, res) {
     try {
       const client = await clientPromise;
       const db = client.db("algorinthtest"); // Replace with your actual database name

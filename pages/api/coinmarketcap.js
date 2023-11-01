@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-export default async (req, res) => {
+// export default async function CoinMarketCap(req, res) {
+export default async function CoinMarketCap(req, res) {
   try {
     const response = await axios.get(
       'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest',

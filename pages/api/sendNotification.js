@@ -12,7 +12,8 @@ const transporter = nodemailer.createTransport(
     }
   )
 
-export default async (req, res) => {
+// export default async function sendNotification (req, res) {
+export default async function sendNotification (req, res) {
 
    const {data} = req.body;
     console.log(data.projectlink)
@@ -41,3 +42,4 @@ export default async (req, res) => {
   res.status(500).json({ error: "Internal Server Error" });
 }
 }
+

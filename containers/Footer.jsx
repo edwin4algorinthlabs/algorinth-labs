@@ -1,4 +1,5 @@
-import { BsTwitter, BsLinkedin } from "react-icons/bs"
+import { BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs";
+import Link from "next/link";
 
 
 export default function FooterContainer() {
@@ -19,38 +20,38 @@ export default function FooterContainer() {
                     comprehensive testing, and cutting-edge software development, 
                     driving the evolution of decentralized technologies.
                 </p>
-                <p className="text-xs text-white font-medium cursor-pointer">
+                <Link href="/about"><p className="text-xs text-white font-medium cursor-pointer">
                     LEARN MORE...
-                </p>
+                </p></Link>
             </div>
             <div className="flex flex-col gap-6 w-full max-w-[310px]">
                 <p className="font-medium text-xl text-white">CONNECT WITH US</p>
                 <div className="flex justify-between items-center w-full max-w-[228px]">
                     <p className="flex gap-1 items-center text-sm text-white font-open-sans cursor-pointer hover:scale-105 hover:font-semibold duration-500">
-                        <BsTwitter className="text-c-grey-2" />
+                    <Link href="twitter.com/#"><BsTwitter className="text-c-grey-2" /></Link>
                         Twitter
                     </p>
-                    <p className="text-sm text-white font-open-sans cursor-pointer hover:scale-105 hover:font-semibold duration-500">
+                    <Link href="/careers"><p className="text-sm text-white font-open-sans cursor-pointer hover:scale-105 hover:font-semibold duration-500">
                         Careers
-                    </p>
+                    </p></Link>
                 </div>
                 <div className="flex justify-between items-center w-full max-w-[228px]">
                     <p className="flex gap-1 items-center text-sm text-white font-open-sans cursor-pointer hover:scale-105 hover:font-semibold duration-500">
-                        <BsLinkedin className="text-c-grey-2" />
+                    <Link href="https://linkedin.com/company/algorinthlabs-llc."><BsLinkedin className="text-c-grey-2" /></Link>
                         LinkedIn
                     </p>
-                    <p className="text-sm text-white font-open-sans cursor-pointer hover:scale-105 hover:font-semibold duration-500">
+                    <Link href="https://algorinth-labs.gitbook.io/resource-library/" target="blank"><p className="text-sm text-white font-open-sans cursor-pointer hover:scale-105 hover:font-semibold duration-500">
                         Resources
-                    </p>
+                    </p></Link>
                 </div>
                 <div className="flex justify-between items-center w-full max-w-[228px]">
                     <p className="flex gap-1 items-center text-sm text-white font-open-sans cursor-pointer hover:scale-105 hover:font-semibold duration-500">
-                        <BsTwitter className="text-c-grey-2" />
-                        Twitter
+                    <Link href="https://instagram.com/algorinthlabs.llc"><BsInstagram className="text-c-grey-2" /></Link>
+                        Instagram
                     </p>
-                    <p className="text-sm text-white font-open-sans cursor-pointer hover:scale-105 hover:font-semibold duration-500">
+                    {/* <p className="text-sm text-white font-open-sans cursor-pointer hover:scale-105 hover:font-semibold duration-500">
                         Careers
-                    </p>
+                    </p> */}
                 </div>
             </div>
         </div>
