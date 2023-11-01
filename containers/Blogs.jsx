@@ -1,7 +1,18 @@
 "use client"
+<<<<<<< HEAD
 import RequestDemo from '@/components/shared/request';
 import axios from 'axios';
 import { useEffect,useState} from 'react';
+=======
+import React from 'react';
+import RequestDemo from '@/components/shared/request';
+import axios from 'axios';
+import { useEffect,useState} from 'react';
+import ReactDOMServer from 'react-dom/server';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
+
+>>>>>>> solomon
 export default function BlogsContainer() {
     const[blogData,setBlogData] = useState(null)
     useEffect(()=>{
@@ -14,7 +25,11 @@ export default function BlogsContainer() {
           const response =await axios.get('/api/blog')
           console.log(response.data.richText)
           setBlogData(response.data.richText)
+<<<<<<< HEAD
           console.log(blogData)
+=======
+          console.log(type(blogData))
+>>>>>>> solomon
 
         }catch(error){
           console.log(error)
@@ -25,6 +40,7 @@ export default function BlogsContainer() {
         <h3 className="text-center text-2xl sm:text-5xl font-bold my-10 sm:my-20">Algorinth Labs Blog</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 w-full max-w-[1244px] mx-auto duration-300">
             {/* =============== Blog =============== */}
+<<<<<<< HEAD
             <div className="flex flex-col w-full max-w-[602px]">
                 <div className="bg-[#141414] w-full h-[300px] rounded-lg"></div>
                 <h2 className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 sm:pt-6">{blogData ? blogData[0].fields.title.content[0].content[0].value:"Loading"}</h2>
@@ -41,6 +57,24 @@ export default function BlogsContainer() {
                 text  text text text text text text text text text text text text text text text text.t</p>
                 <p className="text-xs sm:text-xl text-[#525252]">Aisha Faruq. 28 Aug, 2023</p>
             </div>
+=======
+            {blogData ? blogData.map((item,index)=>(
+              
+                <div className="flex flex-col w-full max-w-[602px]">
+                <div className="bg-[#141414] w-full h-[300px] rounded-lg">
+                  <img src={item.fields.imageAPI.fields.file.url} width={500} height={650}/>
+                </div>
+                <h2 className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 sm:pt-6">{item ? documentToReactComponents(item.fields.title):"loading..."}</h2>
+                <p className="text-xs sm:text-xl text-[#525252]">More details on it</p>
+                <p className="text-base sm:text-2xl py-4 sm:py-6">{item ? ReactDOMServer.renderToStaticMarkup(documentToReactComponents(item.fields.content)[0]).replace(/<[^>]+>/g, '').slice(0,100)+" ..." :"Loading"}</p>
+                <p className="text-xs sm:text-xl text-[#525252]">{item? item.fields.author: "..."} . {new Date(item.sys.updatedAt).toLocaleString()}</p>
+                </div>
+
+            )): <div className="flex flex-col w-full max-w-[602px]">
+              <p>Loading...</p>
+              <div className="bg-[#141414] w-full h-[300px] rounded-lg"></div>
+          </div>}
+>>>>>>> solomon
         </div>
         <div className="flex items-center justify-center">
             <button type="button" className="h-[54px] w-[330px] sm:h-20 text-primary text-base sm:text-2xl font-semibold border-[3px] border-primary rounded-lg mt-20 sm:mt-[100px] mb-20">Load More</button>
