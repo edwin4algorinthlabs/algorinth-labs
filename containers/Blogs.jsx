@@ -1,7 +1,9 @@
 "use client"
+import React from 'react';
 import RequestDemo from '@/components/shared/request';
 import axios from 'axios';
 import { useEffect,useState} from 'react';
+import ReactDOMServer from 'react-dom/server';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 
@@ -29,19 +31,21 @@ export default function BlogsContainer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 w-full max-w-[1244px] mx-auto duration-300">
             {/* =============== Blog =============== */}
             {blogData ? blogData.map((item,index)=>(
-
+              
                 <div className="flex flex-col w-full max-w-[602px]">
-                <div className="bg-[#141414] w-full h-[300px] rounded-lg"></div>
+                <div className="bg-[#141414] w-full h-[300px] rounded-lg">
+                  <img src={item.fields.imageAPI.fields.file.url} width={500} height={650}/>
+                </div>
                 <h2 className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 sm:pt-6">{item ? documentToReactComponents(item.fields.title):"loading..."}</h2>
                 <p className="text-xs sm:text-xl text-[#525252]">More details on it</p>
-                <p className="text-base sm:text-2xl py-4 sm:py-6">{item ? documentToReactComponents(item.fields.content)[0].slice(1, 100) + "...":"Loading"}</p>
+                <p className="text-base sm:text-2xl py-4 sm:py-6">{item ? ReactDOMServer.renderToStaticMarkup(documentToReactComponents(item.fields.content)[0]).replace(/<[^>]+>/g, '').slice(0,100)+" ..." :"Loading"}</p>
                 <p className="text-xs sm:text-xl text-[#525252]">{item? item.fields.author: "..."} . {new Date(item.sys.updatedAt).toLocaleString()}</p>
                 </div>
 
             )): <div className="flex flex-col w-full max-w-[602px]">
-    
-            </div>}
-           
+              <p>Loading...</p>
+              <div className="bg-[#141414] w-full h-[300px] rounded-lg"></div>
+          </div>}
         </div>
         <div className="flex items-center justify-center">
             <button type="button" className="h-[54px] w-[330px] sm:h-20 text-primary text-base sm:text-2xl font-semibold border-[3px] border-primary rounded-lg mt-20 sm:mt-[100px] mb-20">Load More</button>
