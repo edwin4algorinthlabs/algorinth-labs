@@ -117,8 +117,20 @@ export default function Header() {
                     {isOpen && (
                         <ul className="list-style: none bg-black relative max-w-[375px] py-2 px-[31px]">
                             {links.map((link) => (
-                                <li key={link.href} className={link.href === window.location.pathname ? 'text-lg font-medium border-b-[1px] border-gray-400 leading-[26px] border-solid text-white relative whitespace-nowrap w-fit' : 'relative leading-[26px] whitespace-nowrap w-fit font-medium border-b-[1px] border-gray-400 border-solid text-gray-400'}>
-                                <a href={link.href}>{link.text}</a>
+                                <li
+                                    key={link.href}
+                                    className={
+                                        link.href === window.location.pathname
+                                            ? 'text-lg font-medium border-b-[1px] border-gray-400 leading-[26px] border-solid text-white relative whitespace-nowrap w-fit'
+                                            : 'relative leading-[26px] whitespace-nowrap w-fit font-medium border-b-[1px] border-gray-400 opacity-50 border-solid text-gray-400'
+                                    }
+                                >
+                                    <a href={link.href}>{link.text}</a>
+                                    {link.href === window.location.pathname && (
+                                        <span className="text-primary" style={{ marginLeft: '5px' }}>
+                                            &#8226;
+                                        </span>
+                                    )}
                                 </li>
                             ))}
                         </ul>
