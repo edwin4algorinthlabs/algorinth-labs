@@ -21,7 +21,7 @@ const openSans = Open_Sans({
 
 export const metadata = {
   title: 'Algorinth Labs | Home',
-  description: 'This is the coming soon page of Algorinth Labs',
+  description: 'Official Website - Algorinth Labs LLC.',
 }
 
 export default function RootLayout({ children }) {
