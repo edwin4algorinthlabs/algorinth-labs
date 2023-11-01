@@ -7,7 +7,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import ReactDOMServer from 'react-dom/server';
 export default function BlogsContainer() {
     const[blogData,setBlogData] = useState(null)
-    const [tiles, setTiles] = useState(1);
+    const [tiles, setTiles] = useState(2);
     useEffect(()=>{
 
       getBlogData()
