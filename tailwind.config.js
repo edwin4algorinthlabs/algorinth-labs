@@ -25,7 +25,9 @@ module.exports = {
         'c-grey': "#525252",
         'c-grey-2': "#848794",
         "link-active": "#AD2B43"
-      }
+      },
+      keyframes: {
+      },
     },
   },
   plugins: [],
