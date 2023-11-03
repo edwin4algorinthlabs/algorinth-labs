@@ -9,8 +9,15 @@ export default function FooterContainer() {
     const handleChange = (e)=>{
         setMail(e.target.value)
     }
-    const handleClick = ()=>{
-        console.log(mail)
+    const handleClick = async ()=>{
+        try{
+            const response = await axios.post('/api/newsletter', {mail} );
+            alert(response.data.message)
+        }catch(error){
+            alert(error)
+        }
+        
+        
     }
     return (
         <div className="w-full bg-[#0C0000] flex justify-between pt-8 gap-10 flex-wrap pb-[69px] px-5 sm:px-[45px] lg:px-[100px]">
