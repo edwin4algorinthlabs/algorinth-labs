@@ -37,7 +37,7 @@ export default async function CoinMarketCap(req, res) {
        }
     })
     
-
+    console.log(prices)
     // Cache the data for 10 minutes
     cache.set('coinMarketData', prices);
 

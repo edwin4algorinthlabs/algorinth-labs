@@ -27,7 +27,8 @@ const DisplayPrices = () => {
   const renderCryptocurrencyData = () => {
     return Object.keys(data).map((symbol) => {
       const name = symbol;
-      const price = data[symbol];
+      const price = data[symbol][0];
+      const change = data[symbol][1]
 
       return (
         <div key={symbol} className="div-coin-marquee-2">
@@ -75,7 +76,7 @@ const DisplayPrices = () => {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    {/* -0.07% */}
+                    {change}
                   </a>
                 </div>
               </div>
