@@ -16,11 +16,16 @@ export default async function CoinMarketCap(req, res) {
     const json = response.data;
     const price = json.data
     const api_coins = price.slice(0,10)
+    console.log(api_coins[0].quote)
     api_coins.forEach((item,index)=>{
        if(coins.includes(item.symbol)){
+        
         const coin_price = api_coins[index].quote.USD.price
+        const percent_change_24h = api_coins[index].quote.USD.percent_change_24h
+        const info_price_pair = [coin_price.toFixed(4),percent_change_24h]
         const symbol = item.symbol;
-        prices[symbol] = coin_price.toFixed(4)
+        prices[symbol] = info_price_pair
+        console.log(prices)
        }
     })
 
