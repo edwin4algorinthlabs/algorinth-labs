@@ -67,7 +67,7 @@
     border-top-style: solid;
 }
 .div-html-embed .text-wrapper-4 {
-     @apply  text-[#ea3943] text-[11px] font-semibold h-[11px] tracking-[0] leading-[11px] absolute whitespace-nowrap left-[11px] -top-px;
+     @apply text-[11px] font-semibold h-[11px] tracking-[0] leading-[11px] absolute whitespace-nowrap left-[11px] -top-px;
     font-family: "Maven Pro-SemiBold", Helvetica;
 }
 .div-html-embed .pseudo {
@@ -110,3 +110,10 @@
 .div-html-embed .div-coin-marquee-16 {
      @apply  h-[11px] relative w-[27.11px];
 }
+
+.positive-change {
+    @apply text-[darkgreen];
+}
+.negative-change {
+     @apply text-[#ea3943];
+ }

@@ -24,11 +24,20 @@ const DisplayPrices = () => {
     fetchData();
   }, []);
 
+  const getChangeClass = (change) => {
+    if (change > 0) {
+      return "positive-change";
+    } else if (change < 0) {
+      return "negative-change";
+    }
+    return "";
+  };
+
   const renderCryptocurrencyData = () => {
     return Object.keys(data).map((symbol) => {
       const name = symbol;
       const price = data[symbol][0];
-      const change = data[symbol][1]
+      const change = data[symbol][1].toFixed(2);
 
       return (
         <div key={symbol} className="div-coin-marquee-2">
@@ -71,12 +80,12 @@ const DisplayPrices = () => {
                 <div className="div-coin-marquee-11">
                   <div className="span-coin-marquee" />
                   <a
-                    className="text-wrapper-4"
+                    className={`text-wrapper-4 ${getChangeClass(change)}`}
                     href={`https://coinmarketcap.com/currencies/${symbol.toLowerCase()}`}
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    {change}
+                    {change}%
                   </a>
                 </div>
               </div>
