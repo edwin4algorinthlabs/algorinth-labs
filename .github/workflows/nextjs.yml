@@ -29,6 +29,10 @@ jobs:
       # Installs all the dependencies based on your package-lock.json file
       - name: Install dependencies
         run: npm install
+      #Sets Contentful Access Token
+      - name: Set Contentful access token
+        run: |
+          echo "CONTENTFUL_ACCESS_TOKEN=${{ secrets.CONTENTFUL_ACCESS_TOKEN }}" >> $GITHUB_ENV
 
       # Builds your Next.js application
       - name: Build with Next.js
