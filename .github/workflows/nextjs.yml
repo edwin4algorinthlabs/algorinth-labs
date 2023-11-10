@@ -18,6 +18,10 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
+      #Sets Contentful acess token
+      - name: Set Contentful access token
+        run: |
+          echo "CONTENTFUL_ACCESS_TOKEN=${{ secrets.CONTENTFUL_ACCESS_TOKEN }}" >> $GITHUB_ENV
 
       # Sets up a Node.js environment and caches it for faster subsequent runs
       - name: Setup Node.js
@@ -29,10 +33,6 @@ jobs:
       # Installs all the dependencies based on your package-lock.json file
       - name: Install dependencies
         run: npm install
-      #Sets Contentful Access Token
-      - name: Set Contentful access token
-        run: |
-          echo "CONTENTFUL_ACCESS_TOKEN=${{ secrets.CONTENTFUL_ACCESS_TOKEN }}" >> $GITHUB_ENV
 
       # Builds your Next.js application
       - name: Build with Next.js
