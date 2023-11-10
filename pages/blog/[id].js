@@ -44,20 +44,25 @@ export default function Data({blogData}){
 }
 
 export async function getStaticPaths() {
-  let ids = null
-   await client.getEntries().then((entries) => {
-         ids = entries.items.map((entry) =>  entry.sys.id);
-      })
-      .catch(console.error)
-      console.log(ids)
-      const paths = ids.map((id) => ({ params: { id } }));
-   
-     
+  try {
+    const entries = await client.getEntries();
+    const ids = entries.items.map((entry) => entry.sys.id);
+
+    const paths = ids.map((id) => ({ params: { id } }));
+
     return {
       paths,
-      fallback: true, // Set to 'false' if you want to return a 404 for unknown IDs
+      fallback: true,
+    };
+  } catch (error) {
+    console.error("Error fetching entries:", error);
+    return {
+      paths: [],
+      fallback: true,
     };
   }
+}
+
   export async function getStaticProps({ params }) {
     let blogData = null
     try {
