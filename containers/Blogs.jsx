@@ -1,5 +1,6 @@
 "use client"
 import React from 'react';
+import Link from 'next/link';
 import RequestDemo from '@/components/shared/request';
 import axios from 'axios';
 import { useEffect,useState} from 'react';
@@ -32,7 +33,7 @@ export default function BlogsContainer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 w-full max-w-[1244px] mx-auto duration-300">
             {/* =============== Blog =============== */}
             {blogData ? blogData.map((item,index)=>(
-              
+                <Link href={`/blog/${item.sys.id}`} target='_blank'>
                 <div className="flex flex-col w-full max-w-[602px]">
                 <div className="bg-[#141414] w-full h-[300px] rounded-lg">
                   <img src={item.fields.imageAPI.fields.file.url} width={500} height={650}/>
@@ -42,7 +43,7 @@ export default function BlogsContainer() {
                 <p className="text-base sm:text-2xl py-4 sm:py-6">{item ? ReactDOMServer.renderToStaticMarkup(documentToReactComponents(item.fields.content)[0]).replace(/<[^>]+>/g, '').slice(0,100)+" ..." :"Loading"}</p>
                 <p className="text-xs sm:text-xl text-[#525252]">{item? item.fields.author: "..."} . {new Date(item.sys.updatedAt).toLocaleString()}</p>
                 </div>
-
+                </Link>
             )): <div className="flex flex-col w-full max-w-[602px]">
               <p>Loading...</p>
               <div className="bg-[#141414] w-full h-[300px] rounded-lg"></div>

@@ -1,4 +1,4 @@
-
+import "./globals.css"
 // import ComingSoonContainer from "@/containers/ComingSoon"
 import HomeContainer from "@/containers/Home"
 

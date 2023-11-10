@@ -3,8 +3,6 @@ import { Rubik, Open_Sans } from 'next/font/google'
 import Header from "@/components/shared/header"
 import DisplayPrices from "@/components/shared/price-display/DisplayPrices"
 import FooterContainer from "@/containers/Footer"
-
-
 const rubik = Rubik({
   subsets: ['latin'],
   display: 'swap',
