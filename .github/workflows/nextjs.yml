@@ -22,6 +22,10 @@ jobs:
       - name: Set Contentful access token
         run: |
           echo "CONTENTFUL_ACCESS_TOKEN=${{ secrets.CONTENTFUL_ACCESS_TOKEN }}" >> $GITHUB_ENV
+      #Sets Contentful space id
+      - name: Set Contentful space id
+        run: |
+          echo "CONTENTFUL_ACCESS_TOKEN=${{ secrets.CONTENTFUL_SPACE_ID }}" >> $GITHUB_ENV
 
       # Sets up a Node.js environment and caches it for faster subsequent runs
       - name: Setup Node.js
