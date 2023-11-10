@@ -13,7 +13,7 @@
     "@emailjs/browser": "^3.11.0",
     "autoprefixer": "10.4.14",
     "axios": "^1.5.0",
-    "contentful": "^10.6.5",
+    "contentful": "^10.6.7",
     "dotenv": "^16.3.1",
     "email-js": "^2.0.2",
     "email-validator": "^2.0.4",
