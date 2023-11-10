@@ -63,21 +63,17 @@ export async function getStaticPaths() {
   }
 }
 
-  export async function getStaticProps({ params }) {
-    let blogData = null
-    try {
-      await client.getEntry(params.id)
-  .then((entry) =>{
-    blogData = entry;
-}).catch(console.error)
-      
-      return {
-        props: { blogData },
-      };
-    } catch (error) {
-      console.error(error);
-      return {
-        notFound: true,
-      };
-    }
+export async function getStaticProps({ params }) {
+  try {
+    const entry = await client.getEntry(params.id);
+
+    return {
+      props: { blogData: entry },
+    };
+  } catch (error) {
+    console.error("Error fetching entry:", error);
+    return {
+      notFound: true,
+    };
   }
+}
