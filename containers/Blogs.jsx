@@ -36,7 +36,7 @@ export default function BlogsContainer() {
                 <Link href={`/blog/${item.sys.id}`} target='_blank'>
                 <div className="flex flex-col w-full max-w-[602px]">
                 <div className="bg-[#141414] w-full h-[300px] rounded-lg">
-                  <img src={item.fields.imageAPI.fields.file.url} width={500} height={650}/>
+                  <img src={item.fields.imageAPI.fields.file.url} className="w-full h-full object-cover rounded-lg"/>
                 </div>
                 <h2 className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 sm:pt-6">{item ? documentToReactComponents(item.fields.title):"loading..."}</h2>
                 <p className="text-xs sm:text-xl text-[#525252]">More details on it</p>
