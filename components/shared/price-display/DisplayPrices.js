@@ -45,7 +45,7 @@ const DisplayPrices = () => {
             <Image className="img" alt="Element png" src={`/images/${symbol}.png`} width={20} height={20} />
             <div className="div-coin-marquee-3">
               <div className="div-coin-marquee-4">
-                <div className="div-wrapper">
+                <div className="div-wrapper animate-bounce">
                   <a
                     className="text-wrapper-2"
                     href={`https://coinmarketcap.com/currencies/${symbol.toLowerCase()}`}
@@ -55,7 +55,7 @@ const DisplayPrices = () => {
                     {name}
                   </a>
                 </div>
-                <div className="div-wrapper">
+                <div className="animate-bounce div-wrapper">
                   <a
                     className="text-wrapper-2"
                     href={`https://coinmarketcap.com/currencies/${symbol.toLowerCase()}`}
@@ -69,7 +69,7 @@ const DisplayPrices = () => {
               <div className="div-coin-marquee-4">
                 <div className="div-coin-marquee-5">
                   <a
-                    className="text-wrapper-3"
+                    className="text-wrapper-3 animate-pulse"
                     href={`https://coinmarketcap.com/currencies/${symbol.toLowerCase()}`}
                     rel="noopener noreferrer"
                     target="_blank"
@@ -77,7 +77,7 @@ const DisplayPrices = () => {
                     {name}
                   </a>
                 </div>
-                <div className="div-coin-marquee-11">
+                <div className="div-coin-marquee-11 animate-pulse">
                   <div className="span-coin-marquee" />
                   <a
                     className={`text-wrapper-4 ${getChangeClass(change)}`}
