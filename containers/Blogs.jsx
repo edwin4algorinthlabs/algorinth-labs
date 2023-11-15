@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useEffect,useState} from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import ReactDOMServer from 'react-dom/server';
+import Progress from '@/components/shared/Progress';
 export default function BlogsContainer() {
     const[blogData,setBlogData] = useState(null)
     const [tiles, setTiles] = useState(2);
@@ -30,6 +31,9 @@ export default function BlogsContainer() {
     return (
     <div className="pt-[120px] w-full sm:w-[85vw] font-rubik mx-auto min-h-screen px-6 md:px-12 lg:px-24">
         <h3 className="text-center text-2xl sm:text-5xl font-bold my-10 sm:my-20">Algorinth Labs Blog</h3>
+        {!blogData &&<div className="flex items-center justify-center mt-10">
+        <Progress />
+        </div>}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 w-full max-w-[1244px] mx-auto duration-300">
             {/* =============== Blog =============== */}
             {blogData ? blogData.map((item,index)=>(
@@ -44,9 +48,8 @@ export default function BlogsContainer() {
                 <p className="text-xs sm:text-xl text-[#525252]">{item? item.fields.author: "..."} . {new Date(item.sys.updatedAt).toLocaleString()}</p>
                 </div>
                 </Link>
-            )): <div className="flex flex-col w-full max-w-[602px]">
-              <p>Loading...</p>
-              <div className="bg-[#141414] w-full h-[300px] rounded-lg"></div>
+            )):  <div className="flex items-center justify-center mt-10">
+           
           </div>}
            
             {/* =============== Blog =============== */}
@@ -61,7 +64,7 @@ export default function BlogsContainer() {
         <div className="flex items-center justify-center">
             <button type="button" className="h-[54px] w-[330px] sm:h-20 text-primary text-base sm:text-2xl font-semibold border-[3px] border-primary rounded-lg mt-20 sm:mt-[100px] mb-20" onClick={()=>{setTiles(tiles + 1)}}>Load More</button>
         </div>
-
+       
 
         {/* ================================ */}
         <RequestDemo />
