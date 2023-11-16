@@ -19,6 +19,7 @@ const HomePage = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
   return (
     <>
       {isMobile ? <MobileIntro /> : <Intro />}
