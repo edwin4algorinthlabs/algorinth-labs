@@ -20,8 +20,8 @@ const client = contentful.createClient({
       'heading-5': (node, children) => <h5 className="text-lg font-bold mt-2 mb-1">{children}</h5>,
       'heading-6': (node, children) => <h6 className="text-base font-bold mt-1 mb-1">{children}</h6>,
       'paragraph': (node, children) => <p className="text-base leading-7 my-3">{children}</p>,
-      'unordered-list': (node, children) => <ul className="list-disc list-inside mb-4">{children}</ul>,
-      'ordered-list': (node, children) => <ol className="list-decimal list-inside mb-4">{children}</ol>,
+      'unordered-list': (node, children) => <ul className="">{children}</ul>,
+      'ordered-list': (node, children) => <ol className="">{children}</ol>,
       'list-item': (node, children) => <li>{children}</li>,
       'blockquote': (node, children) => <blockquote className="border-l-4 border-gray-300 pl-4 italic my-4">{children}</blockquote>,
     },
@@ -33,30 +33,41 @@ export default function Data({blogData}){
     return <div>Loading...</div>;
   }
   return (
-  <div>
-    <div className="flex justify-center items-center mt-4 mb-8">
-    <div className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 text-justify leading-relaxed px-[20px] sm:pt-6">
-        {blogData ? documentToReactComponents(blogData.fields.title) : "loading..."}
+    <div>
+      <div className="flex justify-center items-center mt-4 mb-8">
+        <div className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 text-justify leading-relaxed px-[20px] sm:pt-6">
+          {blogData ? documentToReactComponents(blogData.fields.title) : 'loading...'}
+        </div>
+      </div>
+
+      <div className="flex justify-center items-center bg-[#141414] mx-4 md:mx-8 lg:mx-16 xl:mx-20 h-[300px] rounded-lg overflow-hidden mb-8">
+        <img
+          src={blogData.fields.imageAPI.fields.file.url}
+          alt="Blog Image"
+          className="w-full h-full object-cover rounded-lg"
+        />
+      </div>
+
+      <div className="text-right italic pr-[20px]">
+        {blogData ? blogData.fields.author : '...'} .{' '}
+        {new Date(blogData.sys.updatedAt).toLocaleString()}
+      </div>
+
+       {/* Table of Contents Section */}
+       <div className="mt-4 text-justify text-lg mb-8 leading-relaxed px-[40px]">
+        <h2 className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 text-justify leading-relaxed px-[20px] sm:pt-6">Table Of Contents</h2>
+        {blogData ? documentToReactComponents(blogData.fields.tableOfContents,options):"loading"}
+      </div>
+
+
+      <div className="mt-4 text-justify text-lg mb-8 leading-relaxed px-[40px]">
+        {blogData ? documentToReactComponents(blogData.fields.content, options) : 'Loading'}
+      </div>
+      <Request />
+      <DisplayPrices />
+      <FooterContainer />
     </div>
-  </div>
-   <div className="flex justify-center items-center bg-[#141414] mx-4 md:mx-8 lg:mx-16 xl:mx-20 h-[300px] rounded-lg overflow-hidden mb-8">
-    <img
-        src={blogData.fields.imageAPI.fields.file.url}
-        alt="Blog Image"
-        className="w-full h-full object-cover rounded-lg"
-    />
-  </div>
-  <div className="text-right italic pr-[20px]">
-  {blogData? blogData.fields.author: "..."} . {new Date(blogData.sys.updatedAt).toLocaleString()}
-  </div>
-  <div className="mt-4 text-justify text-lg mb-8 leading-relaxed px-[40px]">
-    {blogData ? documentToReactComponents(blogData.fields.content,options) :"Loading"}
-  </div>
-  <Request/>
-  <DisplayPrices/>
-  <FooterContainer/>
-  </div>
-  )
+  );
 }
 
 export async function getStaticPaths() {
