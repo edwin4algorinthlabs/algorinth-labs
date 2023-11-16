@@ -2,13 +2,14 @@ import "../../app/globals.css"
 import FooterContainer from "@/containers/Footer";
 import DisplayPrices from "@/components/shared/price-display/DisplayPrices";
 import Header from "@/components/shared/header";
+import Request from "@/components/shared/request";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { useRouter } from 'next/router';
 const contentful = require("contentful")
 const client = contentful.createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
     environment: 'master', // defaults to 'master' if not set
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
   })
 
 export default function Data({blogData}){
@@ -18,10 +19,9 @@ export default function Data({blogData}){
     return <div>Loading...</div>;
   }
   return (
-
   <div>
     <div className="flex justify-center items-center mt-4 mb-8">
-    <div className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 sm:pt-6">
+    <div className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 text-justify leading-relaxed px-[20px] sm:pt-6">
         {blogData ? documentToReactComponents(blogData.fields.title) : "loading..."}
     </div>
   </div>
@@ -32,15 +32,17 @@ export default function Data({blogData}){
         className="w-full h-full object-cover rounded-lg"
     />
   </div>
-  <div className="text-right italic ">
+  <div className="text-right italic pr-[20px]">
   {blogData? blogData.fields.author: "..."} . {new Date(blogData.sys.updatedAt).toLocaleString()}
   </div>
-  <div className="mt-4 text-lg mb-8">
+  <div className="mt-4 text-justify text-lg mb-8 leading-relaxed px-[40px]">
     {blogData ? documentToReactComponents(blogData.fields.content) :"Loading"}
   </div>
+  <Request/>
   <DisplayPrices/>
   <FooterContainer/>
-  </div>)
+  </div>
+  )
 }
 
 export async function getStaticPaths() {

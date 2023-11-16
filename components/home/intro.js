@@ -26,11 +26,11 @@ const Intro = () => {
 
                 <div className="w-[583px] flex items-center justify-center relative z-[2] h-[583px] rounded-full bg-transparent">
                     <div className="flex items-center justify-center absolute z-[3] top-0 left-0 right-0 bottom w-[583px] h-[583px] rounded-full bg-[#FFEFCB]/40 blur-[20px]"></div>
-                    <Image src="/images/settings.svg" width={153.809} height={153.917} alt="Setting" className="absolute z-[5] bottom-0 left-0" />
+                    <Image src="/images/settings.svg" width={153.809} height={153.917} alt="Setting" className="absolute animate-spin z-[5] bottom-0 left-0" />
                         <Image src="/images/shield.svg" width={153.809} height={153.917} alt="Setting" className="absolute z-[5] top-0 right-0" />
                         <Image src="/images/security.svg" width={153.809} height={153.917} alt="Security" className="absolute z-[5] bottom-[70px] right-2.5" />
                         <div className="flex items-center relative z-[4] justify-center bg-black rounded-full w-[480px] h-[480px]"> 
-                            <Image src="/images/bitcoin.svg" width={240.861} height={333.333} alt="Bitcoin" />
+                            <Image src="/images/bitcoin.svg" className="animate-pulse" width={240.861} height={333.333} alt="Bitcoin" />
                         </div>
                     </div>
 

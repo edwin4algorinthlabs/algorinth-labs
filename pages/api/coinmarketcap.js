@@ -20,7 +20,7 @@ export default async function CoinMarketCap(req, res) {
       }
     );
 
-    const coins = ["BTC", "ETH", "BNB", "TRX", "ADA", "USDC", "USDT"];
+    const coins = ["ETH", "BNB", "TRX", "ADA", "USDC", "USDT"];
     const prices = {};
     const json = response.data;
     const price = json.data
