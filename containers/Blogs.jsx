@@ -44,7 +44,7 @@ export default function BlogsContainer() {
                 </div>
                 <h2 className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 sm:pt-6">{item ? documentToReactComponents(item.fields.title):"loading..."}</h2>
                 <p className="text-xs sm:text-xl text-[#525252]">More details on it</p>
-                <p className="text-base sm:text-2xl py-4 sm:py-6">{item ? ReactDOMServer.renderToStaticMarkup(documentToReactComponents(item.fields.content)[0]).replace(/<[^>]+>/g, '').slice(0,100)+" ..." :"Loading"}</p>
+                <p className="text-base sm:text-2xl py-4 sm:py-6">{item ? ReactDOMServer.renderToStaticMarkup(documentToReactComponents(item.fields.content)[1]).replace(/<[^>]+>/g, '').slice(0,100)+" ..." :"Loading"}</p>
                 <p className="text-xs sm:text-xl text-[#525252]">{item? item.fields.author: "..."} . {new Date(item.sys.updatedAt).toLocaleString()}</p>
                 </div>
                 </Link>
