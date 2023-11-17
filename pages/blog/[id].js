@@ -20,12 +20,13 @@ const client = contentful.createClient({
       'heading-5': (node, children) => <h5 className="text-lg font-bold mt-2 mb-1">{children}</h5>,
       'heading-6': (node, children) => <h6 className="text-base font-bold mt-1 mb-1">{children}</h6>,
       'paragraph': (node, children) => <p className="text-base leading-7 my-3">{children}</p>,
-      'unordered-list': (node, children) => <ul className="">{children}</ul>,
-      'ordered-list': (node, children) => <ol className="">{children}</ol>,
-      'list-item': (node, children) => <li>{children}</li>,
+      'unordered-list': (node, children) => <ul className="list-disc pl-5">{children}</ul>,
+      'ordered-list': (node, children) => <ol className="list-decimal pl-5">{children}</ol>,
+      'list-item': (node, children) => <li className="mb-2">{children}</li>,
       'blockquote': (node, children) => <blockquote className="border-l-4 border-gray-300 pl-4 italic my-4">{children}</blockquote>,
     },
   };
+  
 export default function Data({blogData}){
   const router = useRouter();
 
