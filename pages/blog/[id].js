@@ -1,7 +1,8 @@
 import "../../app/globals.css"
 import FooterContainer from "@/containers/Footer";
 import DisplayPrices from "@/components/shared/price-display/DisplayPrices";
-import Header from "@/components/shared/header";
+import Header from "@/components/shared/blog-header";
+import { useEffect, useState } from 'react';
 import Request from "@/components/shared/request";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { useRouter } from 'next/router';
@@ -13,13 +14,13 @@ const client = contentful.createClient({
   })
   const options = {
     renderNode: {
-      'heading-1': (node, children) => <h1 className="text-4xl font-bold mt-6 mb-4">{children}</h1>,
+      'heading-1': (node, children) => <h1 className="text-4xl text-[#EA5501] font-bold mt-6 mb-4">{children}</h1>,
       'heading-2': (node, children) => <h2 className="text-3xl font-bold mt-5 mb-3">{children}</h2>,
       'heading-3': (node, children) => <h3 className="text-2xl font-bold mt-4 mb-2">{children}</h3>,
       'heading-4': (node, children) => <h4 className="text-xl font-bold mt-3 mb-2">{children}</h4>,
       'heading-5': (node, children) => <h5 className="text-lg font-bold mt-2 mb-1">{children}</h5>,
       'heading-6': (node, children) => <h6 className="text-base font-bold mt-1 mb-1">{children}</h6>,
-      'paragraph': (node, children) => <p className="text-base leading-7 my-3">{children}</p>,
+      'paragraph': (node, children) => <p className="text-base leading-7 text-justify my-3">{children}</p>,
       'unordered-list': (node, children) => <ul className="list-disc pl-5">{children}</ul>,
       'ordered-list': (node, children) => <ol className="list-decimal pl-5">{children}</ol>,
       'list-item': (node, children) => <li className="mb-2">{children}</li>,
@@ -28,15 +29,30 @@ const client = contentful.createClient({
   };
   
 export default function Data({blogData}){
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 640);
+    }
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const router = useRouter();
 
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
   return (
-    <div>
+    <>
+    <Header />
+    <div className="mt-[160px]">
       <div className="flex justify-center items-center mt-4 mb-8">
-        <div className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 text-justify leading-relaxed px-[20px] sm:pt-6">
+        <div className="text-xl sm:text-[32px] font-bold pb-1 sm:pb-2 pt-4 text-justify top-[30px] text-[#EA5501] leading-relaxed px-[20px] sm:pt-6">
           {blogData ? documentToReactComponents(blogData.fields.title) : 'loading...'}
         </div>
       </div>
@@ -68,6 +84,7 @@ export default function Data({blogData}){
       <DisplayPrices />
       <FooterContainer />
     </div>
+    </>
   );
 }
 
