@@ -29,9 +29,9 @@ export default function FooterContainer() {
                    SUBSCRIBE
                 </button>
             </div>
-            <div className="flex flex-col gap-6 w-full max-w-[310px]">
+            <div className="flex flex-col gap-6 w-full max-w-[350px]">
                 <p className="font-medium text-xl text-white">ABOUT US</p>
-                <p className="text-base text-white font-open-sans">
+                <p className="text-base text-white text-justify font-open-sans">
                     Algorinth Labs pioneers secure smart contract audits, 
                     comprehensive testing, and cutting-edge software development, 
                     driving the evolution of decentralized technologies.
