@@ -12,7 +12,7 @@ function AboutContainer() {
             <p className="text-2xl sm:text-5xl text-center font-bold">
                 We are <span className="text-primary">Algorinth Labs</span>
             </p>
-            <p className="text-sm sm:text-xl text-center mt-10">
+            <p className="text-sm sm:text-xl leading-9 text-center mt-10">
                 Algorinth Labs is a pioneering leader in the blockchain technology, 
                 specializing in smart contract audits, testing, and innovative web3 
                 software development. <br className="block sm:hidden" /> With a commitment to excellence and security, 
@@ -32,7 +32,7 @@ function AboutContainer() {
                 <About>
                     <About.Heading text="Who are we?" sx="pt-0 sm:pt-20 pb-8 sm:pb-10" />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-                        <div className="flex flex-col gap-6">
+                        <div className="flex flex-col leading-9 gap-6">
                             <About.Title text="Our Focus" />
                             <About.Text>
                                 Our core focus revolves around ensuring the integrity and 
@@ -42,7 +42,7 @@ function AboutContainer() {
                                 reliability and innovation in the web3 space.
                             </About.Text>
                         </div>
-                        <div className="flex flex-col gap-6">
+                        <div className="flex flex-col leading-9 gap-6">
                             <About.Title text="Our Mission" />
                             <About.Text>
                                 Our mission is to fortify the foundations of blockchain 
@@ -52,7 +52,7 @@ function AboutContainer() {
                                 clients to harness the full potential of decentralized technologies.
                             </About.Text>
                         </div>
-                        <div className="flex flex-col gap-6 w-full max-w-[580px]">
+                        <div className="flex flex-col leading-9 gap-6 w-full max-w-[580px]">
                             <About.Title text="Our Vision" />
                             <About.Text>
                                 Algorinth Labs envisions a future where blockchain and web3 technologies 
@@ -66,35 +66,35 @@ function AboutContainer() {
                     <About.Heading text="What do  we do?" sx="pt-20 pb-10" />
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-                        <div className="flex flex-col gap-6">
+                        <div className="flex flex-col leading-10 gap-6">
                             <About.Title text="Smart contract audits" />
                             <About.Text>
                                 Rigorous code reviews and security analysis to identify 
                                 vulnerabilities and ensure the integrity of smart contracts.
                             </About.Text>
                         </div>
-                        <div className="flex flex-col gap-6">
+                        <div className="flex flex-col leading-10 gap-6">
                             <About.Title text="Testing excellence" />
                             <About.Text>
                                 Comprehensive functional, security, and interoperability testing to 
                                 validate the reliability of blockchain-based applications.
                             </About.Text>
                         </div>
-                        <div className="flex flex-col gap-6 flex-1">
+                        <div className="flex flex-col leading-10 gap-6 flex-1">
                             <About.Title text="Innovative software development" />
                             <About.Text>
                                 Crafting cutting-edge web3 solutions that push the boundaries of blockchain technology while maintaining the highest standards 
                                 of security.
                             </About.Text>
                         </div>
-                        <div className="flex flex-col gap-6 flex-1">
+                        <div className="flex flex-col leading-10 gap-6 flex-1">
                             <About.Title text="Strategic consultation" />
                             <About.Text>
                             Providing actionable insights and recommendations to mitigate risks and 
                             enhance the security posture of blockchain projects.
                             </About.Text>
                         </div>
-                        <div className="flex flex-col gap-6 w-full max-w-[563.42px]">
+                        <div className="flex flex-col gap-6 w-full leading-10 max-w-[563.42px]">
                             <About.Title text="Empowerment" />
                             <About.Text>
                             Building a community of secure blockchain adopters through knowledge-sharing, workshops, and resources.
