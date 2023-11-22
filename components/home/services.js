@@ -9,7 +9,7 @@ const Services = () => {
           Our Services
         </p>
         <br></br>
-        <p className="font-medium block grid place-items-center text-2xl">Smart Contract Testing</p>
+        <p className="block grid place-items-center font-bold text-2xl">Smart Contract Testing</p>
         <br></br>
         <p className="block grid place-items-center text-center  leading-relaxed lg:text-2xl text-lg">
                 At Algorinth Labs, we offer comprehensive smart contract testing services to ensure the reliability, 
@@ -20,7 +20,7 @@ const Services = () => {
             evaluate and validate your smart contracts,  safeguarding your projects from vulnerabilities and  potential pitfalls.
           </p>
           <br></br>
-          <p className="font-medium block grid place-items-center text-2xl">Smart Contract Auditing</p>
+          <p className="block grid place-items-center font-bold text-2xl">Smart Contract Auditing</p>
           <br></br>
           <p className="block grid place-items-center text-center  leading-relaxed lg:text-2xl text-lg">
                 Our smart contract auditing services offer a meticulous evaluation of your blockchain-based solutions, mitigating
