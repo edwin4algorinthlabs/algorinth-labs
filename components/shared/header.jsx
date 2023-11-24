@@ -41,23 +41,18 @@ const links = [
 
 export default function Header() {
     const segment = useSelectedLayoutSegment();
-    const [showResource, setShowResource] = useState(false)
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [showResource, setShowResource] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
-
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setisOpen] = useState(false);
     const dropdownRef = useRef(null);
 
-    const toggleDropdown = () => {
-        setIsOpen(!isOpen);
+    const toggleMenu = () => {
+        setisOpen(!isOpen);
     };
 
     const handleOutsideClick = (event) => {
         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-            setIsOpen(false);
+            setisOpen(false);
         }
     };
 
@@ -113,24 +108,14 @@ export default function Header() {
                 <button type="button" onClick={handleOnClick} className="hidden lg:block h-[70px] w-full max-w-[185px] ml-3 border-2 border-white text-white text-xl font-semibold rounded-lg">
                     Request Demo
                 </button>
-                <div className="lg:hidden cursor-pointer" color="#fff" size={28} ref={dropdownRef}>
-                    <button
-                    type="button"
-                    onClick={handleOnClick}
-                    className="hidden lg:block h-[70px] w-full max-w-[185px] ml-3 border-2 border-white text-white text-xl font-semibold rounded-lg"
-                >
-                    Request Demo
-                </button>
 
-                <div className="lg:hidden cursor-pointer relative z-[50]">
+                <div className="lg:hidden cursor-pointer relative ref={dropdownRef}">
                     <button onClick={toggleMenu}>
                         <MdMenu color="#fff" size={28} className="pb-3" />
                     </button>
                     </div>
-                    
-                </div>
-                {menuOpen && (
-                        <ul className="bg-black/60 absolute pt-2 mt-[380px] pb-2 pl-[10px] pr-[120px]">
+                {isOpen && (
+                        <ul className="bg-black/90 absolute pt-2 mt-[380px] pb-2 pl-[10px] pr-[120px]">
                             {links.map((link) => (
                                 <li
                                     key={link.href}
