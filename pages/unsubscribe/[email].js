@@ -30,7 +30,7 @@ export default function Mail({ mail }) {
     <Header />
      <div className="mt-[160px] my-8 mx-auto max-w-xl p-6  rounded-lg shadow-md text-center border border-green-500">
       <h1 className="text-5xl font-semibold mb-4">Hey there!</h1>
-      <p className="text-lg mb-4">We're Sad to See you Go</p>
+      <p className="text-lg mb-4">We are Sad to See you Go</p>
       <div className="text-3xl mb-4">{mail}</div>
       { unsubscribed?
       <button
