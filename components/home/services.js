@@ -9,24 +9,24 @@ const Services = () => {
           Our Services
         </p>
         <br></br>
-        <p className="font-medium block grid place-items-center text-2xl">Smart Contract Testing</p>
+        <p className="block grid place-items-center font-bold text-2xl">Smart Contract Testing</p>
         <br></br>
-        <p className="block grid place-items-center text-center  leading-relaxed text-lg">
+        <p className="block grid place-items-center text-center  leading-relaxed lg:text-2xl text-lg">
                 At Algorinth Labs, we offer comprehensive smart contract testing services to ensure the reliability, 
                 security, and performance of your blockchain-based applications.
               </p>
-          <p className="block mb-[15px] grid place-items-center text-center  leading-relaxed text-lg">
+          <p className="block mb-[15px] grid place-items-center text-center  leading-relaxed lg:text-2xl text-lg">
             Our expert team employs industry best practices and cutting-edge tools to meticulously  
             evaluate and validate your smart contracts,  safeguarding your projects from vulnerabilities and  potential pitfalls.
           </p>
           <br></br>
-          <p className="font-medium block grid place-items-center text-2xl">Smart Contract Auditing</p>
+          <p className="block grid place-items-center font-bold text-2xl">Smart Contract Auditing</p>
           <br></br>
-          <p className="block grid place-items-center text-center  leading-relaxed text-lg">
+          <p className="block grid place-items-center text-center  leading-relaxed lg:text-2xl text-lg">
                 Our smart contract auditing services offer a meticulous evaluation of your blockchain-based solutions, mitigating
                 risks and enhancing the trustworthiness of your projects.
               </p>
-              <p className="block mb-[20px] grid place-items-center text-center  leading-relaxed text-lg">
+              <p className="block mb-[20px] grid place-items-center text-center  leading-relaxed lg:text-2xl text-lg">
                 Our expert auditors perform a thorough code review, examining every line of your smart contract code 
                 to identify vulnerabilities and potential issues. We follow industry best practices to ensure your code is 
                 robust and resilient against threats.
