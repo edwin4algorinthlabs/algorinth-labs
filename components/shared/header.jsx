@@ -42,6 +42,11 @@ const links = [
 export default function Header() {
     const segment = useSelectedLayoutSegment();
     const [showResource, setShowResource] = useState(false)
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
 
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
@@ -74,7 +79,7 @@ export default function Header() {
             <div className="flex flex-row relative z-[12] gap-6 items-center justify-between w-full mx-auto px-5 sm:px-[100px] duration-500">
                 <div className="flex mr-6">
                     <Link href="/"><Image
-                        className="max-h-32 left-0 object-cover lg:top-0 max-w-40"
+                        className="max-h-32 left-0 object-cover z-0 lg:top-0 max-w-40"
                         alt="Element removebg preview"
                         src="/images/logo.png"
                         width={145}
@@ -108,21 +113,31 @@ export default function Header() {
                 <button type="button" onClick={handleOnClick} className="hidden lg:block h-[70px] w-full max-w-[185px] ml-3 border-2 border-white text-white text-xl font-semibold rounded-lg">
                     Request Demo
                 </button>
-
-
                 <div className="lg:hidden cursor-pointer" color="#fff" size={28} ref={dropdownRef}>
-                    <button onClick={toggleDropdown}>
+                    <button
+                    type="button"
+                    onClick={handleOnClick}
+                    className="hidden lg:block h-[70px] w-full max-w-[185px] ml-3 border-2 border-white text-white text-xl font-semibold rounded-lg"
+                >
+                    Request Demo
+                </button>
+
+                <div className="lg:hidden cursor-pointer relative z-[50]">
+                    <button onClick={toggleMenu}>
                         <MdMenu color="#fff" size={28} className="pb-3" />
                     </button>
-                    {isOpen && (
-                        <ul className="list-style: none bg-black relative max-w-[375px] py-2 px-[31px]">
+                    </div>
+                    
+                </div>
+                {menuOpen && (
+                        <ul className="bg-black/60 absolute pt-2 mt-[380px] pb-2 pl-[10px] pr-[120px]">
                             {links.map((link) => (
                                 <li
                                     key={link.href}
                                     className={
                                         link.href === window.location.pathname
-                                            ? 'text-lg font-medium border-b-[1px] border-gray-400 leading-[26px] border-solid text-white relative whitespace-nowrap w-fit'
-                                            : 'relative leading-[26px] whitespace-nowrap w-fit font-medium border-b-[1px] border-gray-400 opacity-50 border-solid text-gray-400'
+                                            ? 'text-lg font-extrabold border-b-[1px] z-[2] border-gray-400 leading-[50px] border-solid text-white whitespace-nowrap '
+                                            : 'relative leading-[26px] whitespace-nowrap z-[2]  font-bold border-b-[1px] leading-[50px] border-gray-400 opacity-50 border-solid text-gray-400'
                                     }
                                 >
                                     <a href={link.href}>{link.text}</a>
@@ -134,8 +149,7 @@ export default function Header() {
                                 </li>
                             ))}
                         </ul>
-                    )}
-                </div>
+                    )} 
             </div>
 
         </div>
