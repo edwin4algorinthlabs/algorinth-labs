@@ -90,7 +90,7 @@ export default async function newsletter(req, res) {
                 <p>We're thrilled to have you as a part of the AlgorinthLabs community. Thank you for signing up for our newsletter.</p>
                 <p>If you have any questions or need assistance, feel free to reach out to us. Here's to exciting updates and valuable insights!</p>
                 <p>Best regards,<br> The AlgorinthLabs Team</p>
-                <p style="font-size: 12px; color: #999;">If you wish to unsubscribe, click <a class="unsubscribe-button" href="http://localhost:3000/unsubscribe/${mail.mail}">here</a>.</p>
+                <p style="font-size: 12px; color: #999;">If you wish to unsubscribe, click <a class="unsubscribe-button" href="https://algorinthlabs.com/unsubscribe/${mail.mail}">here</a>.</p>
             </body>
         </html>
             `,
