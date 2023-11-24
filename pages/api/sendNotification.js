@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport(
 
 // export default async function sendNotification (req, res) {
 export default async function sendNotification (req, res) {
-
+  
    const {data} = req.body;
     console.log(data.projectlink)
     try {
@@ -36,7 +36,7 @@ export default async function sendNotification (req, res) {
       });
   
       console.log('Email sent:', info.response);
-      res.json({ message: "Mail sent successfully", result });
+      res.json({ message: "Mail sent successfully"});
     }   catch (error) {
   console.error(error);
   res.status(500).json({ error: "Internal Server Error" });
