@@ -10,7 +10,7 @@ import Progress from '@/components/shared/Progress';
 export default function BlogsContainer() {
     const[blogData, setBlogData] = useState(null)
     const [tiles, setTiles] = useState(2);
-    const [message,setMessage] = ("Please Wait...")
+    
     useEffect(()=>{
 
       getBlogData()
@@ -33,7 +33,7 @@ export default function BlogsContainer() {
     <div className="pt-[120px] w-full sm:w-[85vw] font-rubik mx-auto min-h-screen px-6 md:px-12 lg:px-24">
         <h3 className="text-center text-2xl sm:text-5xl font-bold my-10 sm:my-20">Algorinth Labs Blog</h3>
         {!blogData &&<div className="flex items-center justify-center mt-10">
-        <Progress message={message} />
+        <Progress message="Loading... Please Wait." />
         </div>}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 w-full max-w-[1244px] mx-auto duration-300">
             {/* =============== Blog =============== */}
