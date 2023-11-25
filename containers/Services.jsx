@@ -63,7 +63,7 @@ export default function ServicesContainer() {
               width={425}
               height={425}
               alt="Blocks"
-              className="max-w-[425px] max-h-[425px]"
+              className="w-[300px] h-[300px] sd:max-w-[425px] sm:max-h-[425px]"
             />
           </div>
         </div>
