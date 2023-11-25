@@ -29,7 +29,7 @@ export default async function Unsubscribe(req,res){
 
        const info = await transporter.sendMail({
         from: 'techwizardhyped@gmail.com', // Sender's email address
-        to: 'algorinthlabs@gmail.com', // Recipient's email address
+        to: 'anajembaedwin@gmail.com', // Recipient's email address
         subject: 'Unsubscription notification', // Email subject
         // Specify the HTML content of the email
         html: `

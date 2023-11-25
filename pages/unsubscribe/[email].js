@@ -5,22 +5,35 @@ import FooterContainer from "@/containers/Footer";
 import DisplayPrices from "@/components/shared/price-display/DisplayPrices";
 import Header from "@/components/shared/blog-header";
 import { useEffect, useState } from "react";
+import Progress from "@/components/shared/Progress";
+import Post from "@/components/shared/postrequest";
 export default function Mail({ mail }) {
  const [unsubscribed, setunsubscribed] = useState(false)
+ const [message,setMessage] = useState("")
+ const [loading, setLoading] = useState(false)
+ const [done, setDone] = useState(false)
   const handleUnsubscribe = async () => {
       try{
+          setLoading(true)
+          setDone(false)
           const response = await axios.post('/api/unsubscribe', {mail} );
-          alert(response.data.message)
+          setDone(true)
+          setMessage(response.data.message)
           setunsubscribed(true)
+          setLoading(false)
       }catch(error){
           alert(error)
       }
   };
   const handleClick = async ()=>{
     try{
+         setDone(false)
+        setLoading(true)
         const response = await axios.post('/api/newsletter', {mail} );
-        alert(response.data.message)
+        setDone(true)
+        setMessage(response.data.message)
         setunsubscribed(false)
+        setLoading(false)
     }catch(error){
         alert(error)
     }
@@ -28,6 +41,8 @@ export default function Mail({ mail }) {
   return (
     <div>
     <Header />
+    {loading && (<Progress message="Loding... please Wait"/>)}
+    {done && (<Post head={message} Body="" Closing=""/>)}
      <div className="mt-[160px] my-8 mx-auto max-w-xl p-6  rounded-lg shadow-md text-center border border-green-500">
       <h1 className="text-5xl font-semibold mb-4">Hey there!</h1>
       <p className="text-lg mb-4">We are Sad to See you Go</p>

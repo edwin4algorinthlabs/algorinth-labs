@@ -3,16 +3,21 @@ import { BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs";
 import Link from "next/link";
 import axios from "axios";
 import { useState } from "react";
+import Post from "@/components/shared/postrequest";
+
 export default function FooterContainer() {
     const [mail,setMail] = useState("")
-
+    const [message,setMessage] = useState("")
+    const [done, setDone] = useState(false)
     const handleChange = (e)=>{
         setMail(e.target.value)
     }
     const handleClick = async ()=>{
         try{
+            setDone(false)
             const response = await axios.post('/api/newsletter', {mail} );
-            alert(response.data.message)
+                setMessage(response.data.message)
+                setDone(true)
         }catch(error){
             alert(error)
         }
@@ -21,6 +26,7 @@ export default function FooterContainer() {
     }
     return (
         <div className="w-full bg-[#0C0000] flex justify-between pt-8 gap-10 flex-wrap pb-[69px] px-5 sm:px-[45px] lg:px-[100px]">
+        
             <div className="flex flex-col gap-[23px] w-full max-w-[310px]">
                 <p className="font-medium text-base text-white">Join our Newsletter</p>
                 <p className="text-sm text-white font-open-sans">Stay informed about our latest work and industry news:</p>
@@ -70,6 +76,8 @@ export default function FooterContainer() {
                     </p> */}
                 </div>
             </div>
+            {done && (<Post head={message} Body="" Closing=""/>)}
+
         </div>
     )
 }

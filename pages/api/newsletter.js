@@ -50,14 +50,14 @@ export default async function newsletter(req, res) {
       } else {
         // Email doesn't exist, insert it into the collection
         const result = await db.collection("Newsletter").insertOne(mail);
-        res.json({ message: "Thanks We'll be in touch", result });
+        res.json({ message: "Thanks For Subscribing", result });
 
         //send notification to registrant 
         const info = await transporter.sendMail({
             from: 'algorinthlabs@gmail.com', // Sender's email address
             to: mail.mail, // Recipient's email address
             subject: 'Thanks For signing up To AlgorinthLabs', // Email subject
-            // Specify the HTML content of the email
+         
             html: `
             <html>
             <head>

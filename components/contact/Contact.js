@@ -3,8 +3,8 @@
 import "./Contact.css";
 import axios from "axios";
 import { useState } from 'react';
-
-
+import Progress from "../shared/Progress";
+import Post from "../shared/postrequest";
 
 
 const Contact = () => {
@@ -12,6 +12,10 @@ const Contact = () => {
     { firstName: "", lastName: "", companyMail: "", inquiry: "Smart Contract Audit", message: "", projectlink: "" }
   )
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false)
+  const [done , setDone] = useState(false)
+  const message = "Please Wait..."
+
 //email transporter
 
 const getMarketCap = async ()=> {
@@ -26,11 +30,15 @@ const getMarketCap = async ()=> {
 
   const sendData = async ()=>{
     try {
+      setDone(false)
+      setLoading(true)
       const response = await axios.post('/api/sendContact', { data });
       
       if (response.data.message == "Data registered successfully"){
-        alert("Thanks we'll be in touch Soon");
+        setLoading(false)
+        setDone(true)
       }else{
+        setLoading(false)
         setError(true)
         alert("please type correct information")
       }
@@ -43,8 +51,9 @@ const getMarketCap = async ()=> {
   }
   const sendNotification = async()=>{
     try{
-       
+      
       const res = await axios.post("/api/sendNotification",{data});
+     
       console.log(res.data.message)
     }catch(error){
       console.log(error)
@@ -68,6 +77,18 @@ const getMarketCap = async ()=> {
   }
   return (
     <div className="w-full max-w-5xl mx-auto">
+           {loading && (
+    <div className="flex items-center justify-center mt-10 absolute inset-0 z-50">
+      <Progress  message = {message}/>
+    </div>
+  )}
+          {done && (
+       <Post
+        head="Thanks For Choosing Us"
+        Body="Thanks We'll reach out Soon"
+        Closing="Stay Tuned"
+      />
+  )}
     <p className="font-bold text-center mb-10 md:mb-20 md:mt-10 text-[40px] text-white">Contact Us</p>
     <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-6 md:gap-3 w-full max-w-[1185px] mx-auto pb-[100px] px-5">
         {/* This is the form section */}
