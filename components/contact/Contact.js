@@ -85,7 +85,7 @@ const getMarketCap = async ()=> {
           {done && (
        <Post
         head="Thanks For Choosing Us"
-        Body="Thanks We'll reach out Soon"
+        Body="We'll reach out Soon"
         Closing="Stay Tuned"
       />
   )}
