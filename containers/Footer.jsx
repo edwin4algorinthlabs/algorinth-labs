@@ -4,20 +4,24 @@ import Link from "next/link";
 import axios from "axios";
 import { useState } from "react";
 import Post from "@/components/shared/postrequest";
+import Progress from "@/components/shared/Progress";
 
 export default function FooterContainer() {
     const [mail,setMail] = useState("")
     const [message,setMessage] = useState("")
     const [done, setDone] = useState(false)
+    const [loading, setLoading] = useState(false)
     const handleChange = (e)=>{
         setMail(e.target.value)
     }
     const handleClick = async ()=>{
         try{
             setDone(false)
+            setLoading(true)
             const response = await axios.post('/api/newsletter', {mail} );
-                setMessage(response.data.message)
-                setDone(true)
+            setMessage(response.data.message)
+            setDone(true)
+            setLoading(false)
         }catch(error){
             alert(error)
         }
@@ -25,8 +29,9 @@ export default function FooterContainer() {
         
     }
     return (
-        <div className="w-full bg-[#0C0000] flex justify-between pt-8 gap-10 flex-wrap pb-[69px] px-5 sm:px-[45px] lg:px-[100px]">
         
+        <div className="w-full bg-[#0C0000] flex justify-between pt-8 gap-10 flex-wrap pb-[69px] px-5 sm:px-[45px] lg:px-[100px]">
+        {loading && (<Progress message="please Wait..."/>)}
             <div className="flex flex-col gap-[23px] w-full max-w-[310px]">
                 <p className="font-medium text-base text-white">Join our Newsletter</p>
                 <p className="text-sm text-white font-open-sans">Stay informed about our latest work and industry news:</p>
@@ -77,6 +82,7 @@ export default function FooterContainer() {
                 </div>
             </div>
             {done && (<Post head={message} Body="" Closing=""/>)}
+            
 
         </div>
     )

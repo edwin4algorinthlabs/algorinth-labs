@@ -56,7 +56,7 @@ export default async function newsletter(req, res) {
         const info = await transporter.sendMail({
             from: 'algorinthlabs@gmail.com', // Sender's email address
             to: mail.mail, // Recipient's email address
-            subject: 'Thanks For signing up To AlgorinthLabs', // Email subject
+            subject: 'Thanks For signing up To AlgorinthLabs NewsLetter', // Email subject
          
             html: `
             <html>

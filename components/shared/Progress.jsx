@@ -6,7 +6,7 @@ const Progress = ({message}) => {
   
   
     return (
-      <div className="flex items-center justify-center h-screen">
+      <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center h-screen">
       <div className="bg-white p-20 rounded-lg shadow-lg">
         <p className="text-gray-700 text-3xl mt-6">{message}</p>
         <Oval color="#00BFFF" height={150} width={250} />
