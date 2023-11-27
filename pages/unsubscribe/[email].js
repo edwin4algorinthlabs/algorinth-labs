@@ -23,6 +23,9 @@ export default function Mail({ mail }) {
           setLoading(false)
       }catch(error){
           alert(error)
+          setMessage("Something Went Wrong")
+          setDone(true)
+          setLoading(false)
       }
   };
   const handleClick = async ()=>{
@@ -36,6 +39,9 @@ export default function Mail({ mail }) {
         setLoading(false)
     }catch(error){
         alert(error)
+        setMessage("Something Went Wrong")
+        setDone(true)
+        setLoading(false)
     }
 }
   return (
