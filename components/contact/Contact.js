@@ -15,6 +15,9 @@ const Contact = () => {
   const [loading, setLoading] = useState(false)
   const [done , setDone] = useState(false)
   const message = "Please Wait..."
+  const [head ,setHead]= useState("Thanks For Choosing Us")
+  const [body ,setBody]= useState("We'll reach out Soon")
+  const [Closing ,setClosing]= useState("Stay Tuned 👍")
 
 //email transporter
 
@@ -45,7 +48,11 @@ const getMarketCap = async ()=> {
       // alert(JSON.stringify(response.data.emails, null, 2));
     } catch (error) {
       setError(true)
-      alert("Something Went Wrong Please check if data follows rule");
+      setLoading(false)
+      setHead("😢 Oops Something went Wrong")
+      setBody("Please Try Again")
+      setClosing("Apologies..")
+      setDone(true)
 
     }
   }
@@ -84,9 +91,9 @@ const getMarketCap = async ()=> {
   )}
           {done && (
        <Post
-        head="Thanks For Choosing Us"
-        Body="We'll reach out Soon"
-        Closing="Stay Tuned"
+        head={head}
+        Body={body}
+        Closing={Closing}
       />
   )}
     <p className="font-bold text-center mb-10 md:mb-20 md:mt-10 text-[40px] text-white">Contact Us</p>

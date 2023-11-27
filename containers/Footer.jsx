@@ -8,7 +8,7 @@ import Progress from "@/components/shared/Progress";
 
 export default function FooterContainer() {
     const [mail,setMail] = useState("")
-    const [message,setMessage] = useState("")
+    const [message,setMessage] = useState("an error occured")
     const [done, setDone] = useState(false)
     const [loading, setLoading] = useState(false)
     const handleChange = (e)=>{
@@ -24,6 +24,8 @@ export default function FooterContainer() {
             setLoading(false)
         }catch(error){
             alert(error)
+            setDone(true)
+            setLoading(false)
         }
         
         
