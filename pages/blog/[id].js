@@ -1,4 +1,6 @@
+// pages/blog/[id].js
 import "../../app/globals.css"
+import Image from 'next/image'
 import FooterContainer from "@/containers/Footer";
 import DisplayPrices from "@/components/shared/price-display/DisplayPrices";
 import Header from "@/components/shared/blog-header";
@@ -8,9 +10,9 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { useRouter } from 'next/router';
 const contentful = require("contentful")
 const client = contentful.createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
     environment: 'master', // defaults to 'master' if not set
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
   })
   const options = {
     renderNode: {
@@ -58,16 +60,18 @@ export default function Data({blogData}){
       </div>
 
       <div className="flex justify-center items-center bg-[#141414] mx-4 md:mx-8 lg:mx-16 xl:mx-20 h-[300px] rounded-lg overflow-hidden mb-8">
-        <img
-          src={blogData.fields.imageAPI.fields.file.url}
-          alt="Blog Image"
+        <Image
+          src={`https:${blogData.fields.imageAPI.fields.file.url}`}
+          alt={blogData.fields.imageAPI.fields.title}
+          width={blogData.fields.imageAPI.fields.file.details.image.width}
+          height={blogData.fields.imageAPI.fields.file.details.image.height}
           className="w-full h-full object-cover rounded-lg"
         />
       </div>
 
       <div className="text-right italic pr-[20px]">
         {blogData ? blogData.fields.author : '...'} .{' '}
-        {new Date(blogData.sys.updatedAt).toLocaleString()}
+        {/* {new Date(blogData.sys.updatedAt).toLocaleString("en-US")} */}
       </div>
 
        {/* Table of Contents Section */}
