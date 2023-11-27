@@ -1,0 +1,119 @@
+.div-html-embed {
+     @apply  items-start bg-black border flex min-h-[61px] w-full relative border-none;
+}
+.div-html-embed .div-coin-marquee {
+     @apply  h-[61px] overflow-hidden relative w-full border-b border-[#222531] border-t;
+    border-bottom-style: solid;
+    border-top-style: solid;
+}
+.div-html-embed .link-wrapper {
+     @apply  items-start flex absolute w-[141px] pl-0 pr-[31px] pt-0 pb-[59px] border-[#40424e] border-r left-0 top-px;
+    border-right-style: solid;
+}
+.div-html-embed .link {
+     @apply  items-start inline-flex flex-[0_0_auto] flex-col relative pl-4 pr-0 pt-[11px] pb-0;
+}
+.div-html-embed .text-wrapper {
+     @apply  text-[#808a9d] text-[9px] font-normal tracking-[0] leading-[18px] relative whitespace-nowrap w-fit -mt-px;
+    font-family: "Maven Pro-Regular", Helvetica;
+}
+
+.div-html-embed .SVG {
+     @apply  h-[18px] relative w-[94px];
+}
+.div-html-embed .div-coin-marquee-wrapper {
+     @apply  h-[57px] overflow-hidden absolute w-[1297px] left-[141px] top-0.5;
+}
+.div-html-embed .div {
+     @apply  items-start inline-flex left-[-905px] relative pl-[880px] pr-[4400px] py-0;
+}
+.div-html-embed .div-coin-marquee-2 {
+     @apply  items-start inline-flex flex-[0_0_auto] min-w-[220px] relative px-[5px] py-0;
+}
+
+.div-html-embed .link-2 {
+     @apply  h-[57px] relative w-[188px];
+}
+.div-html-embed .element-png {
+     @apply  h-5 absolute w-[11px] left-[9px] top-[18px];
+}
+.div-html-embed .div-coin-marquee-3 {
+     @apply  items-start inline-flex flex-col gap-[1.65px] absolute pl-0 pr-7 pt-0 pb-[0.35px] left-7 top-[15px];
+}
+.div-html-embed .div-coin-marquee-4 {
+     @apply  items-center inline-flex flex-[0_0_auto] justify-between relative;
+}
+.div-html-embed .div-wrapper {
+     @apply  items-start inline-flex flex-[0_0_auto] relative pt-0 pb-px px-0;
+}
+.div-html-embed .text-wrapper-2 {
+     @apply  text-white text-xs font-semibold tracking-[0] leading-3 relative whitespace-nowrap w-fit -mt-px;
+    font-family: "Maven Pro-SemiBold", Helvetica;
+}
+.div-html-embed .div-coin-marquee-5 {
+     @apply  items-start inline-flex flex-[0_0_auto] relative;
+}
+.div-html-embed .text-wrapper-3 {
+     @apply  text-[#a1a7bb] text-[9.9px] font-normal tracking-[0] leading-[11px] relative whitespace-nowrap w-fit -mt-px;
+    font-family: "Maven Pro-Regular", Helvetica;
+}
+.div-html-embed .div-coin-marquee-6 {
+     @apply  h-[11px] relative w-[48.86px];
+}
+.div-html-embed .span-coin-marquee {
+     @apply  h-[18px] absolute w-2 border-t-[5px] border-x-4 border-[#ea3943] left-0 top-1;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-top-style: solid;
+}
+.div-html-embed .text-wrapper-4 {
+     @apply text-[11px] font-semibold h-[11px] tracking-[0] leading-[11px] absolute whitespace-nowrap left-[11px] -top-px;
+    font-family: "Maven Pro-SemiBold", Helvetica;
+}
+.div-html-embed .pseudo {
+     @apply  bg-[#40424e] h-5 absolute w-px left-[219px] top-5;
+}
+.div-html-embed .img {
+     @apply  h-5 absolute w-5 left-0 top-[18px];
+}
+.div-html-embed .div-coin-marquee-7 {
+     @apply  items-start inline-flex flex-col gap-[1.65px] absolute pl-0 pr-[50px] pt-0 pb-[0.35px] left-7 top-[15px];
+}
+.div-html-embed .div-coin-marquee-8 {
+     @apply  items-center inline-flex flex-[0_0_auto] justify-between pr-[3.81e-6px] relative pl-0 py-0;
+}
+.div-html-embed .div-coin-marquee-9 {
+     @apply  h-[11px] relative w-[48.8px];
+}
+.div-html-embed .div-coin-marquee-10 {
+     @apply  items-start inline-flex flex-col gap-[1.65px] absolute pl-0 pr-[88px] pt-0 pb-[0.35px] left-7 top-[15px];
+}
+.div-html-embed .div-coin-marquee-11 {
+     @apply  h-[11px] relative w-[46.99px];
+}
+.div-html-embed .div-coin-marquee-12 {
+     @apply  items-start inline-flex flex-col gap-[1.65px] absolute pl-0 pr-[66px] pt-0 pb-[0.35px] left-7 top-[15px];
+}
+.div-html-embed .div-coin-marquee-13 {
+     @apply  items-start inline-flex flex-[0_0_auto] relative pl-[11px] pr-0 py-0;
+}
+.div-html-embed .text-wrapper-5 {
+     @apply  text-[#16c784] text-[11px] font-semibold tracking-[0] leading-[11px] relative whitespace-nowrap w-fit -mt-px;
+    font-family: "Maven Pro-SemiBold", Helvetica;
+}
+.div-html-embed .div-coin-marquee-14 {
+     @apply  h-[11px] relative w-[48.47px];
+}
+.div-html-embed .div-coin-marquee-15 {
+     @apply  items-start inline-flex flex-col gap-[1.65px] absolute pl-0 pr-[75px] pt-0 pb-[0.35px] left-7 top-[15px];
+}
+.div-html-embed .div-coin-marquee-16 {
+     @apply  h-[11px] relative w-[27.11px];
+}
+
+.positive-change {
+    @apply text-[darkgreen];
+}
+.negative-change {
+     @apply text-[#ea3943];
+ }

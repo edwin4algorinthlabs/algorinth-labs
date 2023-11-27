@@ -8,12 +8,26 @@ module.exports = {
   ],
   theme: {
     extend: {
+      lineHeight: {
+        'leading-12': '3rem',
+        'leading-14': '3.5rem',
+      },
+      fontSize: {
+        'xxs': '0.5rem',
+      },
       fontFamily: {
-        "poppins": ['var(--font-poppins)'],
+        "rubik": ['var(--font-rubik)'],
+        "open-sans": ['var(--font-open-sans)'],
       },
       colors: {
+        'primary': "#EA5501",
         'secondary': "#D631BB",
-      }
+        'c-grey': "#525252",
+        'c-grey-2': "#848794",
+        "link-active": "#AD2B43"
+      },
+      keyframes: {
+      },
     },
   },
   plugins: [],
