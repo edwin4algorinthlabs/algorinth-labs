@@ -55,12 +55,17 @@ export default function Header() {
             setisOpen(false);
         }
     };
+    const handleScroll = () => {
+        setisOpen(false);
+    };
 
     useEffect(() => {
         document.addEventListener('mousedown', handleOutsideClick);
+        window.addEventListener('scroll', handleScroll);
 
         return () => {
             document.removeEventListener('mousedown', handleOutsideClick);
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
