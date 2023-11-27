@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from "next/link"
 import { MdMenu, MdOutlineKeyboardArrowDown } from "react-icons/md"
-import { useSelectedLayoutSegment } from "next/navigation";
+// import { useSelectedLayoutSegment } from "next/navigation";
 import React, { useState, useRef, useEffect } from "react";
 
 const links = [
@@ -40,7 +40,7 @@ const links = [
 ];
 
 export default function Header() {
-    const segment = useSelectedLayoutSegment();
+    // const segment = useSelectedLayoutSegment();
     const [showResource, setShowResource] = useState(false);
 
     const [isOpen, setisOpen] = useState(false);
@@ -55,17 +55,12 @@ export default function Header() {
             setisOpen(false);
         }
     };
-    const handleScroll = () => {
-        setisOpen(false);
-    };
 
     useEffect(() => {
         document.addEventListener('mousedown', handleOutsideClick);
-        window.addEventListener('scroll', handleScroll);
 
         return () => {
             document.removeEventListener('mousedown', handleOutsideClick);
-            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
@@ -91,11 +86,11 @@ export default function Header() {
                         {links.map((link, idx) => (
                             idx !== 2 ? (
                                 <Link key={idx} href={idx !== 2 && link.href}
-                                    className={`text-base sm:text-xl font-rubik border-b-2 hover:border-primary hover:text-white duration-500 ease-in-out ${(segment == link.segment && !showResource) ? "text-white border-primary font-bold" : "border-transparent text-c-grey pb-0 font-medium"}`}
+                                    className={`text-base sm:text-xl font-rubik border-b-2 hover:border-primary hover:text-white duration-500 ease-in-out ${(!showResource) ? "text-white border-primary font-bold" : "border-transparent text-c-grey pb-0 font-medium"}`}
                                 >{link.text}</Link>
                             ) : (
                                 <div key={idx} onClick={() => setShowResource(showResource => !showResource)}
-                                    className={`text-base cursor-pointer sm:text-xl font-rubik hover:text-white relative z-[50] duration-500 ease-in-out ${showResource || segment == "products" ? "text-white font-bold" : "text-c-grey pb-0 font-medium"}`}
+                                    className={`text-base cursor-pointer sm:text-xl font-rubik hover:text-white relative z-[50] duration-500 ease-in-out`}
                                 ><p className="flex gap-1 items-center">{link.text} <MdOutlineKeyboardArrowDown className={`transition-[transform] duration-500 ${showResource ? "rotate-180" : ""}`} /></p>
                                     {
                                         showResource && (

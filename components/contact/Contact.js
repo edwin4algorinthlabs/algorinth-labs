@@ -1,13 +1,71 @@
 "use client"
 
 import "./Contact.css";
+import axios from "axios";
 import { useState } from 'react';
+import Progress from "../shared/Progress";
+import Post from "../shared/postrequest";
+
 
 const Contact = () => {
   const [data, setData] = useState(
-    { fName: "", lName: "", cName: "", inquiry: "", message: "", link: "" }
+    { firstName: "", lastName: "", companyMail: "", inquiry: "Smart Contract Audit", message: "", projectlink: "" }
   )
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false)
+  const [done , setDone] = useState(false)
+  const message = "Please Wait..."
+  const [head ,setHead]= useState("Thanks For Choosing Us")
+  const [body ,setBody]= useState("We'll reach out Soon")
+  const [Closing ,setClosing]= useState("Stay Tuned 👍")
 
+//email transporter
+
+const getMarketCap = async ()=> {
+  try{
+    const response =await axios.get('/api/coinmarketcap')
+    console.log(response.data)
+  }catch(error){
+    setError(true)
+    console.log(error)
+  }
+}
+
+  const sendData = async ()=>{
+    try {
+      setDone(false)
+      setLoading(true)
+      const response = await axios.post('/api/sendContact', { data });
+      
+      if (response.data.message == "Data registered successfully"){
+        setLoading(false)
+        setDone(true)
+      }else{
+        setLoading(false)
+        setError(true)
+        alert("please type correct information")
+      }
+      // alert(JSON.stringify(response.data.emails, null, 2));
+    } catch (error) {
+      setError(true)
+      setLoading(false)
+      setHead("😢 Oops Something went Wrong")
+      setBody("Please Try Again")
+      setClosing("Apologies..")
+      setDone(true)
+
+    }
+  }
+  const sendNotification = async()=>{
+    try{
+      
+      const res = await axios.post("/api/sendNotification",{data});
+     
+      console.log(res.data.message)
+    }catch(error){
+      console.log(error)
+    }
+  }
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -17,13 +75,27 @@ const Contact = () => {
       [name]: value
     }))
   }
-
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // alert(data);
+    sendData();
+    sendNotification();
+    //getMarketCap();
   }
   return (
     <div className="w-full max-w-5xl mx-auto">
+           {loading && (
+    <div className="flex items-center justify-center mt-10 absolute inset-0 z-50">
+      <Progress  message = {message}/>
+    </div>
+  )}
+          {done && (
+       <Post
+        head={head}
+        Body={body}
+        Closing={Closing}
+      />
+  )}
     <p className="font-bold text-center mb-10 md:mb-20 md:mt-10 text-[40px] text-white">Contact Us</p>
     <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-6 md:gap-3 w-full max-w-[1185px] mx-auto pb-[100px] px-5">
         {/* This is the form section */}
@@ -32,22 +104,23 @@ const Contact = () => {
 
             <div>
               <label for="fname">First name</label>
-              <input type="text" name="fName" id="fname" placeholder="John" onChange={handleChange} value={data.fName} required /> <br />
+              <input type="text" name="firstName" id="fname" placeholder="John" onChange={handleChange} value={data.name} required /> <br />
 
             </div>
 
             <div>
               <label for="lname">Last name</label>
-              <input type="text" name="lName" placeholder="Doe" id="lname" onChange={handleChange} value={data.lName} required /> <br />
+              <input type="text" name="lastName" placeholder="Doe" id="lname" onChange={handleChange} value={data.name} required /> <br />
+
             </div>
           </div>
 
 
-          <label for="cName">Company name</label>
-          <input type="text" name="cName" cols={15} rows={1} id="cName" onChange={handleChange} value={data.cName} required /> <br />
+          <label for="cName">Company Email</label>
+          <input type="text" name="companyMail" cols={15} rows={1} id="cName" onChange={handleChange} value={data.name} required /> <br />
 
           <label for="inquiry">Inquiry type</label>
-          <select name="inquiry" id="inquiry" required>
+          <select name="inquiry" id="inquiry" value={data.inquiry} onChange={handleChange} required>
             <option value="Smart Contract Audit">Smart Contract Audit</option>
             <option value="Smart Contract Security">Smart Contract Security</option>
             <option value="Smart Contract Testing">Smart Contract Testing</option>
@@ -62,9 +135,19 @@ const Contact = () => {
           <textarea name="message" cols={15} rows={10} id="message" onChange={handleChange} value={data.name} required></textarea> <br />
 
           <label for="link">Link to project on Github</label>
-          <input type="url" name="link" id="link" onChange={handleChange} value={data.name} required /> <br />
+          <input type="url" name="projectlink" id="link" onChange={handleChange} value={data.name} required /> <br />
+
+          {/* <input type="submit" name="submit" value="submit" /> */}
 
           <button type="submit" className="submit__button">Submit</button>
+
+
+          {/* <p>
+        {data.fName} {data.lName} {data.cName} {data.inquiry} {data.message} {data.link} {data.inquiry} 
+    </p> */}
+
+
+
 
           <p className="block md:hidden mt-6 text-xs text-center">
             For secure communications, please use  <a href="https://www.sendsafely.com/u/admin@algorinthlabs.com" className="text-primary">SendSafely.</a>

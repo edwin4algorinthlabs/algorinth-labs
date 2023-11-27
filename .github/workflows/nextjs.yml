@@ -1,0 +1,55 @@
+# This workflow is used to build a Next.js application
+name: Build Next.js App
+
+# This workflow gets triggered on every push to the 'dev' branch
+on:
+  push:
+    branches:
+      - dev
+
+# This workflow contains a single job called 'build'
+jobs:
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+      #Sets Contentful acess token
+      - name: Set Contentful access token
+        run: |
+          echo "CONTENTFUL_ACCESS_TOKEN=${{ secrets.CONTENTFUL_ACCESS_TOKEN }}" >> $GITHUB_ENV
+      #Sets Contentful space id
+      - name: Set Contentful space id
+        run: |
+          echo "CONTENTFUL_SPACE_ID=${{ secrets.CONTENTFUL_SPACE_ID }}" >> $GITHUB_ENV
+      #Sets MongoDB Connection String
+      - name: Set MongoDb Connection String
+        run: |
+          echo "NEXT_PUBLIC_MONGO_KEY=${{ secrets.NEXT_PUBLIC_MONGO_KEY }}" >> $GITHUB_ENV
+
+      # Sets up a Node.js environment and caches it for faster subsequent runs
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          # cache: 'npm'
+
+      # Installs all the dependencies based on your package-lock.json file
+      - name: Install dependencies
+        run: npm install
+
+      # Builds your Next.js application
+      - name: Build with Next.js
+        run: npm run build
+
+      # Deployment to Vercel is commented out for now. Uncomment when ready to deploy.
+      # - name: Deploy to Vercel
+      #   uses: amondnet/vercel-action@v20
+      #   with:
+      #     vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      #     vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+      #     vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}

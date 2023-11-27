@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Service from "@/components/service";
 import RequestDemo from "@/components/shared/request"
+import Link from 'next/link';
 
 const serviceList = [
     {
@@ -52,9 +53,9 @@ export default function ServicesContainer() {
               </p>
             </div>
 
-            <button type="button" className="h-20 w-full max-w-[330px] bg-primary text-white text-2xl font-semibold rounded-lg">
+            <Link href="/contact"><button type="button" className="h-20 w-full max-w-[330px] bg-primary text-white text-2xl font-semibold rounded-lg">
               Request an Audit
-            </button>
+            </button></Link>
           </div>
           <div className="mt-4">
             <Image
@@ -62,7 +63,7 @@ export default function ServicesContainer() {
               width={425}
               height={425}
               alt="Blocks"
-              className="max-w-[425px] max-h-[425px]"
+              className="w-[300px] h-[300px] sd:max-w-[425px] sm:max-h-[425px]"
             />
           </div>
         </div>

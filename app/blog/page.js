@@ -1,5 +1,5 @@
+"use client"
 import BlogsContainer from "@/containers/Blogs"
-
 
 const Blog = () => {
   return (

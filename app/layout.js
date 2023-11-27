@@ -3,8 +3,6 @@ import { Rubik, Open_Sans } from 'next/font/google'
 import Header from "@/components/shared/header"
 import DisplayPrices from "@/components/shared/price-display/DisplayPrices"
 import FooterContainer from "@/containers/Footer"
-
-
 const rubik = Rubik({
   subsets: ['latin'],
   display: 'swap',
@@ -21,7 +19,7 @@ const openSans = Open_Sans({
 
 export const metadata = {
   title: 'Algorinth Labs | Home',
-  description: 'This is the coming soon page of Algorinth Labs',
+  description: 'Official Website - Algorinth Labs LLC.',
 }
 
 export default function RootLayout({ children }) {
